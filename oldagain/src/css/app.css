@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply tw-text-h1;
+  }
+  h2 {
+    @apply tw-text-h2;
+  }
+  h3 {
+    @apply tw-text-h3;
+  }
+  h4 {
+    @apply tw-text-h4;
+  }
+  h5 {
+    @apply tw-text-h5;
+  }
+  h6 {
+    @apply tw-text-h6;
+  }
+
+  body {
+    @apply tw-bg-red-200;
+  }
+}
+
+@layer utilities {
+  .tw-heading {
+    @apply tw-text-h3 tw-text-blue tw-tracking-tighter tw-mb-2;
+  }
+  .tw-content {
+    @apply tw-space-y-4 tw-text-md tw-opacity-80;
+  }
+}

@@ -1,5 +1,8 @@
+/** @type {import('tailwindcss').Config} */
+const colors = require("tailwindcss/colors");
+
 module.exports = {
-  content: ["*.{html}", "./src/*.{vue,js}"],
+  content: ["./src/**/*.{html,js}", "./public/*.{html,js}"],
   prefix: "tw-",
   theme: {
     fontFamily: {
