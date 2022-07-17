@@ -1,1 +1,51 @@
-export const TEST = "config test";
+export const EXPERIENCE = [
+  {
+    role: "Senior Front End Developer",
+    company: "mod.io",
+    icon: "https://picsum.photos/200",
+    type: "Full-time",
+    country: "Australia",
+    date: 1612175276,
+    current: true,
+  },
+  {
+    role: "Co-Founder & Director",
+    company: "Linked Entity Limted",
+    icon: "https://picsum.photos/200",
+    type: "Full-time",
+    country: "United Kingdom",
+    date: "",
+  },
+  {
+    role: "Co-Founder & Director",
+    company: "Gig Ocean",
+    icon: "https://picsum.photos/200",
+    type: "Full-time",
+    country: "United Kingdom",
+    date: "",
+  },
+  {
+    role: "Senior Front End Developer",
+    company: "Icon Agency",
+    icon: "https://picsum.photos/200",
+    type: "Full-time",
+    country: "United Kingdom",
+    date: "",
+  },
+  {
+    role: "Front End Developer",
+    company: "IO Stuidos LTD",
+    icon: "https://picsum.photos/200",
+    type: "Full-time",
+    country: "United Kingdom",
+    date: "",
+  },
+  {
+    role: "Web Developer",
+    company: "NFU Mutual",
+    icon: "https://picsum.photos/200",
+    type: "Full-time",
+    country: "United Kingdom",
+    date: "",
+  },
+];

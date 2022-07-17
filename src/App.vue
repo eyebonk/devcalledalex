@@ -8,17 +8,11 @@
 <script>
 import MyExperience from "@components/Panels/MyExperience.vue";
 import AboutMe from "@components/Panels/AboutMe.vue";
-import { TEST } from "@config/experience.js";
 
 export default {
   components: {
     MyExperience,
     AboutMe,
-  },
-  setup() {
-    return {
-      TEST,
-    };
   },
 };
 </script>
