@@ -1,0 +1,23 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^3.1.6"
+  },
+  "name": "devcalledalex",
+  "description": "",
+  "version": "1.0.0",
+  "main": "tailwind.config.js",
+  "dependencies": {},
+  "scripts": {
+    "serve": "npx tailwindcss -i ./src/css/app.css -o ./public/app.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eyebonk/devcalledalex.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eyebonk/devcalledalex/issues"
+  },
+  "homepage": "https://github.com/eyebonk/devcalledalex#readme"
+}
