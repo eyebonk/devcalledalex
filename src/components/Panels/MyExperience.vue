@@ -4,7 +4,7 @@
 
     <div class="tw-space-y-4">
       <div
-        v-for="(item, index) in EXPERIENCE"
+        v-for="(item, index) in data"
         :key="index"
         class="tw-flex tw-space-x-4"
       >
@@ -22,14 +22,9 @@
             <span> {{ item.company }} | {{ item.type }} </span>
 
             <span>
-              {{ getDate(item.dateFrom, item.dateTo).dateFrom }} -
-              {{
-                getDate(item.dateFrom, item.dateTo).dateTo
-                  ? getDate(item.dateFrom, item.dateTo).dateTo
-                  : "present"
-              }}
-              | {{ getDate(item.dateFrom, item.dateTo).timeSince }} |
-              {{ item.country }}
+              <span v-for="(date, dateIndex) in item.date" :key="dateIndex">
+                {{ date }}
+              </span>
             </span>
           </div>
         </div>
@@ -41,6 +36,7 @@
 <script>
 import BaseHeader from "@components/BaseHeader.vue";
 import { EXPERIENCE } from "@config/experience.js";
+import { computed } from "vue";
 import dayjs from "dayjs";
 
 export default {
@@ -48,46 +44,63 @@ export default {
     BaseHeader,
   },
   setup() {
-    function getDate(dateFrom, dateTo) {
+    const data = computed(() => _mapData(EXPERIENCE));
+
+    function _mapData(exData) {
+      let data = [];
+      exData.forEach((item) => {
+        data.push({
+          role: item.role,
+          company: item.company,
+          icon: item.icon,
+          type: item.type,
+          country: item.country,
+          date: _getDate(item.dateFrom, item.dateTo),
+        });
+      });
+
+      return data;
+    }
+
+    function _getDate(dateFrom, dateTo) {
       let formatFrom = dayjs(dateFrom).format("DD-MM-YYYY");
       let formatTo = dayjs(dateTo).format("DD-MM-YYYY");
-      let activeRole = false;
-      if (!dateTo) {
-        activeRole = true;
-      }
 
       const MONTHS_IN_YEAR = 12;
       const current = formatTo ? dayjs(formatTo) : dayjs();
       const monthDiff = current.diff(formatFrom, "month");
       const yearSince = current.diff(formatFrom, "year");
-      console.log(
-        "monthDiff - MONTHS_IN_YEAR",
-        monthDiff,
-        MONTHS_IN_YEAR,
-        yearSince
-      );
+
       const miyTimesYears = MONTHS_IN_YEAR * yearSince;
       const monthSince = monthDiff - miyTimesYears;
 
       return {
-        dateFrom: _formatDateTo(dateFrom),
-        dateTo: _formatDateTo(dateTo),
-        timeSince: `${_plural(yearSince)} ${_plural(monthSince, "mo")}`,
-        active: activeRole,
+        dateRange: _formatDateTo(dateFrom, dateTo),
+        timeSince: _formatTimeSince(yearSince, monthSince),
       };
     }
 
-    function _formatDateTo(date) {
-      return date ? dayjs(date).format("MMM YYYY") : null;
+    function _formatDateTo(from, to) {
+      let toTemp = to ? dayjs(to).format("MMM YYYY") : "present";
+      return `${dayjs(from).format("MMM YYYY")} - ${toTemp}`;
+    }
+
+    function _formatTimeSince(year, month) {
+      if (!isNaN(year) && !isNaN(month)) {
+        return `${_plural(year)} ${_plural(month, "mo")}`;
+      } else {
+        return null;
+      }
     }
 
     function _plural(date, type = "yr") {
+      console.log("date ", date, type);
       return date > 1 ? `${date} ${type}s` : `${date} ${type}`;
     }
 
     return {
       EXPERIENCE,
-      getDate,
+      data,
     };
   },
 };
