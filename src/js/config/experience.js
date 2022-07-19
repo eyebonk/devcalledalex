@@ -5,8 +5,8 @@ export const EXPERIENCE = [
     icon: "https://picsum.photos/200",
     type: "Full-time",
     country: "Australia",
-    date: 1612175276,
-    current: true,
+    dateFrom: "01-02-2021",
+    dateTo: null,
   },
   {
     role: "Co-Founder & Director",
@@ -14,7 +14,8 @@ export const EXPERIENCE = [
     icon: "https://picsum.photos/200",
     type: "Full-time",
     country: "United Kingdom",
-    date: "",
+    dateFrom: "01-01-2016",
+    dateTo: "01-05-2022",
   },
   {
     role: "Co-Founder & Director",
@@ -22,7 +23,8 @@ export const EXPERIENCE = [
     icon: "https://picsum.photos/200",
     type: "Full-time",
     country: "United Kingdom",
-    date: "",
+    dateFrom: "01-01-2018",
+    dateTo: "01-01-2022",
   },
   {
     role: "Senior Front End Developer",
@@ -30,7 +32,8 @@ export const EXPERIENCE = [
     icon: "https://picsum.photos/200",
     type: "Full-time",
     country: "United Kingdom",
-    date: "",
+    dateFrom: "01-12-2016",
+    dateTo: "01-02-2021",
   },
   {
     role: "Front End Developer",
@@ -38,7 +41,8 @@ export const EXPERIENCE = [
     icon: "https://picsum.photos/200",
     type: "Full-time",
     country: "United Kingdom",
-    date: "",
+    dateFrom: "01-06-2013",
+    dateTo: "01-10-2016",
   },
   {
     role: "Web Developer",
@@ -46,6 +50,7 @@ export const EXPERIENCE = [
     icon: "https://picsum.photos/200",
     type: "Full-time",
     country: "United Kingdom",
-    date: "",
+    dateFrom: "01-09-2007",
+    dateTo: "01-06-2013",
   },
 ];

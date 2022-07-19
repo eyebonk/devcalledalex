@@ -1,5 +1,6 @@
 <template>
-  <div class="tw-space-y-10">
+  <div class="tw-container tw-mx-auto tw-space-y-10">
+    <h1>devcalledalex</h1>
     <about-me />
     <my-experience />
     <my-social />
