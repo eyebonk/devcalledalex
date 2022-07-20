@@ -94,7 +94,6 @@ export default {
     }
 
     function _plural(date, type = "yr") {
-      console.log("date ", date, type);
       return date > 1 ? `${date} ${type}s` : `${date} ${type}`;
     }
 
