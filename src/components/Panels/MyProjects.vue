@@ -10,9 +10,11 @@
         target="_blank"
         class="tw-w-1/3 tw-px-4"
       >
+        <!-- <img :src="item.image" :alt="item.title" class="tw-h-full tw-w-full" /> -->
         <div
           class="tw-h-20 tw-w-full tw-bg-no-repeat tw-bg-cover tw-bg-center"
-          :styles="`background-image: url(${item.image})`"
+          style="background: red"
+          :style="`backrgound-image: url(${item.image})`"
         />
 
         <h5>{{ item.title }}</h5>

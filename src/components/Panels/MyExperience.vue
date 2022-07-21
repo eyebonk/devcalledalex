@@ -21,7 +21,7 @@
           <div class="tw-flex tw-flex-col tw-text-green tw-text-md">
             <span> {{ item.company }} | {{ item.type }} </span>
 
-            <span>
+            <span class="tw-space-x-4">
               <span v-for="(date, dateIndex) in item.date" :key="dateIndex">
                 {{ date }}
               </span>
