@@ -21,13 +21,11 @@
           />
         </div>
 
-        <div class="tw-flex tw-flex-col tw-text-sm tw-space-y-1">
+        <div class="tw-flex tw-flex-col tw-text-sm">
           <h3 class="tw-text-pink tw-filter group-hover:tw-saturate-200">
             {{ item.role }}
           </h3>
-          <div
-            class="tw-flex tw-flex-col tw-opacity-80 tw-text-md tw-space-y-1"
-          >
+          <div class="tw-flex tw-flex-col tw-opacity-80 tw-text-md">
             <span> {{ item.company }} | {{ item.type }} </span>
 
             <span class="tw-space-x-4 tw-opacity-80">

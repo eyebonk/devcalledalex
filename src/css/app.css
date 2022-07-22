@@ -4,16 +4,16 @@
 
 @layer base {
   .tw-h1 {
-    @apply tw-text-h2 sm:tw-text-h1;
+    @apply tw-text-h2 sm:tw-text-h1 tw-leading-tight;
   }
   .tw-h2 {
-    @apply tw-text-h3 sm:tw-text-h2;
+    @apply tw-text-h3 sm:tw-text-h2 tw-leading-tight;
   }
   .tw-h3 {
-    @apply tw-text-h4 sm:tw-text-h3;
+    @apply tw-text-h4 sm:tw-text-h3 tw-leading-tight;
   }
   .tw-h4 {
-    @apply tw-text-h5 sm:tw-text-h4;
+    @apply tw-text-h5 sm:tw-text-h4 tw-leading-tight;
   }
   .tw-h5 {
     @apply tw-text-h6 sm:tw-text-h5;
@@ -41,7 +41,7 @@
     @apply tw-h6;
   }
   body {
-    @apply sm:tw-text-md;
+    @apply tw-text-sm sm:tw-text-md;
   }
 }
 
