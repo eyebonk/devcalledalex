@@ -2,13 +2,18 @@
   <div>
     <base-header text="Experience" />
 
-    <div class="tw-space-y-4">
-      <div
+    <div class="tw-flex tw-flex-col tw-space-y-6">
+      <component
         v-for="(item, index) in data"
         :key="index"
-        class="tw-flex tw-space-x-4"
+        :is="item.link ? 'a' : 'div'"
+        :href="item.link ? item.link : null"
+        :target="item.link ? '_blank' : null"
+        class="tw-flex tw-items-center tw-space-x-4 tw-group"
       >
-        <div class="tw-h-10 tw-w-10">
+        <div
+          class="tw-h-16 tw-w-16 tw-flex-shrink-0 tw-rounded tw-overflow-hidden"
+        >
           <img
             :src="item.icon"
             :alt="item.company"
@@ -16,19 +21,23 @@
           />
         </div>
 
-        <div class="tw-flex tw-flex-col tw-text-sm">
-          <span class="tw-text-pink">{{ item.role }}</span>
-          <div class="tw-flex tw-flex-col tw-text-green tw-text-md">
+        <div class="tw-flex tw-flex-col tw-text-sm tw-space-y-1">
+          <h3 class="tw-text-pink tw-filter group-hover:tw-saturate-200">
+            {{ item.role }}
+          </h3>
+          <div
+            class="tw-flex tw-flex-col tw-opacity-80 tw-text-md tw-space-y-1"
+          >
             <span> {{ item.company }} | {{ item.type }} </span>
 
-            <span class="tw-space-x-4">
+            <span class="tw-space-x-4 tw-opacity-80">
               <span v-for="(date, dateIndex) in item.date" :key="dateIndex">
                 {{ date }}
               </span>
             </span>
           </div>
         </div>
-      </div>
+      </component>
     </div>
   </div>
 </template>
@@ -38,13 +47,24 @@ import BaseHeader from "@components/BaseHeader.vue";
 import { EXPERIENCE } from "@config/experience.js";
 import { computed } from "vue";
 import dayjs from "dayjs";
+import AboutMe from "./AboutMe.vue";
 
 export default {
   components: {
     BaseHeader,
+    AboutMe,
   },
   setup() {
     const data = computed(() => _mapData(EXPERIENCE));
+
+    // function findNumbers(value) {
+    //   let regex = /[0-9]/g;
+    //   if (regex.test(value)) {
+    //     return value.replace(/(\d+)/g, `<span class='tw-text-green'>$1</span>`);
+    //   }
+
+    //   return value;
+    // }
 
     function _mapData(exData) {
       let data = [];
@@ -56,6 +76,7 @@ export default {
           type: item.type,
           country: item.country,
           date: _getDate(item.dateFrom, item.dateTo),
+          link: item.link,
         });
       });
 
@@ -98,6 +119,7 @@ export default {
     }
 
     return {
+      // findNumbers,
       EXPERIENCE,
       data,
     };

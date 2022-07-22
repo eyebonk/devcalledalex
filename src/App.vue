@@ -1,10 +1,21 @@
 <template>
-  <div class="tw-container tw-mx-auto tw-space-y-10">
-    <h1>devcalledalex</h1>
-    <about-me />
-    <my-experience />
-    <my-projects />
-    <my-social />
+  <div class="tw-relative">
+    <div
+      class="tw-container tw-mx-auto tw-space-y-14 tw-pb-14 tw-relative tw-z-10"
+    >
+      <div class="tw-flex tw-items-center tw-justify-between">
+        <h1>devcalledalex</h1>
+        <my-social />
+      </div>
+
+      <about-me />
+      <my-experience />
+      <my-projects />
+    </div>
+    <div
+      class="tw-absolute tw-top-0 tw-left-0 tw-h-full tw-w-full tw-bg-no-repeat tw-bg-cover tw-bg-center tw-z-1 tw-blur-sm tw-opacity-5 tw-filter tw-grayscale"
+      :style="`background-image: url(images/codebg.jpg)`"
+    ></div>
   </div>
 </template>
 

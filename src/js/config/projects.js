@@ -1,26 +1,26 @@
 export const PROJECTS = [
   {
-    title: "Department of Defence UI Component Library",
-    text: "The Defence Design System is a Vue.js component library for building websites. It provides a User Interface framework consisting of working code and design resources to help designers and developers efficiently build Defence websites that are consistent, semantic and accessible.",
+    title: "Department of Defence Component Library",
+    text: "A Vue.js component library for building Department of Defence websites.",
     link: "https://ddss.iconagency.com.au/getting-started/overview/introduction",
-    image: "https://picsum.photos/600",
+    image: "images/dod.png",
   },
   {
-    title: "Visual Studio Marketplace - Subtle Pink theme",
+    title: "Subtle Pink theme",
     text: "A theme for VS Code, subtle background with pink accent",
     link: "https://marketplace.visualstudio.com/items?itemName=eyebonk.subtle-pink",
-    image: "https://picsum.photos/600",
+    image: "images/subtlepink.jpeg",
   },
   {
-    title: "Visual Studio Marketplace - Subtle Blue theme",
+    title: "Subtle Blue theme",
     text: "A theme for VS Code, subtle background with blue accent",
     link: "https://marketplace.visualstudio.com/items?itemName=eyebonk.subtle-blue",
-    image: "https://picsum.photos/600",
+    image: "images/subtleblue.jpeg",
   },
   {
-    title: "Visual Studio Marketplace - Subtle Green theme",
+    title: "Subtle Green theme",
     text: "A theme for VS Code, subtle background with green accent",
     link: "https://marketplace.visualstudio.com/items?itemName=eyebonk.subtle-green",
-    image: "https://picsum.photos/600",
+    image: "images/subtlegreen.jpeg",
   },
 ];

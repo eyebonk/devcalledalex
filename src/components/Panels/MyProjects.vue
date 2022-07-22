@@ -8,17 +8,26 @@
         :key="index"
         :href="item.link"
         target="_blank"
-        class="tw-w-1/3 tw-px-4"
+        class="tw-flex tw-items-center tw-space-x-4 tw-w-1/2 tw-px-4 tw-space-y-2 tw-mb-6 tw-group"
       >
-        <!-- <img :src="item.image" :alt="item.title" class="tw-h-full tw-w-full" /> -->
         <div
-          class="tw-h-20 tw-w-full tw-bg-no-repeat tw-bg-cover tw-bg-center"
-          style="background: red"
-          :style="`backrgound-image: url(${item.image})`"
-        />
+          class="tw-h-40 tw-w-40 tw-rounded tw-overflow-hidden tw-flex-shrink-0"
+        >
+          <div
+            role="img"
+            class="tw-h-full tw-w-full tw-bg-no-repeat tw-bg-cover tw-bg-center"
+            :style="`background-image: url(${item.image})`"
+          ></div>
+        </div>
 
-        <h5>{{ item.title }}</h5>
-        <p>{{ item.text }}</p>
+        <div>
+          <h3
+            class="tw-text-pink tw-leading-tight tw-filter group-hover:tw-saturate-200"
+          >
+            {{ item.title }}
+          </h3>
+          <p class="tw-opacity-80">{{ item.text }}</p>
+        </div>
       </a>
     </div>
   </div>

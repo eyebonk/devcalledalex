@@ -25,7 +25,7 @@
 
 @layer utilities {
   .tw-heading {
-    @apply tw-text-h3 tw-text-blue tw-tracking-tighter tw-mb-2;
+    @apply tw-text-blue tw-tracking-tighter tw-mb-3;
   }
   .tw-content {
     @apply tw-space-y-4 tw-text-md tw-opacity-80;

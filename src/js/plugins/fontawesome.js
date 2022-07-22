@@ -8,13 +8,13 @@ import {
 
 import {} from "@fortawesome/free-regular-svg-icons";
 
-import { faStore } from "@fortawesome/free-solid-svg-icons";
+import { faStore, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const brandIcons = [faGithub, faDiscord, faLinkedinIn];
 
 const regularIcons = [faStore];
 
-const solidIcons = [];
+const solidIcons = [faEnvelope];
 
 library.add(...brandIcons, ...solidIcons, ...regularIcons);
 

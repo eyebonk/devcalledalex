@@ -19,4 +19,9 @@ export const SOCIAL = [
     icon: ["fa-brands", "fa-discord"],
     link: "https://discordapp.com/users/806327296247332905",
   },
+  {
+    text: "Email",
+    icon: "fa-envelope",
+    link: "mailto:alex@devcalledalex.com",
+  },
 ];
