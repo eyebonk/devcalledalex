@@ -7,6 +7,9 @@ module.exports = {
       display: ["IBM Plex Mono", "monospace"],
       body: ["IBM Plex Mono", "monospace"],
     },
+    container: {
+      padding: "2rem",
+    },
     extend: {
       fontSize: {
         h1: "4rem",
@@ -16,6 +19,7 @@ module.exports = {
         h5: "1.5",
         h6: "1.25rem",
         md: "1rem",
+        sm: "0.875rem",
       },
       colors: {
         "off-black": "var(--off-black)",

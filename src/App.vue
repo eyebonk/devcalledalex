@@ -3,7 +3,9 @@
     <div
       class="tw-container tw-mx-auto tw-space-y-14 tw-pb-14 tw-relative tw-z-10"
     >
-      <div class="tw-flex tw-items-center tw-justify-between">
+      <div
+        class="tw-flex tw-flex-col md:tw-flex-row tw-items-center tw-justify-between"
+      >
         <h1>devcalledalex</h1>
         <my-social />
       </div>

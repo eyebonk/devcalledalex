@@ -12,7 +12,7 @@
         class="tw-flex tw-items-center tw-space-x-4 tw-group"
       >
         <div
-          class="tw-h-16 tw-w-16 tw-flex-shrink-0 tw-rounded tw-overflow-hidden"
+          class="tw-h-12 sm:tw-h-16 tw-w-12 sm:tw-w-16 tw-flex-shrink-0 tw-rounded tw-overflow-hidden"
         >
           <img
             :src="item.icon"

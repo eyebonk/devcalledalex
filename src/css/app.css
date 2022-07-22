@@ -3,23 +3,45 @@
 @tailwind utilities;
 
 @layer base {
+  .tw-h1 {
+    @apply tw-text-h2 sm:tw-text-h1;
+  }
+  .tw-h2 {
+    @apply tw-text-h3 sm:tw-text-h2;
+  }
+  .tw-h3 {
+    @apply tw-text-h4 sm:tw-text-h3;
+  }
+  .tw-h4 {
+    @apply tw-text-h5 sm:tw-text-h4;
+  }
+  .tw-h5 {
+    @apply tw-text-h6 sm:tw-text-h5;
+  }
+  .tw-h6 {
+    @apply sm:tw-text-h6;
+  }
+
   h1 {
-    @apply tw-text-h1;
+    @apply tw-h1;
   }
   h2 {
-    @apply tw-text-h2;
+    @apply tw-h2;
   }
   h3 {
-    @apply tw-text-h3;
+    @apply tw-h3;
   }
   h4 {
-    @apply tw-text-h4;
+    @apply tw-h4;
   }
   h5 {
-    @apply tw-text-h5;
+    @apply tw-h5;
   }
   h6 {
-    @apply tw-text-h6;
+    @apply tw-h6;
+  }
+  body {
+    @apply sm:tw-text-md;
   }
 }
 
