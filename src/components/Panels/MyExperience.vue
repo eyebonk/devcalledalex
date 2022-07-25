@@ -9,10 +9,11 @@
         :is="item.link ? 'a' : 'div'"
         :href="item.link ? item.link : null"
         :target="item.link ? '_blank' : null"
-        class="tw-flex tw-items-center tw-space-x-4 tw-group"
+        :title="item.link ? item.company : null"
+        class="tw-flex sm:tw-items-center tw-space-x-4 tw-group tw-w-fit"
       >
         <div
-          class="tw-h-12 sm:tw-h-16 tw-w-12 sm:tw-w-16 tw-flex-shrink-0 tw-rounded tw-overflow-hidden"
+          class="tw-h-10 sm:tw-h-16 tw-w-10 sm:tw-w-16 tw-flex-shrink-0 tw-rounded tw-overflow-hidden"
         >
           <img
             :src="item.icon"
@@ -54,15 +55,6 @@ export default {
   },
   setup() {
     const data = computed(() => _mapData(EXPERIENCE));
-
-    // function findNumbers(value) {
-    //   let regex = /[0-9]/g;
-    //   if (regex.test(value)) {
-    //     return value.replace(/(\d+)/g, `<span class='tw-text-green'>$1</span>`);
-    //   }
-
-    //   return value;
-    // }
 
     function _mapData(exData) {
       let data = [];

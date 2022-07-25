@@ -8,10 +8,11 @@
         :key="index"
         :href="item.link"
         target="_blank"
-        class="tw-flex tw-items-center tw-space-x-4 tw-space-y-2 tw-group"
+        :title="item.title"
+        class="tw-flex sm:tw-items-center tw-space-x-4 tw-group"
       >
         <div
-          class="tw-h-28 sm:tw-h-40 tw-w-28 sm:tw-w-40 tw-rounded tw-overflow-hidden tw-flex-shrink-0"
+          class="tw-h-16 sm:tw-h-40 tw-w-16 sm:tw-w-40 tw-rounded tw-overflow-hidden tw-flex-shrink-0"
         >
           <div
             role="img"
@@ -20,7 +21,7 @@
           ></div>
         </div>
 
-        <div>
+        <div class="tw-space-y-2">
           <h3
             class="tw-text-pink tw-leading-tight tw-filter group-hover:tw-saturate-200"
           >

@@ -1,10 +1,10 @@
 <template>
-  <div class="tw-relative">
+  <div class="tw-bg-off-black tw-text-off-white tw-relative">
     <div
-      class="tw-container tw-mx-auto tw-space-y-14 tw-pb-14 tw-relative tw-z-10"
+      class="tw-container tw-mx-auto tw-space-y-20 tw-pb-40 tw-relative tw-z-10"
     >
       <div
-        class="tw-flex tw-flex-col lg:tw-flex-row tw-items-center tw-justify-between"
+        class="tw-flex tw-flex-col lg:tw-flex-row tw-items-center tw-justify-between tw-space-y-1 lg:tw-space-y-0"
       >
         <h1>devcalledalex</h1>
         <my-social />
