@@ -10,7 +10,7 @@
         :href="item.link ? item.link : null"
         :target="item.link ? '_blank' : null"
         :title="item.link ? item.company : null"
-        class="tw-flex sm:tw-items-center tw-space-x-4 tw-group tw-w-fit"
+        class="tw-flex tw-space-x-4 tw-group tw-w-fit"
       >
         <div
           class="tw-h-10 sm:tw-h-16 tw-w-10 sm:tw-w-16 tw-flex-shrink-0 tw-rounded tw-overflow-hidden"
@@ -35,6 +35,20 @@
               </span>
             </span>
           </div>
+
+          <div class="tw-flex tw-flex-wrap">
+            <div
+              v-for="(item, stackIndex) in item.stack"
+              :key="stackIndex"
+              class="tw-flex"
+            >
+              <span class="tw-flex tw-flex-nowrap tw-space-x-0">
+                <span class="tw-text-green">{{ item }}</span>
+                <span v-if="stackIndex !== lastItem(index)">,</span>
+                &nbsp;
+              </span>
+            </div>
+          </div>
         </div>
       </component>
     </div>
@@ -56,6 +70,10 @@ export default {
   setup() {
     const data = computed(() => _mapData(EXPERIENCE));
 
+    function lastItem(index) {
+      return data.value[index].stack.length - 1;
+    }
+
     function _mapData(exData) {
       let data = [];
       exData.forEach((item) => {
@@ -67,6 +85,7 @@ export default {
           country: item.country,
           date: _getDate(item.dateFrom, item.dateTo),
           link: item.link,
+          stack: item.stack,
         });
       });
 
@@ -109,8 +128,8 @@ export default {
     }
 
     return {
-      // findNumbers,
       EXPERIENCE,
+      lastItem,
       data,
     };
   },

@@ -13,6 +13,7 @@
       <about-me />
       <my-experience />
       <my-projects />
+      <other-projects />
     </div>
     <div
       class="tw-absolute tw-top-0 tw-left-0 tw-h-full tw-w-full tw-bg-no-repeat tw-bg-cover tw-bg-center tw-z-1 tw-blur-sm tw-opacity-5 tw-filter tw-grayscale"
@@ -22,6 +23,7 @@
 </template>
 
 <script>
+import OtherProjects from "@components/Panels/OtherProjects.vue";
 import MyExperience from "@components/Panels/MyExperience.vue";
 import MyProjects from "@components/Panels/MyProjects.vue";
 import MySocial from "@components/Panels/MySocial.vue";
@@ -31,6 +33,7 @@ import { onMounted } from "vue";
 
 export default {
   components: {
+    OtherProjects,
     MyExperience,
     MyProjects,
     MySocial,
@@ -43,8 +46,13 @@ export default {
 
     function _pushThemeVars() {
       for (let [key, value] of Object.entries(COLOR_VARS)) {
-        document.documentElement.style.setProperty(key, value);
+        _addStyle(key, value);
       }
+      _addStyle("background", "var(--off-black)");
+    }
+
+    function _addStyle(key, value) {
+      return document.documentElement.style.setProperty(key, value);
     }
   },
 };
