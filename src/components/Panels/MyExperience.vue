@@ -6,7 +6,7 @@
       <div
         v-for="(item, index) in data"
         :key="index"
-        class="tw-flex tw-space-x-4 tw-group tw-w-fit"
+        class="tw-flex tw-space-x-4 tw-w-fit"
       >
         <div
           class="tw-h-10 sm:tw-h-16 tw-w-10 sm:tw-w-16 tw-flex-shrink-0 tw-rounded tw-overflow-hidden"
@@ -16,6 +16,7 @@
             :href="item.link ? item.link : null"
             :target="item.link ? '_blank' : null"
             :title="item.link ? item.company : null"
+            :tabindex="item.link ? -1 : null"
           >
             <img
               :src="item.icon"
@@ -26,12 +27,13 @@
         </div>
 
         <div class="tw-flex tw-flex-col tw-text-sm">
-          <h3 class="tw-text-pink tw-filter group-hover:tw-saturate-200">
+          <h3 class="tw-text-pink">
             <component
               :is="item.link ? 'a' : 'span'"
               :href="item.link ? item.link : null"
               :target="item.link ? '_blank' : null"
               :title="item.link ? item.company : null"
+              class="hover:tw-text-blue focus:tw-text-blue tw-outline-none"
             >
               {{ item.role }}
             </component>

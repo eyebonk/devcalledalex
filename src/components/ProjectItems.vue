@@ -3,12 +3,12 @@
     <div
       v-for="(item, index) in items"
       :key="index"
-      class="tw-flex sm:tw-items-center tw-space-x-4 tw-group"
+      class="tw-flex sm:tw-items-center tw-space-x-4"
     >
       <div
         class="tw-h-16 sm:tw-h-40 tw-w-16 sm:tw-w-40 tw-rounded tw-overflow-hidden tw-flex-shrink-0"
       >
-        <a :href="item.link" :title="item.title" target="_blank">
+        <a :href="item.link" :title="item.title" target="_blank" tabindex="-1">
           <div
             role="img"
             class="tw-h-full tw-w-full tw-bg-no-repeat tw-bg-cover tw-bg-center"
@@ -18,10 +18,13 @@
       </div>
 
       <div class="tw-space-y-2">
-        <h3
-          class="tw-text-pink tw-leading-tight tw-filter group-hover:tw-saturate-200"
-        >
-          <a :href="item.link" :title="item.title" target="_blank">
+        <h3 class="tw-text-pink tw-leading-tight">
+          <a
+            :href="item.link"
+            :title="item.title"
+            target="_blank"
+            class="hover:tw-text-blue focus:tw-text-blue tw-outline-none"
+          >
             {{ item.title }}
           </a>
         </h3>

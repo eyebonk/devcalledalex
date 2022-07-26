@@ -12,8 +12,12 @@
       <button
         v-for="(item, index) in items"
         :key="index"
-        class="tw-flex tw-items-center tw-border-2 tw-rounded-full tw-px-3 tw-h-8 tw-whitespace-nowrap tw-mr-2 tw-mb-3"
-        :class="isActive(item) ? 'tw-opacity-100 ' : 'tw-opacity-60'"
+        class="tw-flex tw-items-center tw-border-2 tw-rounded-full tw-px-3 tw-h-8 tw-whitespace-nowrap tw-mr-2 tw-mb-3 focus:tw-opacity-80 tw-outline-none"
+        :class="
+          isActive(item)
+            ? 'tw-opacity-100 tw-border-yellow tw-text-yellow '
+            : 'tw-opacity-60'
+        "
         @click="addFilter(item)"
       >
         {{ item }}
@@ -41,7 +45,7 @@ export default {
         tempItems.push(type[property]);
       }
 
-      return tempItems;
+      return tempItems.sort((a, b) => a - b);
     });
     return {
       activeFilters,

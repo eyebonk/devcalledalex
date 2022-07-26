@@ -1,6 +1,11 @@
 module.exports = {
   content: ["*.html", "./src/**/*.{vue,js}"],
   prefix: "tw-",
+  variants: {
+    extend: {
+      textColor: ["group-hover", "group-focus"],
+    },
+  },
   theme: {
     fontFamily: {
       sans: ["IBM Plex Mono", "monospace"],

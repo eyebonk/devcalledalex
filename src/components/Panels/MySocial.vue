@@ -5,7 +5,7 @@
       :key="index"
       :href="item.link"
       :title="item.text"
-      class="tw-h-8 tw-w-8 tw-text-h4 tw-rounded tw-flex tw-items-center tw-justify-center tw-bg-blue tw-text-black tw-filter hover:tw-saturate-200"
+      class="tw-h-8 tw-w-8 tw-text-h4 tw-rounded tw-flex tw-items-center tw-justify-center tw-bg-blue tw-text-black tw-filter hover:tw-saturate-200 focus:tw-saturate-200 tw-outline-none"
       target="_blank"
     >
       <font-awesome-icon :icon="item.icon" />
