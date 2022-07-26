@@ -35,7 +35,9 @@
             class="tw-space-x-1"
           >
             <span v-if="stackIndex > 0">,</span>
-            <span class="tw-text-green">{{ item }}</span>
+            <span :class="stackClass(item)">
+              {{ item }}
+            </span>
           </span>
         </div>
       </div>
@@ -44,6 +46,7 @@
 </template>
 
 <script>
+import { useFilter } from "@composables";
 import { toRefs } from "vue";
 
 export default {
@@ -55,11 +58,15 @@ export default {
   },
   setup(props) {
     const { items } = toRefs(props);
+
+    const { stackClass } = useFilter();
+
     function lastItem(index) {
       return items.value[index].stack.length - 1;
     }
 
     return {
+      stackClass,
       lastItem,
     };
   },

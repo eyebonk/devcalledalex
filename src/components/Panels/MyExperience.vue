@@ -53,7 +53,7 @@
               class="tw-flex"
             >
               <span class="tw-flex tw-flex-nowrap tw-space-x-0">
-                <span class="tw-text-green">{{ item }}</span>
+                <span :class="stackClass(item)">{{ item }}</span>
                 <span v-if="stackIndex !== lastItem(index)">,</span>
                 &nbsp;
               </span>
@@ -68,16 +68,17 @@
 <script>
 import BaseHeader from "@components/BaseHeader.vue";
 import { EXPERIENCE } from "@config/experience.js";
+import { useFilter } from "@composables";
 import { computed } from "vue";
 import dayjs from "dayjs";
-import AboutMe from "./AboutMe.vue";
 
 export default {
   components: {
     BaseHeader,
-    AboutMe,
   },
   setup() {
+    const { stackClass } = useFilter();
+
     const data = computed(() => _mapData(EXPERIENCE));
 
     function lastItem(index) {
@@ -139,6 +140,7 @@ export default {
 
     return {
       EXPERIENCE,
+      stackClass,
       lastItem,
       data,
     };

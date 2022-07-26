@@ -15,6 +15,7 @@ module.exports = {
     },
     resolve: {
       alias: {
+        "@composables": path.resolve(__dirname, "src/js/composables"),
         "@components": path.resolve(__dirname, "src/components"),
         "@plugins": path.resolve(__dirname, "src/js/plugins"),
         "@helpers": path.resolve(__dirname, "src/js/helpers"),
