@@ -3,28 +3,38 @@
     <base-header text="Experience" />
 
     <div class="tw-flex tw-flex-col tw-space-y-6">
-      <component
+      <div
         v-for="(item, index) in data"
         :key="index"
-        :is="item.link ? 'a' : 'div'"
-        :href="item.link ? item.link : null"
-        :target="item.link ? '_blank' : null"
-        :title="item.link ? item.company : null"
         class="tw-flex tw-space-x-4 tw-group tw-w-fit"
       >
         <div
           class="tw-h-10 sm:tw-h-16 tw-w-10 sm:tw-w-16 tw-flex-shrink-0 tw-rounded tw-overflow-hidden"
         >
-          <img
-            :src="item.icon"
-            :alt="item.company"
-            class="tw-h-full tw-w-full"
-          />
+          <component
+            :is="item.link ? 'a' : 'div'"
+            :href="item.link ? item.link : null"
+            :target="item.link ? '_blank' : null"
+            :title="item.link ? item.company : null"
+          >
+            <img
+              :src="item.icon"
+              :alt="item.company"
+              class="tw-h-full tw-w-full"
+            />
+          </component>
         </div>
 
         <div class="tw-flex tw-flex-col tw-text-sm">
           <h3 class="tw-text-pink tw-filter group-hover:tw-saturate-200">
-            {{ item.role }}
+            <component
+              :is="item.link ? 'a' : 'span'"
+              :href="item.link ? item.link : null"
+              :target="item.link ? '_blank' : null"
+              :title="item.link ? item.company : null"
+            >
+              {{ item.role }}
+            </component>
           </h3>
           <div class="tw-flex tw-flex-col tw-opacity-80 tw-text-md">
             <span> {{ item.company }} | {{ item.type }} </span>
@@ -50,7 +60,7 @@
             </div>
           </div>
         </div>
-      </component>
+      </div>
     </div>
   </div>
 </template>

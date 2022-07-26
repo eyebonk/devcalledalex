@@ -13,3 +13,4 @@ export const HTML = "HTML";
 export const WORDPRESS = "WordPress";
 export const VSCODE = "VScode";
 export const THEME = "Theme";
+export const NPM = "npm";

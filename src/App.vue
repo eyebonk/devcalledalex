@@ -1,5 +1,5 @@
 <template>
-  <div class="tw-bg-off-black tw-text-off-white tw-relative">
+  <div class="tw-bg-off-black tw-text-off-white tw-relative tw-pt-4">
     <div
       class="tw-container tw-mx-auto tw-space-y-20 tw-pb-40 tw-relative tw-z-10"
     >
@@ -11,6 +11,7 @@
       </div>
 
       <about-me />
+      <my-skills />
       <my-experience />
       <my-projects />
       <other-projects />
@@ -26,6 +27,7 @@
 import OtherProjects from "@components/Panels/OtherProjects.vue";
 import MyExperience from "@components/Panels/MyExperience.vue";
 import MyProjects from "@components/Panels/MyProjects.vue";
+import MySkills from "@components/Panels/MySkills.vue";
 import MySocial from "@components/Panels/MySocial.vue";
 import AboutMe from "@components/Panels/AboutMe.vue";
 import { COLOR_VARS } from "@config/colors.js";
@@ -37,6 +39,7 @@ export default {
     MyExperience,
     MyProjects,
     MySocial,
+    MySkills,
     AboutMe,
   },
   setup() {
