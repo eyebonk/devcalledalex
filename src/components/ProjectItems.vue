@@ -38,7 +38,7 @@
             class="tw-space-x-1"
           >
             <span v-if="stackIndex > 0">,</span>
-            <span :class="stackClass(item)">
+            <span class="tw-whitespace-nowrap" :class="stackClass(item)">
               {{ item }}
             </span>
           </span>

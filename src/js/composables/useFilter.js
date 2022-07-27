@@ -22,7 +22,7 @@ export default function () {
     const index = state.value.indexOf(item) !== -1;
     return index
       ? "tw-opacity-100 tw-text-yellow"
-      : "tw-opacity-60 tw-text-green";
+      : "tw-opacity-70 tw-text-green";
   }
 
   function _addFilter(value) {

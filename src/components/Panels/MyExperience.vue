@@ -55,7 +55,9 @@
               class="tw-flex"
             >
               <span class="tw-flex tw-flex-nowrap tw-space-x-0">
-                <span :class="stackClass(item)">{{ item }}</span>
+                <span class="tw-whitespace-nowrap" :class="stackClass(item)">
+                  {{ item }}
+                </span>
                 <span v-if="stackIndex !== lastItem(index)">,</span>
                 &nbsp;
               </span>
