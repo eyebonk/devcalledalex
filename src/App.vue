@@ -1,5 +1,5 @@
 <template>
-  <div class="tw-bg-off-black tw-text-off-white tw-relative tw-pt-4">
+  <div class="tw-relative tw-pt-4">
     <div
       class="tw-container tw-mx-auto tw-space-y-20 tw-pb-40 tw-relative tw-z-10"
     >
@@ -17,9 +17,28 @@
       <other-projects />
     </div>
     <div
+      v-if="presetType === TYPE_CODE"
       class="tw-absolute tw-top-0 tw-left-0 tw-h-full tw-w-full tw-bg-no-repeat tw-bg-cover tw-bg-center tw-z-1 tw-blur-sm tw-opacity-5 tw-filter tw-grayscale"
       :style="`background-image: url(images/codebg.jpg)`"
     ></div>
+
+    <div
+      class="tw-fixed tw-top-0 tw-right-0 tw-p-2 tw-flex tw-flex-col tw-space-y-4"
+    >
+      <button
+        class="tw-h-8 tw-w-8 tw-rounded tw-bg-green tw-text-off-black"
+        @click="changeType(TYPE_CODE)"
+      >
+        {}
+      </button>
+
+      <button
+        class="tw-h-8 tw-w-8 tw-rounded tw-bg-green tw-text-off-black"
+        @click="changeType(TYPE_GREEN_SCREEN)"
+      >
+        GS
+      </button>
+    </div>
   </div>
 </template>
 
@@ -30,8 +49,14 @@ import MyProjects from "@components/Panels/MyProjects.vue";
 import MySkills from "@components/Panels/MySkills.vue";
 import MySocial from "@components/Panels/MySocial.vue";
 import AboutMe from "@components/Panels/AboutMe.vue";
-import { COLOR_VARS } from "@config/colors.js";
+import { usePresets } from "@composables";
 import { onMounted } from "vue";
+import {
+  PRESET_GREEN_SCREEN,
+  TYPE_GREEN_SCREEN,
+  PRESET_CODE,
+  TYPE_CODE,
+} from "@config/colors.js";
 
 export default {
   components: {
@@ -43,20 +68,29 @@ export default {
     AboutMe,
   },
   setup() {
+    const { setDefaults, changePreset, presetType } = usePresets();
+
     onMounted(() => {
-      _pushThemeVars();
+      setDefaults();
     });
 
-    function _pushThemeVars() {
-      for (let [key, value] of Object.entries(COLOR_VARS)) {
-        _addStyle(key, value);
+    function changeType(type) {
+      if (type === TYPE_CODE) {
+        changePreset(PRESET_CODE);
+        return;
       }
-      _addStyle("background", "var(--off-black)");
+      if (type === TYPE_GREEN_SCREEN) {
+        changePreset(PRESET_GREEN_SCREEN);
+        return;
+      }
     }
 
-    function _addStyle(key, value) {
-      return document.documentElement.style.setProperty(key, value);
-    }
+    return {
+      TYPE_GREEN_SCREEN,
+      changeType,
+      TYPE_CODE,
+      presetType,
+    };
   },
 };
 </script>

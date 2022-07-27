@@ -8,9 +8,9 @@ module.exports = {
   },
   theme: {
     fontFamily: {
-      sans: ["IBM Plex Mono", "monospace"],
-      display: ["IBM Plex Mono", "monospace"],
-      body: ["IBM Plex Mono", "monospace"],
+      sans: "var(--font)",
+      display: "var(--font)",
+      body: "var(--font)",
     },
     container: {
       padding: "2rem",
@@ -23,7 +23,7 @@ module.exports = {
         h4: "1rem",
         h5: "1.5",
         h6: "1.25rem",
-        md: "1rem",
+        md: "var(--font-size)",
         sm: "0.875rem",
       },
       colors: {
