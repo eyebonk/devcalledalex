@@ -9,7 +9,7 @@
         class="tw-flex tw-space-x-4 tw-w-fit"
       >
         <div
-          class="tw-h-10 sm:tw-h-16 tw-w-10 sm:tw-w-16 tw-flex-shrink-0 tw-rounded tw-overflow-hidden"
+          class="tw-h-10 sm:tw-h-16 tw-w-10 sm:tw-w-16 tw-flex-shrink-0 tw-overflow-hidden tw-rounded-global"
         >
           <component
             :is="item.link ? 'a' : 'div'"
@@ -17,23 +17,36 @@
             :target="item.link ? '_blank' : null"
             :title="item.link ? item.company : null"
             :tabindex="item.link ? -1 : null"
+            class="tw-relative"
           >
             <img
               :src="item.icon"
               :alt="item.company"
-              class="tw-h-full tw-w-full"
+              class="tw-h-full tw-w-full tw-relative"
+              :class="{
+                'tw-filter tw-grayscale tw-opacity-50 tw-z-20': isPresetGreen,
+              }"
             />
+            <div
+              v-if="isPresetGreen"
+              class="tw-absolute tw-top-0 tw-left-0 tw-h-full tw-w-full tw-bg-green tw-z-10"
+            ></div>
           </component>
         </div>
 
         <div class="tw-flex tw-flex-col tw-text-sm">
-          <h3 class="tw-text-pink">
+          <h3 class="tw-leading-tight">
             <component
               :is="item.link ? 'a' : 'span'"
               :href="item.link ? item.link : null"
               :target="item.link ? '_blank' : null"
               :title="item.link ? item.company : null"
-              class="hover:tw-text-blue focus:tw-text-blue tw-outline-none"
+              class="tw-outline-none"
+              :class="
+                isPresetGreen
+                  ? 'tw-text-h3'
+                  : 'tw-text-pink hover:tw-text-blue focus:tw-text-blue'
+              "
             >
               {{ item.role }}
             </component>
@@ -48,7 +61,7 @@
             </span>
           </div>
 
-          <div class="tw-flex tw-flex-wrap">
+          <div class="tw-flex tw-flex-wrap tw-text-md">
             <div
               v-for="(item, stackIndex) in item.stack"
               :key="stackIndex"
@@ -70,9 +83,9 @@
 </template>
 
 <script>
+import { useFilter, usePresets } from "@composables";
 import BaseHeader from "@components/BaseHeader.vue";
 import { EXPERIENCE } from "@config/experience.js";
-import { useFilter } from "@composables";
 import { computed } from "vue";
 import dayjs from "dayjs";
 
@@ -82,6 +95,7 @@ export default {
   },
   setup() {
     const { stackClass } = useFilter();
+    const { isPresetGreen } = usePresets();
 
     const data = computed(() => _mapData(EXPERIENCE));
 
@@ -143,6 +157,7 @@ export default {
     }
 
     return {
+      isPresetGreen,
       EXPERIENCE,
       stackClass,
       lastItem,

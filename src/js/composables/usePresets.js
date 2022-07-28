@@ -1,15 +1,20 @@
-import { PRESET_CODE, COLOR_VARS } from "@config/colors.js";
+import {
+  TYPE_GREEN_SCREEN,
+  PRESET_CODE,
+  COLOR_VARS,
+  TYPE_CODE,
+} from "@config/colors.js";
 import { computed, ref } from "vue";
 
 const type = ref("");
 
 export default function () {
   const presetType = computed(() => type.value);
+  const isPresetCode = computed(() => presetType.value === TYPE_CODE);
+  const isPresetGreen = computed(() => presetType.value === TYPE_GREEN_SCREEN);
 
   function changePreset(preset) {
-    console.log("preset ", preset);
     for (let [key, value] of Object.entries(preset)) {
-      console.log("sss ", key, value);
       if (key === "type") {
         _addType(value);
       } else {
@@ -42,8 +47,10 @@ export default function () {
   }
 
   return {
-    setDefaults,
+    isPresetGreen,
+    isPresetCode,
     changePreset,
+    setDefaults,
     presetType,
   };
 }

@@ -6,24 +6,40 @@
       class="tw-flex sm:tw-items-center tw-space-x-4"
     >
       <div
-        class="tw-h-16 sm:tw-h-40 tw-w-16 sm:tw-w-40 tw-rounded tw-overflow-hidden tw-flex-shrink-0"
+        class="tw-h-16 sm:tw-h-40 tw-w-16 sm:tw-w-40 tw-overflow-hidden tw-flex-shrink-0 tw-rounded-global"
       >
-        <a :href="item.link" :title="item.title" target="_blank" tabindex="-1">
+        <a
+          :href="item.link"
+          :title="item.title"
+          target="_blank"
+          tabindex="-1"
+          class="tw-relative"
+        >
           <div
             role="img"
-            class="tw-h-full tw-w-full tw-bg-no-repeat tw-bg-cover tw-bg-center"
-            :style="`background-image: url(${item.image})`"
+            class="tw-h-full tw-w-full tw-bg-no-repeat tw-bg-cover tw-bg-center tw-relative tw-z-20"
+            :class="{ 'tw-filter tw-grayscale tw-opacity-50': isPresetGreen }"
+            :style="`background-image: url(${item.image});`"
+          ></div>
+          <div
+            v-if="isPresetGreen"
+            class="tw-absolute tw-top-0 tw-left-0 tw-h-full tw-w-full tw-bg-green tw-z-10"
           ></div>
         </a>
       </div>
 
       <div class="tw-space-y-2">
-        <h3 class="tw-text-pink tw-leading-tight">
+        <h3 class="tw-leading-tight">
           <a
             :href="item.link"
             :title="item.title"
             target="_blank"
-            class="hover:tw-text-blue focus:tw-text-blue tw-outline-none"
+            class="tw-outline-none"
+            :class="
+              isPresetGreen
+                ? 'tw-text-h3'
+                : 'tw-text-pink hover:tw-text-blue focus:tw-text-blue'
+            "
           >
             {{ item.title }}
           </a>
@@ -49,7 +65,7 @@
 </template>
 
 <script>
-import { useFilter } from "@composables";
+import { useFilter, usePresets } from "@composables";
 import { toRefs } from "vue";
 
 export default {
@@ -63,12 +79,14 @@ export default {
     const { items } = toRefs(props);
 
     const { stackClass } = useFilter();
+    const { isPresetGreen } = usePresets();
 
     function lastItem(index) {
       return items.value[index].stack.length - 1;
     }
 
     return {
+      isPresetGreen,
       stackClass,
       lastItem,
     };

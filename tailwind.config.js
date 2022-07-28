@@ -35,6 +35,9 @@ module.exports = {
         yellow: "var(--yellow)",
         orange: "var(--orange)",
       },
+      borderRadius: {
+        global: "var(--radius)",
+      },
     },
   },
   plugins: [],

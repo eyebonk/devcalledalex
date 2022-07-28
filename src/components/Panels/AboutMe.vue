@@ -24,6 +24,13 @@
             {{ item }}
           </span>
         </span>
+
+        <span
+          v-if="isPresetGreen"
+          class="tw-ml-1 tw-w-5 tw-h-8 tw-bg-green tw-animate-pulse"
+          style="animation-duration: 1s"
+          >&nbsp;</span
+        >
       </p>
     </div>
   </div>
@@ -32,6 +39,7 @@
 <script>
 import BaseHeader from "@components/BaseHeader.vue";
 import { BLURB, SKILLS } from "@config/about.js";
+import { usePresets } from "@composables";
 import { computed } from "vue";
 import dayjs from "dayjs";
 
@@ -40,12 +48,15 @@ export default {
     BaseHeader,
   },
   setup() {
+    const { isPresetGreen } = usePresets();
+
     const DEV_START_DATE = dayjs("01-09-2007");
     const current = dayjs();
 
     const howLong = computed(() => current.diff(DEV_START_DATE, "year"));
 
     return {
+      isPresetGreen,
       howLong,
       SKILLS,
       BLURB,

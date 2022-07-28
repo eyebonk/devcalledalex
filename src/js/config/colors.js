@@ -12,6 +12,7 @@ export const TYPE_CODE = "code";
 export const PRESET_CODE = {
   "--font": ["IBM Plex Mono", "monospace"],
   "--font-size": "1rem",
+  "--radius": "0.25rem",
   "line-height": 1.5,
   color: "var(--off-white)",
   background: "var(--off-black)",
@@ -22,6 +23,7 @@ export const TYPE_GREEN_SCREEN = "green-screen";
 export const PRESET_GREEN_SCREEN = {
   "--font": ["VT323", "monospace"],
   "--font-size": "1.5rem",
+  "--radius": "0",
   "line-height": 1,
   color: "var(--green)",
   background: "var(--off-black)",
