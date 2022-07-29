@@ -99,7 +99,6 @@ export default {
     }
 
     function isActive(type) {
-      console.log("type", type, presetType.value);
       return type === presetType.value ? "tw-bg-pink" : "tw-bg-green";
     }
 
