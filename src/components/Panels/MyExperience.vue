@@ -19,17 +19,21 @@
             :tabindex="item.link ? -1 : null"
             class="tw-relative"
           >
+            <pixel-image
+              v-if="isPresetGreen"
+              :image="item.icon"
+              class="tw-h-full tw-w-full tw-relative tw-filter tw-grayscale tw-opacity-70 tw-z-20"
+            />
+
             <img
+              v-else
               :src="item.icon"
               :alt="item.company"
               class="tw-h-full tw-w-full tw-relative"
-              :class="{
-                'tw-filter tw-grayscale tw-opacity-50 tw-z-20': isPresetGreen,
-              }"
             />
             <div
               v-if="isPresetGreen"
-              class="tw-absolute tw-top-0 tw-left-0 tw-h-full tw-w-full tw-bg-green tw-z-10"
+              class="tw-absolute tw-top-0 tw-left-0 tw-h-full tw-w-full tw-bg-green tw-opacity-80 tw-z-10"
             ></div>
           </component>
         </div>
@@ -85,6 +89,7 @@
 <script>
 import { useFilter, usePresets } from "@composables";
 import BaseHeader from "@components/BaseHeader.vue";
+import PixelImage from "@components/PixelImage.vue";
 import { EXPERIENCE } from "@config/experience.js";
 import { computed } from "vue";
 import dayjs from "dayjs";
@@ -92,6 +97,7 @@ import dayjs from "dayjs";
 export default {
   components: {
     BaseHeader,
+    PixelImage,
   },
   setup() {
     const { stackClass } = useFilter();

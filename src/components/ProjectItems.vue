@@ -15,15 +15,22 @@
           tabindex="-1"
           class="tw-relative"
         >
+          <pixel-image
+            v-if="isPresetGreen"
+            :image="item.image"
+            class="tw-h-full tw-w-full tw-relative tw-filter tw-grayscale tw-opacity-70 tw-z-20"
+          />
+
           <div
+            v-else
             role="img"
             class="tw-h-full tw-w-full tw-bg-no-repeat tw-bg-cover tw-bg-center tw-relative tw-z-20"
-            :class="{ 'tw-filter tw-grayscale tw-opacity-50': isPresetGreen }"
             :style="`background-image: url(${item.image});`"
           ></div>
+
           <div
             v-if="isPresetGreen"
-            class="tw-absolute tw-top-0 tw-left-0 tw-h-full tw-w-full tw-bg-green tw-z-10"
+            class="tw-absolute tw-top-0 tw-left-0 tw-h-full tw-w-full tw-bg-green tw-opacity-80 tw-z-10"
           ></div>
         </a>
       </div>
@@ -66,9 +73,13 @@
 
 <script>
 import { useFilter, usePresets } from "@composables";
+import PixelImage from "@components/PixelImage.vue";
 import { toRefs } from "vue";
 
 export default {
+  components: {
+    PixelImage,
+  },
   props: {
     items: {
       type: Array,

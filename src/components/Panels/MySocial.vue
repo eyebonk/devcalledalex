@@ -6,7 +6,7 @@
       :href="item.link"
       :title="item.text"
       class="tw-h-8 tw-w-8 tw-text-h4 tw-rounded-global tw-flex tw-items-center tw-justify-center tw-text-black tw-filter hover:tw-saturate-200 focus:tw-saturate-200 tw-outline-none"
-      :class="isPresetGreen ? 'tw-bg-green' : 'tw-bg-blue'"
+      :class="isPresetGreen ? 'tw-bg-green tw-opacity-70' : 'tw-bg-blue'"
       target="_blank"
     >
       <font-awesome-icon :icon="item.icon" />
