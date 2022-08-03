@@ -5,9 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="<%= BASE_URL %>apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="<%= BASE_URL %>favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="<%= BASE_URL %>favicon-16x16.png"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,12 +29,38 @@
       rel="stylesheet"
     />
 
-    <link rel="manifest" href="site.webmanifest" />
+    <link rel="manifest" href="<%= BASE_URL %>site.webmanifest" />
     <script
       src="https://kit.fontawesome.com/b08c6281bf.js"
       crossorigin="anonymous"
     ></script>
     <title><%= htmlWebpackPlugin.options.title %></title>
+
+    <meta property="og:title" content="Senior Front End Developer" />
+    <meta property="twitter:title" content="Senior Front End Developer" />
+
+    <meta
+      name="keywords"
+      content="senior, front, end, frontend, developer, engineer, web, development"
+    />
+
+    <meta name="description" content="Alex Smith Senior Front End Developer" />
+    <meta
+      property="og:description"
+      content="Alex Smith Senior Front End Developer"
+    />
+    <meta
+      property="twitter:description"
+      content="Alex Smith Senior Front End Developer"
+    />
+
+    <meta property="og:image" content="<%= BASE_URL %>images/splash.png" />
+    <meta property="og:site_name" content="devcalledalex.com" />
+    <meta property="og:type" content="website" />
+
+    <meta property="og:url" content="https://devcalledalex.com" />
+    <meta property="twitter:url" content="https://devcalledalex.com" />
+    <link rel="canonical" href="https://devcalledalex.com" />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
