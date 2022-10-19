@@ -128,8 +128,8 @@ export default {
     }
 
     function _getDate(dateFrom, dateTo) {
-      let formatFrom = dayjs(dateFrom).format("DD-MM-YYYY");
-      let formatTo = dayjs(dateTo).format("DD-MM-YYYY");
+      let formatFrom = dayjs(dateFrom);
+      let formatTo = dayjs(dateTo);
 
       const MONTHS_IN_YEAR = 12;
       const current = formatTo ? dayjs(formatTo) : dayjs();
@@ -140,13 +140,13 @@ export default {
       const monthSince = monthDiff - miyTimesYears;
 
       return {
-        dateRange: _formatDateTo(dateFrom, dateTo),
+        dateRange: _formatDateTo(formatFrom, formatTo),
         timeSince: _formatTimeSince(yearSince, monthSince),
       };
     }
 
     function _formatDateTo(from, to) {
-      let toTemp = to ? dayjs(to).format("MMM YYYY") : "present";
+      let toTemp = to.isValid() ? dayjs(to).format("MMM YYYY") : "present";
       return `${dayjs(from).format("MMM YYYY")} - ${toTemp}`;
     }
 

@@ -1,5 +1,5 @@
 export const BLURB = [
-  "I take great pride in creating clean, well crafted, accessible and scalable websites across desktop and mobile devices.",
+  "I take great pride in creating clean, pixel perfect, accessible and scalable websites across desktop and mobile devices.",
   " I am a motivated web professional whos used to working in a fast-paced environment, creating sites to deadline while ensuring high standards are always maintained.",
   " I have developed a wide range of websites ranging from small scale brochure sites to large scale high profile sites.",
 ];
