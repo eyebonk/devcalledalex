@@ -44,13 +44,13 @@ export const PROJECTS = [
     text: "WordPress custom theme full build",
     link: "https://www.deviantdistillery.com/",
     image: "images/deviant_distillery_logo.png",
-    stack: [type.WORDPRESS, type.BOOTSTRAP3, type.SCSS],
+    stack: [type.WORDPRESS, type.BOOTSTRAP4, type.SCSS],
   },
   {
     title: "Pye Parr",
     text: "WordPress custom theme full build",
     link: "http://www.pyeparr.com",
     image: "images/pye_parr_logo.png",
-    stack: [type.WORDPRESS, type.BOOTSTRAP3, type.SCSS],
+    stack: [type.WORDPRESS, type.BOOTSTRAP4, type.SCSS],
   },
 ];
