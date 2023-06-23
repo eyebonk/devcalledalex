@@ -26,7 +26,7 @@
         </span>
 
         <span
-          v-if="isPresetGreen"
+          v-if="isGreenActive"
           class="tw-ml-1 tw-w-5 tw-h-8 tw-bg-green tw-animate-pulse"
           style="animation-duration: 1s"
           >&nbsp;</span
@@ -48,7 +48,7 @@ export default {
     BaseHeader,
   },
   setup() {
-    const { isPresetGreen } = usePresets();
+    const { isGreenActive } = usePresets();
 
     const DEV_START_DATE = dayjs("01-09-2007");
     const current = dayjs();
@@ -56,7 +56,7 @@ export default {
     const howLong = computed(() => current.diff(DEV_START_DATE, "year"));
 
     return {
-      isPresetGreen,
+      isGreenActive,
       howLong,
       SKILLS,
       BLURB,

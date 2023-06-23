@@ -53,10 +53,10 @@
     @apply tw-space-y-4 tw-text-md tw-opacity-80;
   }
   .tw-debug {
-    @apply tw-bg-red-500 tw-text-white tw-rounded-global-lg tw-p-2 tw-mt-4 tw-flex tw-flex-col tw-space-y-1 tw-text-sm tw-relative;
+    @apply tw-bg-red-500 tw-text-white tw-rounded-lg tw-p-2 tw-mt-4 tw-flex tw-flex-col tw-space-y-1 tw-text-sm tw-relative;
   }
   .tw-debug:after {
     content: "Debug";
-    @apply tw-absolute tw--top-4 tw-right-0 tw-bg-red-500 tw-text-white tw-font-bold tw-h-6 tw-px-2 tw-flex tw-items-center tw-rounded-global-t-lg;
+    @apply tw-absolute tw--top-4 tw-right-0 tw-bg-red-500 tw-text-white tw-font-bold tw-h-6 tw-px-2 tw-flex tw-items-center tw-rounded-lg;
   }
 }

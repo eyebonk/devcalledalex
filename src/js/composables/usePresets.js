@@ -1,5 +1,6 @@
 import {
   TYPE_GREEN_SCREEN,
+  TYPE_CEEFAX,
   PRESET_CODE,
   COLOR_VARS,
   TYPE_CODE,
@@ -10,8 +11,9 @@ const type = ref("");
 
 export default function () {
   const presetType = computed(() => type.value);
-  const isPresetCode = computed(() => presetType.value === TYPE_CODE);
-  const isPresetGreen = computed(() => presetType.value === TYPE_GREEN_SCREEN);
+  const isCodeActive = computed(() => presetType.value === TYPE_CODE);
+  const isGreenActive = computed(() => presetType.value === TYPE_GREEN_SCREEN);
+  const isCeefaxActive = computed(() => presetType.value === TYPE_CEEFAX);
 
   function changePreset(preset) {
     for (let [key, value] of Object.entries(preset)) {
@@ -47,8 +49,9 @@ export default function () {
   }
 
   return {
-    isPresetGreen,
-    isPresetCode,
+    isCeefaxActive,
+    isGreenActive,
+    isCodeActive,
     changePreset,
     setDefaults,
     presetType,

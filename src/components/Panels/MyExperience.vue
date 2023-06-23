@@ -20,7 +20,7 @@
             class="tw-relative"
           >
             <pixel-image
-              v-if="isPresetGreen"
+              v-if="isGreenActive"
               :image="item.icon"
               class="tw-h-full tw-w-full tw-relative tw-filter tw-grayscale tw-opacity-70 tw-z-20"
             />
@@ -32,7 +32,7 @@
               class="tw-h-full tw-w-full tw-relative"
             />
             <div
-              v-if="isPresetGreen"
+              v-if="isGreenActive"
               class="tw-absolute tw-top-0 tw-left-0 tw-h-full tw-w-full tw-bg-green tw-opacity-80 tw-z-10"
             ></div>
           </component>
@@ -47,7 +47,7 @@
               :title="item.link ? item.company : null"
               class="tw-outline-none"
               :class="
-                isPresetGreen
+                isGreenActive
                   ? 'tw-text-h3'
                   : 'tw-text-pink hover:tw-text-blue focus:tw-text-blue'
               "
@@ -101,7 +101,7 @@ export default {
   },
   setup() {
     const { stackClass } = useFilter();
-    const { isPresetGreen } = usePresets();
+    const { isGreenActive } = usePresets();
 
     const data = computed(() => _mapData(EXPERIENCE));
 
@@ -163,7 +163,7 @@ export default {
     }
 
     return {
-      isPresetGreen,
+      isGreenActive,
       EXPERIENCE,
       stackClass,
       lastItem,

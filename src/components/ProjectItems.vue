@@ -16,7 +16,7 @@
           class="tw-relative"
         >
           <pixel-image
-            v-if="isPresetGreen"
+            v-if="isGreenActive"
             :image="item.image"
             class="tw-h-full tw-w-full tw-relative tw-filter tw-grayscale tw-opacity-70 tw-z-20"
           />
@@ -29,7 +29,7 @@
           ></div>
 
           <div
-            v-if="isPresetGreen"
+            v-if="isGreenActive"
             class="tw-absolute tw-top-0 tw-left-0 tw-h-full tw-w-full tw-bg-green tw-opacity-80 tw-z-10"
           ></div>
         </a>
@@ -43,7 +43,7 @@
             target="_blank"
             class="tw-outline-none"
             :class="
-              isPresetGreen
+              isGreenActive
                 ? 'tw-text-h3'
                 : 'tw-text-pink hover:tw-text-blue focus:tw-text-blue'
             "
@@ -90,14 +90,14 @@ export default {
     const { items } = toRefs(props);
 
     const { stackClass } = useFilter();
-    const { isPresetGreen } = usePresets();
+    const { isGreenActive } = usePresets();
 
     function lastItem(index) {
       return items.value[index].stack.length - 1;
     }
 
     return {
-      isPresetGreen,
+      isGreenActive,
       stackClass,
       lastItem,
     };
