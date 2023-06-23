@@ -1,27 +1,26 @@
 import {
   TYPE_GREEN_SCREEN,
   TYPE_CEEFAX,
-  PRESET_CODE,
   COLOR_VARS,
   TYPE_CODE,
+  PRESETS,
 } from "@config/colors.js";
 import { computed, ref } from "vue";
 
 const type = ref("");
 
 export default function () {
+  const DEFAULT_TYPE = TYPE_CODE;
   const presetType = computed(() => type.value);
   const isCodeActive = computed(() => presetType.value === TYPE_CODE);
   const isGreenActive = computed(() => presetType.value === TYPE_GREEN_SCREEN);
   const isCeefaxActive = computed(() => presetType.value === TYPE_CEEFAX);
 
   function changePreset(preset) {
-    for (let [key, value] of Object.entries(preset)) {
-      if (key === "type") {
-        _addType(value);
-      } else {
-        _addStyle(key, value);
-      }
+    type.value = preset.type;
+
+    for (let [key, value] of Object.entries(preset.colors)) {
+      _addStyle(key, value);
     }
   }
 
@@ -37,15 +36,12 @@ export default function () {
   }
 
   function _setDefaultPreset() {
-    changePreset(PRESET_CODE);
+    const index = PRESETS.findIndex((item) => item.type === DEFAULT_TYPE);
+    changePreset(PRESETS[index]);
   }
 
   function _addStyle(key, value) {
     return document.documentElement.style.setProperty(key, value);
-  }
-
-  function _addType(value) {
-    type.value = value;
   }
 
   return {

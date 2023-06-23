@@ -1,5 +1,6 @@
 <template>
   <div class="tw-debug">
+    presetType: {{ presetType }}<br />
     isCeefaxActive: {{ isCeefaxActive }}<br />
     isGreenActive: {{ isGreenActive }}<br />
     isCodeActive: {{ isCodeActive }}<br />
@@ -33,17 +34,15 @@
       :style="`background-image: url(images/screen-lines.png)`"
     ></div>
 
-    <div class="tw-debug">PRESETS: {{ PRESETS }} <br /></div>
-
     <div
       class="tw-fixed tw-bottom-2 tw-right-2 tw-p-2 tw-flex tw-flex-col tw-space-y-2 tw-z-50"
     >
       <button
         v-for="(item, index) in PRESETS"
         :key="index"
-        class="tw-h-8 tw-w-8 tw-rounded-global tw-text-off-black"
-        :class="isActive(item.code)"
-        @click="changeType(item.code)"
+        class="tw-h-8 tw-w-8 tw-rounded-lg tw-text-sm tw-text-off-black"
+        :class="isActive(item.type)"
+        @click="changeType(item)"
       >
         <font-awesome-icon :icon="item.icon" />
       </button>
@@ -58,15 +57,9 @@ import MyProjects from "@components/Panels/MyProjects.vue";
 import MySkills from "@components/Panels/MySkills.vue";
 import MySocial from "@components/Panels/MySocial.vue";
 import AboutMe from "@components/Panels/AboutMe.vue";
+import { PRESETS } from "@config/colors.js";
 import { usePresets } from "@composables";
 import { onMounted } from "vue";
-import {
-  // PRESET_GREEN_SCREEN,
-  // TYPE_GREEN_SCREEN,
-  // PRESET_CODE,
-  // TYPE_CODE,
-  PRESETS,
-} from "@config/colors.js";
 
 export default {
   components: {
@@ -93,14 +86,6 @@ export default {
 
     function changeType(type) {
       changePreset(type);
-      // if (type === TYPE_CODE) {
-      //   changePreset(PRESET_CODE);
-      //   return;
-      // }
-      // if (type === TYPE_GREEN_SCREEN) {
-      //   changePreset(PRESET_GREEN_SCREEN);
-      //   return;
-      // }
     }
 
     function isActive(type) {
@@ -108,14 +93,14 @@ export default {
     }
 
     return {
-      // TYPE_GREEN_SCREEN,
       isCeefaxActive,
       isGreenActive,
       isCodeActive,
       changeType,
-      // TYPE_CODE,
       isActive,
       PRESETS,
+
+      presetType,
     };
   },
 };
