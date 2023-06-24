@@ -10,7 +10,7 @@ import { computed, ref } from "vue";
 const type = ref("");
 
 export default function () {
-  const DEFAULT_TYPE = TYPE_RETRO;
+  const DEFAULT_TYPE = TYPE_CODE;
   const presetType = computed(() => type.value);
   const isCodeActive = computed(() => presetType.value === TYPE_CODE);
   const isGreenActive = computed(() => presetType.value === TYPE_GREEN_SCREEN);
