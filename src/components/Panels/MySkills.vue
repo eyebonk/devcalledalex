@@ -33,7 +33,7 @@ export default {
     BaseHeader,
   },
   setup() {
-    const { addFilter, activeFilters, isActive } = useFilter();
+    const { addFilter, isActive } = useFilter();
     const { isCodeActive, isRetroActive } = usePresets();
 
     const items = computed(() => {
@@ -78,15 +78,11 @@ export default {
     }
 
     return {
-      // activeFilters,
       baseTagStyles,
       addFilter,
       tagStyles,
       isActive,
       items,
-      // type,
-
-      activeFilters,
     };
   },
 };
