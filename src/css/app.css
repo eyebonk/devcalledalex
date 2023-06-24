@@ -4,22 +4,26 @@
 
 @layer base {
   .tw-h1 {
-    @apply tw-text-h2 sm:tw-text-h1 tw-leading-tight;
+    @apply tw-text-h2 sm:tw-text-h1 tw-leading-tight tw-font-heading;
+    letter-spacing: var(--heading-spacing);
   }
   .tw-h2 {
-    @apply tw-text-h3 sm:tw-text-h2 tw-leading-tight;
+    @apply tw-text-h3 sm:tw-text-h2 tw-leading-tight tw-font-heading;
+    letter-spacing: var(--heading-spacing);
   }
   .tw-h3 {
-    @apply tw-text-h4 sm:tw-text-h3 tw-leading-tight;
+    @apply tw-text-h4 sm:tw-text-h3 tw-leading-tight tw-font-heading;
+    letter-spacing: var(--heading-spacing);
   }
   .tw-h4 {
-    @apply tw-text-h5 sm:tw-text-h4 tw-leading-tight;
+    @apply tw-text-h5 sm:tw-text-h4 tw-leading-tight tw-font-heading;
+    letter-spacing: var(--heading-spacing);
   }
   .tw-h5 {
-    @apply tw-text-h6 sm:tw-text-h5;
+    @apply tw-text-h6 sm:tw-text-h5 tw-font-heading;
   }
   .tw-h6 {
-    @apply sm:tw-text-h6;
+    @apply sm:tw-text-h6 tw-font-heading;
   }
 
   h1 {
@@ -41,14 +45,11 @@
     @apply tw-h6;
   }
   body {
-    @apply tw-text-sm sm:tw-text-md;
+    @apply tw-text-sm sm:tw-text-md tw-font-body tw-bg-black;
   }
 }
 
 @layer utilities {
-  .tw-heading {
-    @apply tw-text-blue tw-tracking-tighter tw-mb-3;
-  }
   .tw-content {
     @apply tw-space-y-4 tw-text-md tw-opacity-80;
   }

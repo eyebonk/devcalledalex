@@ -8,30 +8,9 @@ export const COLOR_VARS = {
   "--orange": "#eea774",
 };
 
-// export const TYPE_CODE = "code";
-// export const PRESET_CODE = {
-//   "--font": ["IBM Plex Mono", "monospace"],
-//   "--font-size": "1rem",
-//   "--radius": "0.25rem",
-//   "line-height": 1.5,
-//   color: "var(--off-white)",
-//   background: "var(--off-black)",
-//   type: TYPE_CODE,
-// };
-
-// export const TYPE_GREEN_SCREEN = "green-screen";
-// export const PRESET_GREEN_SCREEN = {
-
-// };
-
-// export const TYPE_CEEFAX = "ceefax";
-// export const PRESET_CEEFAX = {
-
-// };
-
 export const TYPE_CODE = "code";
 export const TYPE_GREEN_SCREEN = "green-screen";
-export const TYPE_CEEFAX = "ceefax";
+export const TYPE_RETRO = "retro";
 
 export const PRESETS = [
   {
@@ -39,6 +18,8 @@ export const PRESETS = [
     icon: "code",
     colors: {
       "--font": ["IBM Plex Mono", "monospace"],
+      "--heading": ["IBM Plex Mono", "monospace"],
+      "--heading-spacing": "0.05rem",
       "--font-size": "1rem",
       "--radius": "0.25rem",
       "line-height": 1.5,
@@ -51,6 +32,8 @@ export const PRESETS = [
     icon: "list",
     colors: {
       "--font": ["VT323", "monospace"],
+      "--heading": ["VT323", "monospace"],
+      "--heading-spacing": "0.05rem",
       "--font-size": "1.5rem",
       "--radius": "0",
       "line-height": 1,
@@ -59,14 +42,16 @@ export const PRESETS = [
     },
   },
   {
-    type: TYPE_CEEFAX,
-    icon: "tv",
+    type: TYPE_RETRO,
+    icon: "sun",
     colors: {
-      "--font": ["VT323", "monospace"],
+      "--font": ["Rubik", "sans-serif"],
+      "--heading": ["Monoton", "cursive"],
+      "--heading-spacing": "0.13rem",
       "--font-size": "1.5rem",
       "--radius": "0",
-      "line-height": 1,
-      color: "var(--green)",
+      "line-height": 1.25,
+      color: "var(--off-white)",
       background: "var(--pink)",
     },
   },

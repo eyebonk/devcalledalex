@@ -1,5 +1,5 @@
 <template>
-  <h2 class="tw-heading">
+  <h2 class="tw-mb-3 tw-text-blue">
     <span v-if="typeCode">["</span>
     <span :class="typeCode ? 'tw-text-orange' : 'tw-text-green'">
       {{ text }}

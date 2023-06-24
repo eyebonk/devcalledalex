@@ -1,6 +1,6 @@
 import {
   TYPE_GREEN_SCREEN,
-  TYPE_CEEFAX,
+  TYPE_RETRO,
   COLOR_VARS,
   TYPE_CODE,
   PRESETS,
@@ -14,7 +14,7 @@ export default function () {
   const presetType = computed(() => type.value);
   const isCodeActive = computed(() => presetType.value === TYPE_CODE);
   const isGreenActive = computed(() => presetType.value === TYPE_GREEN_SCREEN);
-  const isCeefaxActive = computed(() => presetType.value === TYPE_CEEFAX);
+  const isRetroActive = computed(() => presetType.value === TYPE_RETRO);
 
   function changePreset(preset) {
     type.value = preset.type;
@@ -45,7 +45,7 @@ export default function () {
   }
 
   return {
-    isCeefaxActive,
+    isRetroActive,
     isGreenActive,
     isCodeActive,
     changePreset,

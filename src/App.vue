@@ -1,11 +1,4 @@
 <template>
-  <div class="tw-debug">
-    presetType: {{ presetType }}<br />
-    isCeefaxActive: {{ isCeefaxActive }}<br />
-    isGreenActive: {{ isGreenActive }}<br />
-    isCodeActive: {{ isCodeActive }}<br />
-  </div>
-
   <div class="tw-relative tw-pt-4" :class="{ 'green-shadow': isGreenActive }">
     <div
       class="tw-container tw-mx-auto tw-space-y-20 tw-pb-40 tw-relative tw-z-10"
@@ -23,16 +16,8 @@
       <my-projects />
       <other-projects />
     </div>
-    <div
-      v-if="isCodeActive"
-      class="tw-absolute tw-top-0 tw-left-0 tw-h-full tw-w-full tw-bg-no-repeat tw-bg-cover tw-bg-center tw-z-1 tw-blur-sm tw-opacity-5 tw-filter tw-grayscale"
-      :style="`background-image: url(images/codebg.jpg)`"
-    ></div>
-    <div
-      v-else
-      class="tw-absolute tw-top-0 tw-left-0 tw-h-full tw-w-full tw-bg-no-repeat tw-bg-cover tw-bg-center tw-opacity-30 tw-animate-pulse tw-z-1"
-      :style="`background-image: url(images/screen-lines.png)`"
-    ></div>
+
+    <the-backgrounds />
 
     <div
       class="tw-fixed tw-bottom-2 tw-right-2 tw-p-2 tw-flex tw-flex-col tw-space-y-2 tw-z-50"
@@ -47,12 +32,21 @@
         <font-awesome-icon :icon="item.icon" />
       </button>
     </div>
+
+    <div>
+      <a
+        href="https://www.freepik.com/free-vector/retro-futuristic-landscape-background-with-sun_5072279.htm#query=80s%20background&position=0&from_view=keyword&track=ais"
+        >Image by pikisuperstar</a
+      >
+      on Freepik
+    </div>
   </div>
 </template>
 
 <script>
 import OtherProjects from "@components/Panels/OtherProjects.vue";
 import MyExperience from "@components/Panels/MyExperience.vue";
+import TheBackgrounds from "@components/TheBackgrounds.vue";
 import MyProjects from "@components/Panels/MyProjects.vue";
 import MySkills from "@components/Panels/MySkills.vue";
 import MySocial from "@components/Panels/MySocial.vue";
@@ -63,6 +57,7 @@ import { onMounted } from "vue";
 
 export default {
   components: {
+    TheBackgrounds,
     OtherProjects,
     MyExperience,
     MyProjects,
@@ -72,7 +67,7 @@ export default {
   },
   setup() {
     const {
-      isCeefaxActive,
+      isRetroActive,
       isGreenActive,
       changePreset,
       isCodeActive,
@@ -93,7 +88,7 @@ export default {
     }
 
     return {
-      isCeefaxActive,
+      isRetroActive,
       isGreenActive,
       isCodeActive,
       changeType,

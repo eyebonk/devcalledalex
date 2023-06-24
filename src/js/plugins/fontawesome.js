@@ -12,7 +12,7 @@ import {
   faStore,
   faEnvelope,
   faCode,
-  faTv,
+  faSun,
   faList,
 } from "@fortawesome/free-solid-svg-icons";
 
@@ -20,7 +20,7 @@ const brandIcons = [faGithub, faDiscord, faLinkedinIn];
 
 const regularIcons = [faStore];
 
-const solidIcons = [faEnvelope, faCode, faTv, faList];
+const solidIcons = [faEnvelope, faCode, faSun, faList];
 
 library.add(...brandIcons, ...solidIcons, ...regularIcons);
 
