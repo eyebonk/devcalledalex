@@ -1,4 +1,5 @@
 export const JS = "JavaScript";
+export const TS = "TypeScript";
 export const VUE2 = "Vue2";
 export const VUE3 = "Vue3";
 export const TAILWIND = "Tailwind";
@@ -14,4 +15,5 @@ export const WORDPRESS = "WordPress";
 export const VSCODE = "VScode";
 export const THEME = "Theme";
 export const NPM = "npm";
-export const NUXT2 = "Nuxt2";
+export const NUXT2 = "Nuxt 2";
+export const NUXT3 = "Nuxt 3";

@@ -1,17 +1,15 @@
 <template>
-  <h2 class="tw-heading">
-    <span v-if="typeCode">["</span>
-    <span :class="typeCode ? 'tw-text-orange' : 'tw-text-green'">
+  <h2 class="tw-mb-3 tw-text-blue">
+    <span v-if="isCodeActive">["</span>
+    <span :class="isCodeActive ? 'tw-text-orange' : 'tw-text-green'">
       {{ text }}
     </span>
-    <span v-if="typeCode">"]</span>
+    <span v-if="isCodeActive">"]</span>
   </h2>
 </template>
 
 <script>
-import { TYPE_CODE } from "@config/colors.js";
 import { usePresets } from "@composables";
-import { computed } from "vue";
 
 export default {
   props: {
@@ -21,12 +19,10 @@ export default {
     },
   },
   setup() {
-    const { presetType } = usePresets();
-
-    const typeCode = computed(() => presetType.value === TYPE_CODE);
+    const { isCodeActive } = usePresets();
 
     return {
-      typeCode,
+      isCodeActive,
     };
   },
 };

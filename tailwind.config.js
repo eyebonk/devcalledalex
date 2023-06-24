@@ -11,6 +11,7 @@ module.exports = {
       sans: "var(--font)",
       display: "var(--font)",
       body: "var(--font)",
+      heading: "var(--heading)",
     },
     container: {
       padding: "2rem",
