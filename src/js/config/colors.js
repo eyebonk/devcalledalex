@@ -25,6 +25,7 @@ export const PRESETS = [
       "line-height": 1.5,
       color: "var(--off-white)",
       background: "var(--off-black)",
+      ...COLOR_VARS,
     },
   },
   {
@@ -39,6 +40,7 @@ export const PRESETS = [
       "line-height": 1,
       color: "var(--green)",
       background: "var(--off-black)",
+      ...COLOR_VARS,
     },
   },
   {
@@ -48,11 +50,14 @@ export const PRESETS = [
       "--font": ["Rubik", "sans-serif"],
       "--heading": ["Monoton", "cursive"],
       "--heading-spacing": "0.13rem",
-      "--font-size": "1.5rem",
+      "--font-size": "1.25rem",
       "--radius": "0",
       "line-height": 1.25,
       color: "var(--off-white)",
       background: "var(--pink)",
+      "--green": "#1EB09C",
+      "--pink": "#ED1583",
+      "--orange": "#F04E36",
     },
   },
 ];

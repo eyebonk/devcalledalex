@@ -1,6 +1,6 @@
 <template>
   <div>
-    <base-header text="Skills" />
+    <BaseHeader text="Skills" />
 
     <div class="tw-content tw-mb-3">
       <p>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <base-header text="Experience" />
+    <BaseHeader text="Experience" />
 
     <div class="tw-flex tw-flex-col tw-space-y-6">
       <div
@@ -19,7 +19,7 @@
             :tabindex="item.link ? -1 : null"
             class="tw-relative"
           >
-            <pixel-image
+            <PixelImage
               v-if="isGreenActive"
               :image="item.icon"
               class="tw-h-full tw-w-full tw-relative tw-filter tw-grayscale tw-opacity-70 tw-z-20"

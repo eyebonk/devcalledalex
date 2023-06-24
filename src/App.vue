@@ -7,17 +7,17 @@
         class="tw-flex tw-flex-col lg:tw-flex-row tw-items-center tw-justify-between tw-space-y-1 lg:tw-space-y-0"
       >
         <h1>devcalledalex</h1>
-        <my-social />
+        <MySocial />
       </div>
 
-      <about-me />
-      <my-skills />
-      <my-experience />
-      <my-projects />
-      <other-projects />
+      <AboutMe />
+      <MySkills />
+      <MyExperience />
+      <MyProjects />
+      <OtherProjects />
     </div>
 
-    <the-backgrounds />
+    <TheBackgrounds />
 
     <div
       class="tw-fixed tw-bottom-2 tw-right-2 tw-p-2 tw-flex tw-flex-col tw-space-y-2 tw-z-50"
@@ -33,10 +33,11 @@
       </button>
     </div>
 
-    <div>
+    <div v-if="isRetroActive" class="tw-text-sm tw-opacity-0">
       <a
         href="https://www.freepik.com/free-vector/retro-futuristic-landscape-background-with-sun_5072279.htm#query=80s%20background&position=0&from_view=keyword&track=ais"
-        >Image by pikisuperstar</a
+      >
+        Image by pikisuperstar</a
       >
       on Freepik
     </div>

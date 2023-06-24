@@ -1,6 +1,6 @@
 <template>
   <div>
-    <base-header text="About me" />
+    <BaseHeader text="About me" />
     <div class="tw-content">
       <p>
         Hi, I'm Alex, a Senior Front End Web Developer/workaholic with over

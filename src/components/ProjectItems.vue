@@ -15,7 +15,7 @@
           tabindex="-1"
           class="tw-relative"
         >
-          <pixel-image
+          <PixelImage
             v-if="isGreenActive"
             :image="item.image"
             class="tw-h-full tw-w-full tw-relative tw-filter tw-grayscale tw-opacity-70 tw-z-20"

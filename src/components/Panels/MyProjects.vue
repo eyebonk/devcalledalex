@@ -1,8 +1,8 @@
 <template>
   <div>
-    <base-header text="My projects" />
+    <BaseHeader text="My projects" />
 
-    <project-items :items="MY_PROJECTS" />
+    <ProjectItems :items="MY_PROJECTS" />
   </div>
 </template>
 
