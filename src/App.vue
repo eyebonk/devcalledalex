@@ -95,8 +95,6 @@ export default {
       changeType,
       isActive,
       PRESETS,
-
-      presetType,
     };
   },
 };

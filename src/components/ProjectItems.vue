@@ -3,7 +3,8 @@
     <div
       v-for="(item, index) in items"
       :key="index"
-      class="tw-flex sm:tw-items-center tw-space-x-4"
+      class="tw-flex"
+      :class="isRetroActive ? 'tw-space-x-6' : 'tw-space-x-4'"
     >
       <div
         class="tw-h-16 sm:tw-h-40 tw-w-16 sm:tw-w-40 tw-overflow-hidden tw-flex-shrink-0 tw-rounded-global"
@@ -24,7 +25,8 @@
           <div
             v-else
             role="img"
-            class="tw-h-full tw-w-full tw-bg-no-repeat tw-bg-cover tw-bg-center tw-relative tw-z-20"
+            class="tw-h-full tw-w-full tw-bg-no-repeat tw-bg-cover tw-bg-center tw-relative tw-z-20 tw-rounded-global"
+            :class="{ 'tw-border-4 tw-border-blue': isRetroActive }"
             :style="`background-image: url(${item.image});`"
           ></div>
 
@@ -90,13 +92,14 @@ export default {
     const { items } = toRefs(props);
 
     const { stackClass } = useFilter();
-    const { isGreenActive } = usePresets();
+    const { isGreenActive, isRetroActive } = usePresets();
 
     function lastItem(index) {
       return items.value[index].stack.length - 1;
     }
 
     return {
+      isRetroActive,
       isGreenActive,
       stackClass,
       lastItem,

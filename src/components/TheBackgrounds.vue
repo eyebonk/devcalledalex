@@ -4,6 +4,11 @@
     :class="bgStyles"
     :style="`background-image: url(${bgImage})`"
   ></div>
+
+  <div
+    v-if="isGreenActive"
+    class="tw-h-2 tw-w-full tw-bg-green tw-absolute tw-top-0 tw-left-0 line"
+  />
 </template>
 
 <script>
@@ -41,9 +46,25 @@ export default {
     });
 
     return {
+      isGreenActive,
       bgStyles,
       bgImage,
     };
   },
 };
 </script>
+
+<style>
+.line {
+  animation: bar 40s ease infinite;
+  filter: blur(30px);
+}
+@keyframes bar {
+  0% {
+    top: 0%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+</style>

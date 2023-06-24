@@ -51,7 +51,7 @@ export const PRESETS = [
       "--heading": ["Monoton", "cursive"],
       "--heading-spacing": "0.13rem",
       "--font-size": "1.25rem",
-      "--radius": "0",
+      "--radius": "2rem",
       "line-height": 1.25,
       color: "var(--off-white)",
       background: "var(--pink)",

@@ -2,14 +2,23 @@
   <div>
     <BaseHeader text="Experience" />
 
-    <div class="tw-flex tw-flex-col tw-space-y-6">
+    <div
+      class="tw-flex tw-flex-col"
+      :class="isRetroActive ? 'tw-space-y-8' : 'tw-space-y-6'"
+    >
       <div
         v-for="(item, index) in data"
         :key="index"
-        class="tw-flex tw-space-x-4 tw-w-fit"
+        class="tw-flex tw-w-fit"
+        :class="isRetroActive ? 'tw-space-x-6' : 'tw-space-x-4'"
       >
         <div
-          class="tw-h-10 sm:tw-h-16 tw-w-10 sm:tw-w-16 tw-flex-shrink-0 tw-overflow-hidden tw-rounded-global"
+          class="tw-shrink-0 tw-overflow-hidden tw-rounded-global"
+          :class="
+            isRetroActive
+              ? 'tw-h-20 sm:tw-h-28 tw-w-20 sm:tw-w-28'
+              : 'tw-h-10 sm:tw-h-16 tw-w-10 sm:tw-w-16'
+          "
         >
           <component
             :is="item.link ? 'a' : 'div'"
@@ -29,7 +38,8 @@
               v-else
               :src="item.icon"
               :alt="item.company"
-              class="tw-h-full tw-w-full tw-relative"
+              class="tw-h-full tw-w-full tw-relative tw-rounded-global"
+              :class="{ 'tw-border-4 tw-border-blue': isRetroActive }"
             />
             <div
               v-if="isGreenActive"
@@ -101,7 +111,7 @@ export default {
   },
   setup() {
     const { stackClass } = useFilter();
-    const { isGreenActive } = usePresets();
+    const { isGreenActive, isRetroActive } = usePresets();
 
     const data = computed(() => _mapData(EXPERIENCE));
 
@@ -163,6 +173,7 @@ export default {
     }
 
     return {
+      isRetroActive,
       isGreenActive,
       EXPERIENCE,
       stackClass,
