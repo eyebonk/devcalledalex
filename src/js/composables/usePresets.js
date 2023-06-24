@@ -10,7 +10,6 @@ import { computed, ref } from "vue";
 const type = ref("");
 
 export default function () {
-  const DEFAULT_TYPE = TYPE_CODE;
   const presetType = computed(() => type.value);
   const isCodeActive = computed(() => presetType.value === TYPE_CODE);
   const isGreenActive = computed(() => presetType.value === TYPE_GREEN_SCREEN);
@@ -36,6 +35,8 @@ export default function () {
   }
 
   function _setDefaultPreset() {
+    const DEFAULT_TYPE =
+      PRESETS[Math.floor(Math.random() * PRESETS.length)].type;
     const index = PRESETS.findIndex((item) => item.type === DEFAULT_TYPE);
     changePreset(PRESETS[index]);
   }
