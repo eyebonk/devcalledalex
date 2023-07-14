@@ -35,10 +35,11 @@ export default function () {
   }
 
   function _setDefaultPreset() {
-    const DEFAULT_TYPE =
-      PRESETS[Math.floor(Math.random() * PRESETS.length)].type;
-    const index = PRESETS.findIndex((item) => item.type === DEFAULT_TYPE);
-    changePreset(PRESETS[index]);
+    // const DEFAULT_TYPE =
+    // PRESETS[Math.floor(Math.random() * PRESETS.length)].type;
+    // const index = PRESETS.findIndex((item) => item.type === DEFAULT_TYPE);
+    // changePreset(PRESETS[index]);
+    changePreset(PRESETS[3]);
   }
 
   function _addStyle(key, value) {

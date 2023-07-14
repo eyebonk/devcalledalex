@@ -3,13 +3,9 @@
     <div
       class="tw-container tw-mx-auto tw-space-y-20 tw-pb-40 tw-relative tw-z-10"
     >
-      <div
-        class="tw-flex tw-flex-col lg:tw-flex-row tw-items-center tw-justify-between tw-space-y-1 lg:tw-space-y-0"
-      >
-        <h1>devcalledalex</h1>
-        <MySocial />
-      </div>
+      <JsonObj />
 
+      <TheHeader />
       <AboutMe />
       <MySkills />
       <MyExperience />
@@ -33,6 +29,7 @@
       </button>
     </div>
 
+    <!-- credits -->
     <div v-if="isRetroActive" class="tw-text-sm tw-opacity-0">
       <a
         href="https://www.freepik.com/free-vector/retro-futuristic-landscape-background-with-sun_5072279.htm#query=80s%20background&position=0&from_view=keyword&track=ais"
@@ -49,9 +46,10 @@ import OtherProjects from "@components/Panels/OtherProjects.vue";
 import MyExperience from "@components/Panels/MyExperience.vue";
 import TheBackgrounds from "@components/TheBackgrounds.vue";
 import MyProjects from "@components/Panels/MyProjects.vue";
+import TheHeader from "@components/Panels/TheHeader.vue";
 import MySkills from "@components/Panels/MySkills.vue";
-import MySocial from "@components/Panels/MySocial.vue";
 import AboutMe from "@components/Panels/AboutMe.vue";
+import JsonObj from "@components/Panels/JsonObj.vue";
 import { PRESETS } from "@config/colors.js";
 import { usePresets } from "@composables";
 import { onMounted } from "vue";
@@ -62,9 +60,10 @@ export default {
     OtherProjects,
     MyExperience,
     MyProjects,
-    MySocial,
+    TheHeader,
     MySkills,
     AboutMe,
+    JsonObj,
   },
   setup() {
     const {

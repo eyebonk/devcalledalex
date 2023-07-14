@@ -11,6 +11,7 @@ export const COLOR_VARS = {
 export const TYPE_CODE = "code";
 export const TYPE_GREEN_SCREEN = "green-screen";
 export const TYPE_RETRO = "retro";
+export const TYPE_JSON = "json";
 
 export const PRESETS = [
   {
@@ -58,6 +59,21 @@ export const PRESETS = [
       "--green": "#1EB09C",
       "--pink": "#ED1583",
       "--orange": "#F04E36",
+    },
+  },
+  {
+    type: TYPE_JSON,
+    icon: "code",
+    colors: {
+      "--font": ["IBM Plex Mono", "monospace"],
+      "--heading": ["IBM Plex Mono", "monospace"],
+      "--heading-spacing": "0.05rem",
+      "--font-size": "1rem",
+      "--radius": "0.25rem",
+      "line-height": 1.5,
+      color: "var(--off-white)",
+      background: "var(--off-black)",
+      ...COLOR_VARS,
     },
   },
 ];
