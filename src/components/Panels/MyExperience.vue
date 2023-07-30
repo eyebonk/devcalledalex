@@ -90,6 +90,12 @@
               </span>
             </div>
           </div>
+
+          <div
+            v-if="item.blurb"
+            class="tw-mt-6 tw-content"
+            v-html="item.blurb"
+          />
         </div>
       </div>
     </div>
@@ -130,6 +136,7 @@ export default {
           country: item.country,
           date: _getDate(item.dateFrom, item.dateTo),
           link: item.link,
+          blurb: item.blurb,
           stack: item.stack,
         });
       });

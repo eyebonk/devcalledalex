@@ -3,9 +3,10 @@
     <BaseHeader text="About me" />
     <div class="tw-content">
       <p>
-        Hi, I'm Alex, a Senior Front End Web Developer/workaholic with over
-        {{ howLong }}
-        years of development experience.
+        Hi, I'm Alex, a Web Developer/Engineer with a passion for pushing
+        boundaries and delivering outstanding results. With over
+        {{ howLong }} years of experience in the industry, I bring a wealth of
+        expertise to every project I undertake.
       </p>
 
       <p v-for="(item, index) in BLURB" :key="index">
