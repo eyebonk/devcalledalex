@@ -1,3 +1,59 @@
+<script>
+import OtherProjects from '@components/Panels/OtherProjects.vue'
+import MyExperience from '@components/Panels/MyExperience.vue'
+import TheBackgrounds from '@components/TheBackgrounds.vue'
+import MyProjects from '@components/Panels/MyProjects.vue'
+import MySkills from '@components/Panels/MySkills.vue'
+import MySocial from '@components/Panels/MySocial.vue'
+import AboutMe from '@components/Panels/AboutMe.vue'
+import { PRESETS } from '@config/colors.js'
+import { usePresets } from '@composables'
+import { onMounted } from 'vue'
+
+export default {
+  components: {
+    TheBackgrounds,
+    OtherProjects,
+    MyExperience,
+    MyProjects,
+    MySocial,
+    MySkills,
+    AboutMe,
+  },
+  setup() {
+    const {
+      isRetroActive,
+      isGreenActive,
+      changePreset,
+      isCodeActive,
+      setDefaults,
+      presetType,
+    } = usePresets()
+
+    onMounted(() => {
+      setDefaults()
+    })
+
+    function changeType(type) {
+      changePreset(type)
+    }
+
+    function isActive(type) {
+      return type === presetType.value ? 'tw-bg-pink' : 'tw-bg-green'
+    }
+
+    return {
+      isRetroActive,
+      isGreenActive,
+      isCodeActive,
+      changeType,
+      isActive,
+      PRESETS,
+    }
+  },
+}
+</script>
+
 <template>
   <div class="tw-relative tw-pt-4" :class="{ 'green-shadow': isGreenActive }">
     <div
@@ -37,68 +93,11 @@
       <a
         href="https://www.freepik.com/free-vector/retro-futuristic-landscape-background-with-sun_5072279.htm#query=80s%20background&position=0&from_view=keyword&track=ais"
       >
-        Image by pikisuperstar</a
-      >
+        Image by pikisuperstar</a>
       on Freepik
     </div>
   </div>
 </template>
-
-<script>
-import OtherProjects from "@components/Panels/OtherProjects.vue";
-import MyExperience from "@components/Panels/MyExperience.vue";
-import TheBackgrounds from "@components/TheBackgrounds.vue";
-import MyProjects from "@components/Panels/MyProjects.vue";
-import MySkills from "@components/Panels/MySkills.vue";
-import MySocial from "@components/Panels/MySocial.vue";
-import AboutMe from "@components/Panels/AboutMe.vue";
-import { PRESETS } from "@config/colors.js";
-import { usePresets } from "@composables";
-import { onMounted } from "vue";
-
-export default {
-  components: {
-    TheBackgrounds,
-    OtherProjects,
-    MyExperience,
-    MyProjects,
-    MySocial,
-    MySkills,
-    AboutMe,
-  },
-  setup() {
-    const {
-      isRetroActive,
-      isGreenActive,
-      changePreset,
-      isCodeActive,
-      setDefaults,
-      presetType,
-    } = usePresets();
-
-    onMounted(() => {
-      setDefaults();
-    });
-
-    function changeType(type) {
-      changePreset(type);
-    }
-
-    function isActive(type) {
-      return type === presetType.value ? "tw-bg-pink" : "tw-bg-green";
-    }
-
-    return {
-      isRetroActive,
-      isGreenActive,
-      isCodeActive,
-      changeType,
-      isActive,
-      PRESETS,
-    };
-  },
-};
-</script>
 
 <style>
 .green-shadow {
