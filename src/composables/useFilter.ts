@@ -1,9 +1,9 @@
-import { usePresets } from '@composables'
+import { usePresets } from '@composables/usePresets.ts'
 import { computed, ref } from 'vue'
 
-const state = ref([])
+export function useFilter() {
+  const state = ref([])
 
-export default function () {
   const { isGreenActive } = usePresets()
   const activeFilters = computed(() => state.value)
 
