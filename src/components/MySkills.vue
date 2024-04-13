@@ -26,7 +26,7 @@ const baseTagStyles = computed(() => {
   return 'tw-h-8 tw-px-3 tw-bg-red-500'
 })
 
-function tagStyles(item) {
+function tagStyles(item: string) {
   if (isActive(item)) {
     if (isCodeActive.value)
       return 'tw-opacity-100 tw-border-yellow tw-text-yellow'

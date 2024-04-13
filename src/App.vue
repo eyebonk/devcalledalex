@@ -6,6 +6,7 @@ import MySkills from '@components/MySkills.vue'
 import MySocial from '@components/MySocial.vue'
 // import TheBackgrounds from '@components/TheBackgrounds.vue'
 import { usePresets } from '@composables/usePresets.ts'
+import type { PRESET } from '@models/Preset.ts'
 import { PRESETS } from '@config/colors'
 import { onMounted } from 'vue'
 
@@ -21,7 +22,7 @@ onMounted(() => {
   setDefaults()
 })
 
-function changeType(type: string) {
+function changeType(type: PRESET) {
   changePreset(type)
 }
 
