@@ -37,7 +37,7 @@ export function usePresets() {
     const DEFAULT_TYPE
       = PRESETS[Math.floor(Math.random() * PRESETS.length)].type
     const index = PRESETS.findIndex(item => item.type === DEFAULT_TYPE)
-    const randomPreset = PRESETS[index]
+    const randomPreset: PRESET = PRESETS[index]
     changePreset(randomPreset)
   }
 

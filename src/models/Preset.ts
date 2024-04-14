@@ -7,13 +7,13 @@ interface COLORS {
   'line-height': string
   'color': string
   'background': string
-  '--off-black': string
-  '--off-white': string
-  '--pink': string
-  '--blue': string
   '--green': string
-  '--yellow': string
+  '--pink': string
   '--orange': string
+  '--off-black'?: string
+  '--off-white'?: string
+  '--blue'?: string
+  '--yellow'?: string
 }
 export interface PRESET {
   type: string
