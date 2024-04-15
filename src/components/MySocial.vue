@@ -30,7 +30,7 @@ const buttonStyles = computed(() => {
       :class="buttonStyles"
       target="_blank"
     >
-      <font-awesome-icon :icon="item.icon" />
+      <FontAwesomeIcon :icon="item.icon" />
     </a>
   </div>
 </template>
