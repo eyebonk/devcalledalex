@@ -85,7 +85,7 @@ export default {
         :class="isActive(item.type)"
         @click="changeType(item)"
       >
-        <font-awesome-icon :icon="item.icon" />
+        <FontAwesomeIcon :icon="item.icon" />
       </button>
     </div>
 

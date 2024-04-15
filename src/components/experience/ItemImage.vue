@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import PixelImage from '@components/PixelImage.vue'
 import { usePresets } from '@composables/usePresets.ts'
-import type { EXPERIENCE } from '@models/Experience.ts'
+import type { EXPERIENCE_ITEM } from '@models/Experience.ts'
 
 defineProps<{
-  item: EXPERIENCE
+  item: EXPERIENCE_ITEM
 }>()
 
 const { isGreenActive, isRetroActive } = usePresets()

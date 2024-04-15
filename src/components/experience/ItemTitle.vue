@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import type { EXPERIENCE } from '@models/Experience.ts'
+import type { EXPERIENCE_ITEM } from '@models/Experience.ts'
 import { usePresets } from '@composables/usePresets.ts'
 
 defineProps<{
-  item: EXPERIENCE
+  item: EXPERIENCE_ITEM
 }>()
 
 const { isGreenActive } = usePresets()

@@ -1,16 +1,14 @@
 <script setup lang="ts">
-import { useFilter } from '@composables/useFilter.ts'
 import { usePresets } from '@composables/usePresets.ts'
 import BaseHeader from '@components/BaseHeader.vue'
-// import PixelImage from '@components/PixelImage.vue'
 import { EXPERIENCE } from '@config/experience.ts'
 import type { Dayjs } from 'dayjs'
 import dayjs from 'dayjs'
 import ItemImage from './ItemImage.vue'
 import ItemTitle from './ItemTitle.vue'
+import StackItem from './StackItem.vue'
 
-const { stackClass } = useFilter()
-const { isGreenActive, isRetroActive } = usePresets()
+const { isRetroActive } = usePresets()
 
 function getDate(dateFrom: string, dateTo: string | null) {
   const formatFrom = dayjs(dateFrom)
@@ -48,10 +46,6 @@ function _formatTimeSince(year: number, month: number) {
 function _plural(date: number, type = 'yr') {
   return date > 1 ? `${date} ${type}s` : `${date} ${type}`
 }
-
-function lastItem(index: number) {
-  return EXPERIENCE[index].stack.length - 1
-}
 </script>
 
 <template>
@@ -73,22 +67,6 @@ function lastItem(index: number) {
         <div class="tw-flex tw-flex-col tw-text-sm">
           <ItemTitle :item="item" />
 
-          <!-- <h3 class="tw-leading-tight">
-            <component
-              :is="item.link ? 'a' : 'span'"
-              :href="item.link ? item.link : null"
-              :target="item.link ? '_blank' : null"
-              :title="item.link ? item.company : null"
-              class="tw-outline-none"
-              :class="
-                isGreenActive
-                  ? 'tw-text-h3'
-                  : 'tw-text-pink hover:tw-text-blue focus:tw-text-blue'
-              "
-            >
-              {{ item.role }}
-            </component>
-          </h3> -->
           <div class="tw-flex tw-flex-col tw-opacity-80 tw-text-md">
             <span> {{ item.company }} | {{ item.type }} </span>
 
@@ -100,19 +78,12 @@ function lastItem(index: number) {
           </div>
 
           <div class="tw-flex tw-flex-wrap tw-text-md">
-            <div
-              v-for="(stack, stackIndex) in item.stack"
-              :key="stackIndex"
-              class="tw-flex"
-            >
-              <span class="tw-flex tw-flex-nowrap tw-space-x-0">
-                <span class="tw-whitespace-nowrap" :class="stackClass(stack)">
-                  {{ stack }}
-                </span>
-                <span v-if="stackIndex !== lastItem(index)">,</span>
-                &nbsp;
-              </span>
-            </div>
+            <StackItem
+              v-for="(stack, stackIndex) in item.stack" :key="stackIndex"
+              :item="stack"
+              :index="index"
+              :stack-index="stackIndex"
+            />
           </div>
 
           <div
