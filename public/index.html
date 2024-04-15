@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="" style="background: #000">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="<%= BASE_URL %>apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="<%= BASE_URL %>favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="<%= BASE_URL %>favicon-16x16.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=VT323&family=Monoton&family=Rubik:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="manifest" href="<%= BASE_URL %>site.webmanifest" />
+    <script
+      src="https://kit.fontawesome.com/b08c6281bf.js"
+      crossorigin="anonymous"
+    ></script>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+
+    <meta property="og:title" content="Lead Frontend Developer" />
+    <meta property="twitter:title" content="Lead Frontend Developer" />
+
+    <meta
+      name="keywords"
+      content="lead, senior, front, end, frontend, developer, engineer, web, development"
+    />
+
+    <meta name="description" content="Alex Smith Lead Frontend Developer" />
+    <meta
+      property="og:description"
+      content="Alex Smith Lead Frontend Developer"
+    />
+    <meta
+      property="twitter:description"
+      content="Alex Smith Lead Frontend Developer"
+    />
+
+    <meta property="og:image" content="<%= BASE_URL %>images/splash.jpg" />
+    <meta property="og:site_name" content="devcalledalex.com" />
+    <meta property="og:type" content="website" />
+
+    <meta property="og:url" content="https://devcalledalex.com" />
+    <meta property="twitter:url" content="https://devcalledalex.com" />
+    <link rel="canonical" href="https://devcalledalex.com" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-GEGHGSKZRY"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-GEGHGSKZRY");
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <strong
+        >We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work
+        properly without JavaScript enabled. Please enable it to
+        continue.</strong
+      >
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
