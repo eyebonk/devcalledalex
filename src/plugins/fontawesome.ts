@@ -9,6 +9,7 @@ import {
 import {} from '@fortawesome/free-regular-svg-icons'
 
 import {
+  faCircle,
   faCode,
   faEnvelope,
   faList,
@@ -20,7 +21,7 @@ const brandIcons = [faGithub, faDiscord, faLinkedinIn]
 
 const regularIcons = [faStore]
 
-const solidIcons = [faEnvelope, faCode, faSun, faList]
+const solidIcons = [faEnvelope, faCode, faSun, faList, faCircle]
 
 library.add(...brandIcons, ...solidIcons, ...regularIcons)
 

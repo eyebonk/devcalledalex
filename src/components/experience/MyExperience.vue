@@ -3,7 +3,7 @@ import { usePresets } from '@composables/usePresets.ts'
 import BaseHeader from '@components/BaseHeader.vue'
 import { EXPERIENCE } from '@config/experience.ts'
 import ItemImage from './ItemImage.vue'
-import ItemTitle from './ItemTitle.vue'
+import ItemContent from './ItemContent.vue'
 import StackItem from './StackItem.vue'
 
 const { isRetroActive } = usePresets()
@@ -26,13 +26,7 @@ const { isRetroActive } = usePresets()
         <ItemImage :item="item" />
 
         <div class="tw-flex tw-flex-col tw-text-sm tw-space-y-4">
-          <ItemTitle :item="item" :first="index === 0" />
-
-          <div
-            v-if="item.blurb"
-            class="tw-mt-6 tw-content"
-            v-html="item.blurb"
-          />
+          <ItemContent :item="item" :first="index === 0" />
 
           <div class="tw-flex tw-flex-wrap tw-text-md">
             <StackItem
