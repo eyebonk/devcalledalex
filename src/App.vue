@@ -6,6 +6,7 @@ import MySkills from '@components/MySkills.vue'
 import MySocial from '@components/MySocial.vue'
 import MyProjects from '@components/projects/MyProjects.vue'
 import TheBackgrounds from '@components/TheBackgrounds.vue'
+import MyServices from '@components/MyServices.vue'
 import ThemeButtons from '@components/ThemeButtons.vue'
 import { usePresets } from '@composables/usePresets.ts'
 import type { PRESET } from '@models/Preset.ts'
@@ -38,6 +39,7 @@ onMounted(() => {
       <MyExperience />
       <MyProjects />
       <OtherProjects />
+      <MyServices />
     </div>
 
     <TheBackgrounds />

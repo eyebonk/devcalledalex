@@ -11,7 +11,10 @@ import {} from '@fortawesome/free-regular-svg-icons'
 import {
   faCircle,
   faCode,
+  faComments,
   faEnvelope,
+  faHandSparkles,
+  faLayerGroup,
   faList,
   faStore,
   faSun,
@@ -21,7 +24,7 @@ const brandIcons = [faGithub, faDiscord, faLinkedinIn]
 
 const regularIcons = [faStore]
 
-const solidIcons = [faEnvelope, faCode, faSun, faList, faCircle]
+const solidIcons = [faEnvelope, faCode, faSun, faList, faCircle, faHandSparkles, faComments, faLayerGroup]
 
 library.add(...brandIcons, ...solidIcons, ...regularIcons)
 
