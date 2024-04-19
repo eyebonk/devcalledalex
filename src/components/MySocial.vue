@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { SOCIAL } from '@config/social.js'
+import { SOCIAL } from '@config/social.ts'
 import { usePresets } from '@composables/usePresets.ts'
 import { computed } from 'vue'
 

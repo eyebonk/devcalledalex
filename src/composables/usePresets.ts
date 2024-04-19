@@ -4,7 +4,7 @@ import {
   TYPE_CODE,
   TYPE_GREEN_SCREEN,
   TYPE_RETRO,
-} from '@config/colors.js'
+} from '@config/colors.ts'
 import { computed, ref } from 'vue'
 import type { PRESET } from '@models/Preset.ts'
 

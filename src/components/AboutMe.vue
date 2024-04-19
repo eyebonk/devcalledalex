@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import BaseHeader from '@components/BaseHeader.vue'
-import { BLURB, SKILLS } from '@config/about.js'
+import { BLURB, SKILLS } from '@config/about.ts'
 import { usePresets } from '@composables/usePresets.ts'
 import { computed } from 'vue'
 import dayjs from 'dayjs'
