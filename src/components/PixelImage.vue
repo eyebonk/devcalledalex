@@ -2,22 +2,23 @@
 import { getCurrentInstance, onMounted } from 'vue'
 import eightBit from '8bit'
 
-defineProps<{
+const props = defineProps<{
   image: string
 }>()
 
-const id = `canvas${getCurrentInstance().uid}`
+const id = `canvas${getCurrentInstance()?.uid}`
 
 onMounted(() => {
-  // processImage()
+  processImage()
 })
 
 function processImage() {
   const img = new Image()
+
   img.onload = function () {
     eightBit(document.getElementById(id), img, 12)
   }
-  img.src = image.value
+  img.src = props.image
 }
 </script>
 
