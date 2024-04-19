@@ -8,10 +8,6 @@ import { PROJECTS } from '@config/projects.js'
   <div>
     <BaseHeader text="Projects" />
 
-    <div class="tw-content tw-mb-3">
-      <p>A List of projects I have built in full or built the frontend</p>
-    </div>
-
     <ProjectItems :items="PROJECTS" />
   </div>
 </template>
