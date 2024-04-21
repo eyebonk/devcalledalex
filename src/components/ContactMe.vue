@@ -5,56 +5,55 @@ import MySocial from '@components/MySocial.vue'
 import emailjs from 'emailjs-com'
 import { ref } from 'vue'
 
-// const runtimeConfig = useRuntimeConfig()
-
 const form = ref('')
-const success = ref(true)
+const success = ref(false)
 const failure = ref(false)
 const loading = ref(false)
-const showMessage = ref(true)
+const showMessage = ref(false)
 
 const {
   isGreenActive,
 } = usePresets()
 
-// function sendEmail(e: any): void {
-//   loading.value = true
-//   emailjs
-//     .sendForm(
-//       runtimeConfig.public.emailService,
-//       runtimeConfig.public.emailTemplate,
-//       form.value,
-//       runtimeConfig.public.emailKey,
-//     )
-//     .then(
-//       () => {
-//         loading.value = false
-//         showMessage.value = true
-//         success.value = true
-//         failure.value = false
-//         clearStatus()
-//       },
-//       () => {
-//         loading.value = false
-//         showMessage.value = true
-//         success.value = false
-//         failure.value = true
-//         clearStatus()
-//       },
-//     )
-// }
+function sendEmail(): void {
+  loading.value = true
+  emailjs
+    .sendForm(
+      import.meta.env.VITE_EMAIL_SERVICE_ID,
+      import.meta.env.VITE_EMAIL_TEMPLATE_ID,
+      form.value,
+      import.meta.env.VITE_EMAIL_PUBLIC_KEY,
+    )
+    .then(
+      () => {
+        loading.value = false
+        showMessage.value = true
+        success.value = true
+        failure.value = false
+        clearStatus()
+      },
+      () => {
+        loading.value = false
+        showMessage.value = true
+        success.value = false
+        failure.value = true
+        clearStatus()
+      },
+    )
+}
 
 function clearStatus(): void {
   setTimeout(() => {
     success.value = false
     failure.value = false
     showMessage.value = false
+    form.value = ''
   }, 5000)
 }
 </script>
 
 <template>
-  <section id="contact" class="tw-container">
+  <section>
     <BaseHeader text="Contact Me" />
 
     <div class="tw-flex tw-flex-col lg:tw-flex-row tw-gap-20 lg:tw-gap-40">
@@ -71,28 +70,26 @@ function clearStatus(): void {
         <form ref="form" class="tw-flex tw-flex-col tw-space-y-4" @submit.prevent="sendEmail">
           <input type="text" class="tw-input tw-h-10" :class="{ 'tw-border-green tw-text-green tw-placeholder-[#4e6d42]': isGreenActive }" placeholder="first name" name="firstName" required>
           <input type="text" class="tw-input tw-h-10" :class="{ 'tw-border-green tw-text-green tw-placeholder-[#4e6d42]': isGreenActive }" placeholder="last name" name="lastName">
-          <input type="tel" class="tw-input tw-h-10" :class="{ 'tw-border-green tw-text-green tw-placeholder-[#4e6d42]': isGreenActive }" placeholder="phone" name="phone" required>
+          <input type="tel" class="tw-input tw-h-10" :class="{ 'tw-border-green tw-text-green tw-placeholder-[#4e6d42]': isGreenActive }" placeholder="phone" name="phone">
           <input type="email" class="tw-input tw-h-10" :class="{ 'tw-border-green tw-text-green tw-placeholder-[#4e6d42]': isGreenActive }" placeholder="email" name="email" required>
           <textarea class="tw-input tw-h-28 tw-py-2" :class="{ 'tw-border-green tw-text-green tw-placeholder-[#4e6d42]': isGreenActive }" placeholder="message" name="message" required />
 
           <div class="tw-flex tw-flex-col tw-space-y-4">
-            <button class="tw-ml-auto tw-h-10 tw-px-4 tw-bg-pink tw-text-off-black tw-rounded hover:tw-saturate-200 focus:tw-saturate-200">
+            <button type="submit" class="tw-ml-auto tw-h-10 tw-px-4 tw-bg-pink tw-text-off-black tw-rounded hover:tw-saturate-200 focus:tw-saturate-200">
               Get in touch
             </button>
 
             <div
-              class="tw-transition tw-text-white tw-text-center tw-px-3 tw-py-2 tw-rounded tw-text-sm tw-bg-opacity-40"
+              class="tw-transition tw-text-center tw-py-2 tw-rounded tw-text-sm tw-bg-opacity-40 tw-content"
               :class="[
                 showMessage ? 'tw-opacity-100 tw-visible' : 'tw-opacity-0 tw-invisible',
                 success ? 'tw-border-green-500 tw-bg-green-500 ' : 'tw-border-red-500 tw-bg-red-500',
               ]"
             >
-              <p v-if="success" class="tw-flex tw-justify-center tw-space-x-3">
-                <IconCheck class="tw-fill-white tw-mt-1" />
+              <p v-if="success" class="tw-flex tw-justify-center">
                 <span>Thanks for your message, i'll be in touch very soon :) </span>
               </p>
-              <p v-else class="tw-flex tw-justify-center tw-space-x-3">
-                <IconFailure class="tw-fill-white tw-mt-1" />
+              <p v-else class="tw-flex tw-justify-center">
                 <span>Looks like theres been a problem, please try again later </span>
               </p>
             </div>
@@ -105,6 +102,6 @@ function clearStatus(): void {
 
 <style scoped>
 .tw-input {
-  @apply tw-w-full tw-px-3 tw-bg-transparent tw-border-2 tw-rounded hover:tw-border-pink focus:tw-border-pink tw-outline-none;
+  @apply tw-w-full tw-px-3 tw-bg-transparent tw-border-2 tw-border-opacity-50 tw-rounded hover:tw-border-pink focus:tw-border-pink tw-outline-none;
 }
 </style>
