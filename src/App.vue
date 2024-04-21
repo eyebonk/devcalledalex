@@ -8,6 +8,7 @@ import MyProjects from '@components/projects/MyProjects.vue'
 import TheBackgrounds from '@components/TheBackgrounds.vue'
 import MyServices from '@components/MyServices.vue'
 import ThemeButtons from '@components/ThemeButtons.vue'
+import ContactMe from '@components/ContactMe.vue'
 import { usePresets } from '@composables/usePresets.ts'
 import type { PRESET } from '@models/Preset.ts'
 import { onMounted } from 'vue'
@@ -40,6 +41,7 @@ onMounted(() => {
       <MyProjects />
       <OtherProjects />
       <MyServices />
+      <ContactMe />
     </div>
 
     <TheBackgrounds />
