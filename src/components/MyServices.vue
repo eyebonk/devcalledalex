@@ -5,7 +5,7 @@ import { MY_SERVICES } from '@config/services.ts'
 </script>
 
 <template>
-  <div>
+  <div class="tw-py-10">
     <BaseHeader text="My Services" />
 
     <ServiceItems :items="MY_SERVICES" />

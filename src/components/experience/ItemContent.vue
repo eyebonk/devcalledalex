@@ -98,20 +98,20 @@ function _plural(date: number, type = 'yr') {
       </component>
     </h3>
 
-    <div class="tw-flex tw-flex-col tw-opacity-80 tw-text-md">
+    <div class="tw-flex tw-flex-col tw-opacity-80 tw-content">
       <template v-if="hasMultiPosition">
         <span> {{ item.type }} |{{ getTotalDate() }}  </span>
-        <span class="tw-opacity-80">{{ item.country }} | {{ item.attendance }}</span>
+        <span>{{ item.country }} | {{ item.attendance }}</span>
       </template>
 
       <template v-else>
         <span> {{ item.company }} | {{ item.type }} </span>
-        <span class="tw-space-x-4 tw-opacity-80">
+        <span class="tw-space-x-4">
           <span v-for="(date, dateIndex) in getDate(item.positions[0].dateFrom, item.positions[0].dateTo)" :key="dateIndex">
             {{ date }}
           </span>
         </span>
-        <span class="tw-opacity-80">{{ item.country }}</span>
+        <span>{{ item.country }}</span>
 
         <div
           v-if="item.positions[0].blurb"
@@ -135,7 +135,7 @@ function _plural(date: number, type = 'yr') {
         <h4 class="tw-h3 tw-leading-tight tw-font-bold">
           {{ position.role }}
         </h4>
-        <span class="tw-space-x-4 tw-opacity-80">
+        <span class="tw-space-x-4 tw-opacity-80 tw-content">
           <span v-for="(date, dateIndex) in getDate(position.dateFrom, position.dateTo)" :key="dateIndex">
             {{ date }}
           </span>
