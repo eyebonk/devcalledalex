@@ -85,6 +85,7 @@ function clearStatus(): void {
       </div>
       <div class="lg:tw-w-1/2">
         <form ref="form" class="tw-flex tw-flex-col tw-space-y-4" @submit.prevent="sendEmail">
+          <input hidden name="website" value="devcalledalex" class="tw-absolute" style="z-index: -1;">
           <input v-model="formData.firstName" type="text" class="tw-input tw-h-10" :class="{ 'tw-border-green tw-text-green tw-placeholder-[#4e6d42]': isGreenActive }" placeholder="first name" name="firstName" required>
           <input v-model="formData.lastName" type="text" class="tw-input tw-h-10" :class="{ 'tw-border-green tw-text-green tw-placeholder-[#4e6d42]': isGreenActive }" placeholder="last name" name="lastName">
           <input v-model="formData.phone" type="tel" class="tw-input tw-h-10" :class="{ 'tw-border-green tw-text-green tw-placeholder-[#4e6d42]': isGreenActive }" placeholder="phone" name="phone">
