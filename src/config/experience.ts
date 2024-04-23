@@ -62,7 +62,7 @@ export const EXPERIENCE = [
   },
   {
     company: 'mod.io',
-    icon: 'images/modio_logo.jpeg',
+    icon: 'images/modio_logo.png',
     type: 'Full-time',
     country: 'Australia',
     attendance: 'Remote',
@@ -80,7 +80,7 @@ export const EXPERIENCE = [
   },
   {
     company: 'Linked Entity Limted',
-    icon: 'images/linkedentity_logo.jpeg',
+    icon: 'images/linkedentity_logo.png',
     type: 'Full-time',
     country: 'United Kingdom',
     attendance: 'Remote',
@@ -106,7 +106,7 @@ export const EXPERIENCE = [
   },
   {
     company: 'Gig Ocean',
-    icon: 'images/gigocean_logo.jpeg',
+    icon: 'images/gigocean_logo.png',
     type: 'Full-time',
     country: 'United Kingdom',
     attendance: 'Remote',
@@ -131,7 +131,7 @@ export const EXPERIENCE = [
   },
   {
     company: 'Icon Agency',
-    icon: 'images/iconagency_logo.jpeg',
+    icon: 'images/iconagency_logo.png',
     type: 'Full-time',
     country: 'United Kingdom',
     attendance: 'Hybrid',
@@ -159,7 +159,7 @@ export const EXPERIENCE = [
   },
   {
     company: 'IO Stuidos LTD',
-    icon: 'images/iostudios_logo.jpeg',
+    icon: 'images/iostudios_logo.png',
     type: 'Full-time',
     country: 'United Kingdom',
     attendance: 'On-Site',
@@ -186,7 +186,7 @@ export const EXPERIENCE = [
   },
   {
     company: 'NFU Mutual',
-    icon: 'images/nfumutual_logo.jpeg',
+    icon: 'images/nfumutual_logo.png',
     type: 'Full-time',
     country: 'United Kingdom',
     attendance: 'On-Site',

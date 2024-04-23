@@ -6,13 +6,13 @@ const { isRetroActive, isGreenActive, isCodeActive } = usePresets()
 
 const bgImage = computed(() => {
   if (isCodeActive.value)
-    return 'images/codebg.jpg'
+    return 'images/codebg.png'
 
   if (isGreenActive.value)
     return 'images/screen-lines.png'
 
   if (isRetroActive.value)
-    return 'images/retro.jpg'
+    return 'images/retro.png'
 
   return ''
 })
