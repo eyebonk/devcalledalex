@@ -4,7 +4,15 @@ import BaseHeader from '@components/BaseHeader.vue'
 import MySocial from '@components/MySocial.vue'
 import emailjs from 'emailjs-com'
 import { ref } from 'vue'
+import LoadingIcon from './LoadingIcon.vue'
 
+const formData = ref({
+  firstName: '',
+  lastName: '',
+  phone: '',
+  email: '',
+  message: '',
+})
 const form = ref('')
 const success = ref(false)
 const failure = ref(false)
@@ -16,8 +24,6 @@ const {
 } = usePresets()
 
 function sendEmail(): void {
-  console.log('ssss, ', import.meta.env.VITE_EMAIL_SERVICE_ID)
-  console.log(import.meta.env.VITE_SOME_KEY)
   loading.value = true
   emailjs
     .sendForm(
@@ -32,6 +38,7 @@ function sendEmail(): void {
         showMessage.value = true
         success.value = true
         failure.value = false
+        clearForm()
         clearStatus()
       },
       () => {
@@ -43,13 +50,21 @@ function sendEmail(): void {
       },
     )
 }
+function clearForm(): void {
+  formData.value = {
+    firstName: '',
+    lastName: '',
+    phone: '',
+    email: '',
+    message: '',
+  }
+}
 
 function clearStatus(): void {
   setTimeout(() => {
     success.value = false
     failure.value = false
     showMessage.value = false
-    form.value = ''
   }, 5000)
 }
 </script>
@@ -70,15 +85,16 @@ function clearStatus(): void {
       </div>
       <div class="lg:tw-w-1/2">
         <form ref="form" class="tw-flex tw-flex-col tw-space-y-4" @submit.prevent="sendEmail">
-          <input type="text" class="tw-input tw-h-10" :class="{ 'tw-border-green tw-text-green tw-placeholder-[#4e6d42]': isGreenActive }" placeholder="first name" name="firstName" required>
-          <input type="text" class="tw-input tw-h-10" :class="{ 'tw-border-green tw-text-green tw-placeholder-[#4e6d42]': isGreenActive }" placeholder="last name" name="lastName">
-          <input type="tel" class="tw-input tw-h-10" :class="{ 'tw-border-green tw-text-green tw-placeholder-[#4e6d42]': isGreenActive }" placeholder="phone" name="phone">
-          <input type="email" class="tw-input tw-h-10" :class="{ 'tw-border-green tw-text-green tw-placeholder-[#4e6d42]': isGreenActive }" placeholder="email" name="email" required>
-          <textarea class="tw-input tw-h-28 tw-py-2" :class="{ 'tw-border-green tw-text-green tw-placeholder-[#4e6d42]': isGreenActive }" placeholder="message" name="message" required />
+          <input v-model="formData.firstName" type="text" class="tw-input tw-h-10" :class="{ 'tw-border-green tw-text-green tw-placeholder-[#4e6d42]': isGreenActive }" placeholder="first name" name="firstName" required>
+          <input v-model="formData.lastName" type="text" class="tw-input tw-h-10" :class="{ 'tw-border-green tw-text-green tw-placeholder-[#4e6d42]': isGreenActive }" placeholder="last name" name="lastName">
+          <input v-model="formData.phone" type="tel" class="tw-input tw-h-10" :class="{ 'tw-border-green tw-text-green tw-placeholder-[#4e6d42]': isGreenActive }" placeholder="phone" name="phone">
+          <input v-model="formData.email" type="email" class="tw-input tw-h-10" :class="{ 'tw-border-green tw-text-green tw-placeholder-[#4e6d42]': isGreenActive }" placeholder="email" name="email" required>
+          <textarea v-model="formData.message" class="tw-input tw-h-28 tw-py-2" :class="{ 'tw-border-green tw-text-green tw-placeholder-[#4e6d42]': isGreenActive }" placeholder="message" name="message" required />
 
           <div class="tw-flex tw-flex-col tw-space-y-4">
-            <button type="submit" class="tw-ml-auto tw-h-10 tw-px-4 tw-bg-pink tw-text-off-black tw-rounded hover:tw-saturate-200 focus:tw-saturate-200">
-              Get in touch
+            <button type="submit" class="tw-ml-auto tw-h-10 tw-px-4 tw-bg-pink tw-text-off-black tw-rounded hover:tw-saturate-200 focus:tw-saturate-200 tw-relative">
+              <LoadingIcon v-if="loading" class="tw-absolute tw-top-0 tw-left-0 tw-right-0 tw-bottom-0 tw-m-auto" />
+              <span :class="loading ? 'tw-opacity-0' : 'tw-opacity-100'">Get in touch</span>
             </button>
 
             <div
