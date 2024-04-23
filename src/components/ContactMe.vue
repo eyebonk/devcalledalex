@@ -16,6 +16,8 @@ const {
 } = usePresets()
 
 function sendEmail(): void {
+  console.log('ssss, ', import.meta.env.VITE_EMAIL_SERVICE_ID)
+  console.log(import.meta.env.VITE_SOME_KEY)
   loading.value = true
   emailjs
     .sendForm(
