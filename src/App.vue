@@ -10,7 +10,6 @@ import MyServices from '@components/MyServices.vue'
 import ThemeButtons from '@components/ThemeButtons.vue'
 import ContactMe from '@components/ContactMe.vue'
 import { usePresets } from '@composables/usePresets.ts'
-import type { PRESET } from '@models/Preset.ts'
 import { onMounted } from 'vue'
 
 const {
