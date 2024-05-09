@@ -16,6 +16,7 @@ import {
   faHandSparkles,
   faLayerGroup,
   faList,
+  faMugSaucer,
   faStore,
   faSun,
 } from '@fortawesome/free-solid-svg-icons'
@@ -24,7 +25,7 @@ const brandIcons = [faGithub, faDiscord, faLinkedinIn]
 
 const regularIcons = [faStore]
 
-const solidIcons = [faEnvelope, faCode, faSun, faList, faCircle, faHandSparkles, faComments, faLayerGroup]
+const solidIcons = [faEnvelope, faCode, faSun, faList, faCircle, faHandSparkles, faComments, faLayerGroup, faMugSaucer]
 
 library.add(...brandIcons, ...solidIcons, ...regularIcons)
 
