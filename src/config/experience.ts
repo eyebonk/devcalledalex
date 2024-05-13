@@ -10,7 +10,7 @@ export const EXPERIENCE = [
     link: 'https://lyka.com.au/',
     positions: [
       {
-        role: 'Engineering Manger',
+        role: 'Staff Engineer (UI)',
         dateFrom: '04-01-2024',
         dateTo: null,
       },

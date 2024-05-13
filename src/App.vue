@@ -6,8 +6,9 @@ import MySkills from '@components/MySkills.vue'
 import MySocial from '@components/MySocial.vue'
 import MyProjects from '@components/projects/MyProjects.vue'
 import TheBackgrounds from '@components/TheBackgrounds.vue'
-import MyServices from '@components/MyServices.vue'
+import MyServices from '@components/services/MyServices.vue'
 import ThemeButtons from '@components/ThemeButtons.vue'
+import MyStack from '@components/stack/MyStack.vue'
 import ContactMe from '@components/ContactMe.vue'
 import { usePresets } from '@composables/usePresets.ts'
 import { onMounted } from 'vue'
@@ -25,7 +26,7 @@ onMounted(() => {
 <template>
   <div class="tw-relative tw-pt-4" :class="{ 'green-shadow': isGreenActive }">
     <div
-      class="tw-container tw-mx-auto tw-space-y-20 tw-pb-40 tw-relative tw-z-10"
+      class="tw-container tw-mx-auto tw-space-y-24 tw-pb-40 tw-relative tw-z-10"
     >
       <div
         class="tw-flex tw-flex-col lg:tw-flex-row tw-items-center tw-justify-between tw-space-y-1 lg:tw-space-y-0"
@@ -40,6 +41,7 @@ onMounted(() => {
       <MyProjects />
       <OtherProjects />
       <MyServices />
+      <MyStack />
       <ContactMe />
     </div>
 
