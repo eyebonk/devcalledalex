@@ -75,6 +75,7 @@ export const PRESETS = [
       'background': 'var(--off-black)',
       ...COLOR_VARS,
       '--blue': '#0013F8',
+      '--light-blue': '#17FEFE',
       '--yellow': '#FFFE3B',
     },
   },

@@ -28,6 +28,7 @@ onMounted(() => {
   <div class="tw-relative tw-pt-4" :class="{ 'green-shadow': isGreenActive }">
     <div
       class="tw-container tw-mx-auto tw-space-y-24 tw-pb-40 tw-relative tw-z-10"
+      :class="{ 'tw-text-light-blue': isTeletextActive }"
     >
       <div
         class="tw-flex tw-items-center tw-space-y-1 lg:tw-space-y-0"
