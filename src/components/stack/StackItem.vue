@@ -13,7 +13,7 @@ defineProps<{
   items: Referal[]
 }>()
 
-const { isGreenActive } = usePresets()
+const { isGreenActive, isTeletextActive } = usePresets()
 </script>
 
 <template>
@@ -25,14 +25,16 @@ const { isGreenActive } = usePresets()
       :key="index"
       :href="item.link"
       class="tw-flex tw-w-fit tw-space-x-6"
+      target="_blank"
     >
       <div
         class="tw-shrink-0 tw-overflow-hidden tw-rounded-global tw-h-10 sm:tw-h-16 tw-w-10 sm:tw-w-16 tw-flex tw-items-center tw-justify-center tw-relative"
       >
         <PixelImage
-          v-if="isGreenActive"
+          v-if="isGreenActive || isTeletextActive"
           :image="item.image"
-          class="tw-h-full tw-w-full tw-relative tw-filter tw-grayscale tw-opacity-70 tw-z-20"
+          class="tw-h-full tw-w-full tw-relative tw-filter tw-z-20"
+          :class="{ 'tw-grayscale tw-opacity-70': isGreenActive }"
         />
 
         <img v-else :src="item.image" :alt="item.text">

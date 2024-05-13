@@ -3,7 +3,7 @@ import { SOCIAL } from '@config/social.ts'
 import { usePresets } from '@composables/usePresets.ts'
 import { computed } from 'vue'
 
-const { isGreenActive, isRetroActive } = usePresets()
+const { isGreenActive, isRetroActive, isTeletextActive } = usePresets()
 
 const buttonStyles = computed(() => {
   if (isRetroActive.value)
@@ -19,15 +19,15 @@ const buttonStyles = computed(() => {
 <template>
   <div
     class="tw-flex"
-    :class="isRetroActive ? 'tw-space-x-1.5' : 'tw-space-x-2.5'"
+    :class="isRetroActive || isTeletextActive ? 'tw-space-x-1.5' : 'tw-space-x-2.5'"
   >
     <a
       v-for="(item, index) in SOCIAL"
       :key="index"
       :href="item.link"
       :title="item.text"
-      class="tw-text-h4 tw-rounded-global tw-flex tw-items-center tw-justify-center tw-filter hover:tw-saturate-200 focus:tw-saturate-200 tw-outline-none"
-      :class="buttonStyles"
+      class="tw-rounded-global tw-flex tw-items-center tw-justify-center tw-filter hover:tw-saturate-200 focus:tw-saturate-200 tw-outline-none"
+      :class="[buttonStyles, isTeletextActive ? 'tw-text-h3' : 'tw-text-h4']"
       target="_blank"
     >
       <FontAwesomeIcon :icon="item.icon" />

@@ -19,7 +19,7 @@ module.exports = {
     extend: {
       fontSize: {
         'teletext-h1': '8rem',
-        'teletext-h2': '4rem',
+        'teletext-h2': '4.1rem',
         'h1': '4rem',
         'h2': '2rem',
         'h3': '1.375rem',
@@ -38,6 +38,7 @@ module.exports = {
         'green': 'var(--green)',
         'yellow': 'var(--yellow)',
         'orange': 'var(--orange)',
+        'red': 'var(--red)',
       },
       borderRadius: {
         global: 'var(--radius)',

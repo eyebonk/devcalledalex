@@ -11,7 +11,7 @@ const props = defineProps<{
   first: boolean
 }>()
 
-const { isGreenActive, isRetroActive } = usePresets()
+const { isGreenActive, isRetroActive, isTeletextActive } = usePresets()
 
 const MONTHS_IN_YEAR = 12
 const hasMultiPosition = computed(() => props.item.positions.length > 1)
@@ -77,6 +77,15 @@ function _formatTimeSince(year: number, month: number) {
 function _plural(date: number, type = 'yr') {
   return date > 1 ? `${date} ${type}s` : `${date} ${type}`
 }
+
+const textStyle = computed(() => {
+  if (isGreenActive.value)
+    return 'tw-text-h3'
+  if (isTeletextActive.value)
+    return 'tw-h2 tw-text-yellow tw-bg-blue tw-text-light-blue tw-px-4 tw-py-2'
+
+  return 'tw-text-pink hover:tw-text-blue focus:tw-text-blue'
+})
 </script>
 
 <template>
@@ -88,11 +97,7 @@ function _plural(date: number, type = 'yr') {
         :target="item.link ? '_blank' : null"
         :title="item.link ? item.company : null"
         class="tw-outline-none"
-        :class="
-          isGreenActive
-            ? 'tw-text-h3'
-            : 'tw-text-pink hover:tw-text-blue focus:tw-text-blue'
-        "
+        :class="textStyle"
       >
         {{ hasMultiPosition ? item.company : item.positions[0].role }}
       </component>
@@ -132,7 +137,7 @@ function _plural(date: number, type = 'yr') {
           v-if="index !== item.positions.length - 1" class="tw-absolute tw-top-6  tw-w-px line-height tw-bg-white tw-opacity-50"
           :class="isRetroActive ? 'tw--left-16 sm:tw--left-20 tw-transform tw-translate-x-[3px]' : 'tw--left-10 sm:tw--left-12'"
         />
-        <h4 class="tw-h3 tw-leading-tight tw-font-bold">
+        <h4 class="tw-leading-tight tw-font-bold" :class="isTeletextActive ? 'tw-h2 tw-text-off-white' : 'tw-h3'">
           {{ position.role }}
         </h4>
         <span class="tw-space-x-4 tw-opacity-80 tw-content">

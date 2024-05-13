@@ -23,7 +23,7 @@ const baseTagStyles = computed(() => {
   if (isRetroActive.value)
     return 'tw-h-12 tw-px-4 tw-bg-yellow tw-rounded-lg tw-font-heading tw-text-off-black tw-text-sm'
 
-  return 'tw-h-8 tw-px-3 tw-bg-red-500'
+  return 'tw-h-8 tw-px-3 tw-bg-red'
 })
 
 function tagStyles(item: string) {

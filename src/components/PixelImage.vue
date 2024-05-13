@@ -16,7 +16,7 @@ function processImage() {
   const img = new Image()
 
   img.onload = function () {
-    eightBit(document.getElementById(id), img, 12)
+    eightBit(document.getElementById(id), img, 10)
   }
   img.src = props.image
 }

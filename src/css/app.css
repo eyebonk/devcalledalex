@@ -7,6 +7,10 @@
     @apply tw-text-teletext-h1 sm:tw-text-teletext-h1 tw-leading-tight tw-font-heading;
     letter-spacing: var(--heading-spacing);
   }
+  .tw-teletext-h2 {
+    @apply tw-text-h2 sm:tw-text-teletext-h2 tw-leading-tight tw-font-heading;
+    letter-spacing: var(--heading-spacing);
+  }
   .tw-h1 {
     @apply tw-text-h2 sm:tw-text-h1 tw-leading-tight tw-font-heading;
     letter-spacing: var(--heading-spacing);

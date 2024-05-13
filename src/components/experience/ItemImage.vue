@@ -7,7 +7,7 @@ defineProps<{
   item: EXPERIENCE_ITEM
 }>()
 
-const { isGreenActive, isRetroActive } = usePresets()
+const { isGreenActive, isRetroActive, isTeletextActive } = usePresets()
 </script>
 
 <template>
@@ -28,9 +28,10 @@ const { isGreenActive, isRetroActive } = usePresets()
       class="tw-relative"
     >
       <PixelImage
-        v-if="isGreenActive"
+        v-if="isGreenActive || isTeletextActive"
         :image="item.icon"
-        class="tw-h-full tw-w-full tw-relative tw-filter tw-grayscale tw-opacity-70 tw-z-20"
+        class="tw-h-full tw-w-full tw-relative tw-z-20"
+        :class="{ 'tw-grayscale tw-opacity-70': isGreenActive }"
       />
 
       <img

@@ -19,7 +19,7 @@ const headerStyle = computed(() => {
 </script>
 
 <template>
-  <h2 class="tw-mb-3 tw-text-blue">
+  <h2 class="tw-mb-3 tw-text-blue" :class="isTeletextActive ? 'tw-teletext-h2' : 'tw-h2'">
     <span v-if="isCodeActive">["</span>
     <span :class="headerStyle">
       {{ text }}

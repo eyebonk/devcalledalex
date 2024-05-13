@@ -6,6 +6,7 @@ export const COLOR_VARS = {
   '--yellow': '#fffe8e',
   '--off-black': '#1a1a1a',
   '--off-white': '#e1e1e1',
+  '--red': '#FE1015',
 }
 
 export const TYPE_CODE = 'code'
@@ -68,7 +69,7 @@ export const PRESETS = [
       '--font': ['VT323', 'monospace'],
       '--heading': ['VT323', 'monospace'],
       '--heading-spacing': '0.05rem',
-      '--font-size': '2rem',
+      '--font-size': '2.25rem',
       '--radius': '0',
       'line-height': 1,
       'color': 'var(--off-white)',

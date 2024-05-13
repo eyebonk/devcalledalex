@@ -5,7 +5,7 @@ import { usePresets } from '@composables/usePresets.ts'
 import { computed } from 'vue'
 import dayjs from 'dayjs'
 
-const { isGreenActive } = usePresets()
+const { isGreenActive, isTeletextActive } = usePresets()
 
 const DEV_START_DATE = dayjs('01-09-2007')
 const current = dayjs()
@@ -34,7 +34,7 @@ const howLong = computed(() => current.diff(DEV_START_DATE, 'year'))
           <span
             v-for="(item, skillIndex) in SKILLS"
             :key="skillIndex"
-            class="tw-text-green"
+            :class="isTeletextActive ? 'tw-text-yellow' : 'tw-text-green'"
           >
             <span v-if="skillIndex > 0" class="tw-text-off-white">/</span>
             {{ item }}
