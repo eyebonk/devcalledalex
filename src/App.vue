@@ -14,6 +14,7 @@ import { usePresets } from '@composables/usePresets.ts'
 import { onMounted } from 'vue'
 
 const {
+  isTeletextActive,
   isGreenActive,
   setDefaults,
 } = usePresets()
@@ -29,9 +30,12 @@ onMounted(() => {
       class="tw-container tw-mx-auto tw-space-y-24 tw-pb-40 tw-relative tw-z-10"
     >
       <div
-        class="tw-flex tw-flex-col lg:tw-flex-row tw-items-center tw-justify-between tw-space-y-1 lg:tw-space-y-0"
+        class="tw-flex tw-items-center tw-space-y-1 lg:tw-space-y-0"
+        :class="isTeletextActive ? 'tw-flex-col tw-bg-blue tw-text-yellow tw-pt-6 tw-pb-12' : 'tw-flex-col lg:tw-flex-row tw-justify-between tw-text-off-white'"
       >
-        <h1>devcalledalex</h1>
+        <h1 :class="isTeletextActive ? 'tw-teletext-h1' : 'tw-h1'">
+          devcalledalex
+        </h1>
         <MySocial />
       </div>
 

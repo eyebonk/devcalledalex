@@ -26,7 +26,7 @@ const buttonStyles = computed(() => {
       :key="index"
       :href="item.link"
       :title="item.text"
-      class="tw-text-h4 tw-rounded-global tw-flex tw-items-center tw-justify-center tw-text-black tw-filter hover:tw-saturate-200 focus:tw-saturate-200 tw-outline-none"
+      class="tw-text-h4 tw-rounded-global tw-flex tw-items-center tw-justify-center tw-filter hover:tw-saturate-200 focus:tw-saturate-200 tw-outline-none"
       :class="buttonStyles"
       target="_blank"
     >
