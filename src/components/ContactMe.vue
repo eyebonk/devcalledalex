@@ -86,14 +86,18 @@ function clearStatus(): void {
       <div class="lg:tw-w-1/2">
         <form ref="form" class="tw-flex tw-flex-col tw-space-y-4" @submit.prevent="sendEmail">
           <input hidden name="website" value="devcalledalex" class="tw-absolute" style="z-index: -1;">
-          <input v-model="formData.firstName" type="text" class="tw-input tw-h-10" :class="{ 'tw-border-green tw-text-green tw-placeholder-[#4e6d42]': isGreenActive }" placeholder="first name" name="firstName" required>
-          <input v-model="formData.lastName" type="text" class="tw-input tw-h-10" :class="{ 'tw-border-green tw-text-green tw-placeholder-[#4e6d42]': isGreenActive }" placeholder="last name" name="lastName">
-          <input v-model="formData.phone" type="tel" class="tw-input tw-h-10" :class="{ 'tw-border-green tw-text-green tw-placeholder-[#4e6d42]': isGreenActive }" placeholder="phone" name="phone">
-          <input v-model="formData.email" type="email" class="tw-input tw-h-10" :class="{ 'tw-border-green tw-text-green tw-placeholder-[#4e6d42]': isGreenActive }" placeholder="email" name="email" required>
-          <textarea v-model="formData.message" class="tw-input tw-h-28 tw-py-2" :class="{ 'tw-border-green tw-text-green tw-placeholder-[#4e6d42]': isGreenActive }" placeholder="message" name="message" required />
+          <input v-model="formData.firstName" type="text" class="tw-input tw-h-10" :class="isGreenActive ? 'tw-border-green tw-text-green tw-placeholder-[#4e6d42]' : 'hover:tw-border-pink focus:tw-border-pink'" placeholder="first name" name="firstName" required>
+          <input v-model="formData.lastName" type="text" class="tw-input tw-h-10" :class="isGreenActive ? 'tw-border-green tw-text-green tw-placeholder-[#4e6d42]' : 'hover:tw-border-pink focus:tw-border-pink'" placeholder="last name" name="lastName">
+          <input v-model="formData.phone" type="tel" class="tw-input tw-h-10" :class="isGreenActive ? 'tw-border-green tw-text-green tw-placeholder-[#4e6d42]' : 'hover:tw-border-pink focus:tw-border-pink'" placeholder="phone" name="phone">
+          <input v-model="formData.email" type="email" class="tw-input tw-h-10" :class="isGreenActive ? 'tw-border-green tw-text-green tw-placeholder-[#4e6d42]' : 'hover:tw-border-pink focus:tw-border-pink'" placeholder="email" name="email" required>
+          <textarea v-model="formData.message" class="tw-input tw-h-28 tw-py-2" :class="isGreenActive ? 'tw-border-green tw-text-green tw-placeholder-[#4e6d42]' : 'hover:tw-border-pink focus:tw-border-pink'" placeholder="message" name="message" required />
 
           <div class="tw-flex tw-flex-col tw-space-y-4">
-            <button type="submit" class="tw-ml-auto tw-h-10 tw-px-4 tw-bg-pink tw-text-off-black tw-rounded hover:tw-saturate-200 focus:tw-saturate-200 tw-relative">
+            <button
+              type="submit"
+              class="tw-ml-auto tw-h-10 tw-px-4 tw-rounded hover:tw-saturate-200 focus:tw-saturate-200 tw-relative"
+              :class="isGreenActive ? 'tw-bg-green tw-text-black' : 'tw-bg-pink tw-text-off-black'"
+            >
               <LoadingIcon v-if="loading" class="tw-absolute tw-top-0 tw-left-0 tw-right-0 tw-bottom-0 tw-m-auto" />
               <span :class="loading ? 'tw-opacity-0' : 'tw-opacity-100'">Get in touch</span>
             </button>
@@ -121,6 +125,6 @@ function clearStatus(): void {
 
 <style scoped>
 .tw-input {
-  @apply tw-w-full tw-px-3 tw-bg-transparent tw-border-2 tw-border-opacity-50 tw-rounded hover:tw-border-pink focus:tw-border-pink tw-outline-none;
+  @apply tw-w-full tw-px-3 tw-bg-transparent tw-border-2 tw-border-opacity-50 tw-rounded tw-outline-none;
 }
 </style>

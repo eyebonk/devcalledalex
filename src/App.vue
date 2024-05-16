@@ -12,6 +12,7 @@ import MyStack from '@components/stack/MyStack.vue'
 import ContactMe from '@components/ContactMe.vue'
 import { usePresets } from '@composables/usePresets.ts'
 import { onMounted } from 'vue'
+import MySpecialties from '@components/MySpecialties.vue'
 
 const {
   isTeletextActive,
@@ -27,8 +28,8 @@ onMounted(() => {
 <template>
   <div class="tw-relative tw-pt-4" :class="{ 'green-shadow': isGreenActive }">
     <div
-      class="tw-container tw-mx-auto tw-space-y-24 tw-pb-40 tw-relative tw-z-10"
-      :class="{ 'tw-text-light-blue': isTeletextActive }"
+      class="tw-container tw-mx-auto tw-pb-40 tw-relative tw-z-10"
+      :class="isTeletextActive ? 'tw-text-light-blue tw-space-y-16' : 'tw-space-y-24'"
     >
       <div
         class="tw-flex tw-items-center tw-space-y-1 lg:tw-space-y-0"
@@ -40,8 +41,12 @@ onMounted(() => {
         <MySocial />
       </div>
 
-      <AboutMe />
-      <MySkills />
+      <div :class="isTeletextActive ? 'tw-flex tw-gap-10' : 'tw-space-y-24 '">
+        <AboutMe />
+        <MySkills />
+      </div>
+
+      <MySpecialties v-if="isTeletextActive" />
       <MyExperience />
       <MyProjects />
       <OtherProjects />

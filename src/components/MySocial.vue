@@ -10,9 +10,12 @@ const buttonStyles = computed(() => {
     return 'tw-h-10 tw-w-10 tw-bg-pink'
 
   if (isGreenActive.value)
-    return 'tw-h-8 tw-w-8 tw-bg-green tw-opacity-70'
+    return 'tw-h-8 tw-w-8 tw-bg-green tw-text-black tw-opacity-70'
 
-  return 'tw-h-8 tw-w-8 tw-bg-blue'
+  if (isTeletextActive.value)
+    return 'tw-h-10 tw-w-10 tw-bg-blue tw-text-white'
+
+  return 'tw-h-8 tw-w-8 tw-bg-blue tw-text-black'
 })
 </script>
 

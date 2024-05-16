@@ -82,14 +82,14 @@ const textStyle = computed(() => {
   if (isGreenActive.value)
     return 'tw-text-h3'
   if (isTeletextActive.value)
-    return 'tw-h2 tw-text-yellow tw-bg-blue tw-text-light-blue tw-px-4 tw-py-2'
+    return 'tw-h1 tw-text-off-white'
 
   return 'tw-text-pink hover:tw-text-blue focus:tw-text-blue'
 })
 </script>
 
 <template>
-  <div>
+  <div class="tw--mt-2">
     <h3 class="tw-leading-tight">
       <component
         :is="item.link ? 'a' : 'span'"
@@ -121,6 +121,7 @@ const textStyle = computed(() => {
         <div
           v-if="item.positions[0].blurb"
           class="tw-mt-6 tw-content"
+          :class="{ 'tw-border-[8px] tw-border-red tw-p-6': isTeletextActive }"
           v-html="item.positions[0].blurb"
         />
       </template>
@@ -149,6 +150,7 @@ const textStyle = computed(() => {
         <div
           v-if="position.blurb"
           class="tw-mt-6 tw-content"
+          :class="{ 'tw-border-[8px] tw-border-red tw-p-6': isTeletextActive }"
           v-html="position.blurb"
         />
       </div>

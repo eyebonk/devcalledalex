@@ -8,10 +8,6 @@ const props = defineProps<{
 
 const id = `canvas${getCurrentInstance()?.uid}`
 
-onMounted(() => {
-  processImage()
-})
-
 function processImage() {
   const img = new Image()
 
@@ -20,6 +16,10 @@ function processImage() {
   }
   img.src = props.image
 }
+
+onMounted(() => {
+  processImage()
+})
 </script>
 
 <template>

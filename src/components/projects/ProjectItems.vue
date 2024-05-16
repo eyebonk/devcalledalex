@@ -2,6 +2,7 @@
 import { useFilter } from '@composables/useFilter.ts'
 import { usePresets } from '@composables/usePresets.ts'
 import PixelImage from '@components/PixelImage.vue'
+import { computed } from 'vue'
 
 interface Projects {
   title: string
@@ -17,6 +18,15 @@ defineProps<{
 
 const { stackClass } = useFilter()
 const { isGreenActive, isRetroActive, isTeletextActive } = usePresets()
+
+const textStyle = computed(() => {
+  if (isGreenActive.value)
+    return 'tw-text-h3'
+  if (isTeletextActive.value)
+    return 'tw-h2 tw-text-off-white'
+
+  return 'tw-text-pink hover:tw-text-blue focus:tw-text-blue'
+})
 </script>
 
 <template>
@@ -66,11 +76,7 @@ const { isGreenActive, isRetroActive, isTeletextActive } = usePresets()
             :title="item.title"
             target="_blank"
             class="tw-outline-none"
-            :class="
-              isGreenActive
-                ? 'tw-text-h3'
-                : 'tw-text-pink hover:tw-text-blue focus:tw-text-blue'
-            "
+            :class="textStyle"
           >
             {{ item.title }}
           </a>

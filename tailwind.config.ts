@@ -18,7 +18,7 @@ module.exports = {
     },
     extend: {
       fontSize: {
-        'teletext-h1': '8rem',
+        'teletext-h1': '10rem',
         'teletext-h2': '4.1rem',
         'h1': '4rem',
         'h2': '2rem',

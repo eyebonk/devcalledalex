@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { usePresets } from '@composables/usePresets.ts'
 import PixelImage from '@components/PixelImage.vue'
+import { computed } from 'vue'
 
 interface Referal {
   title: string
@@ -14,6 +15,15 @@ defineProps<{
 }>()
 
 const { isGreenActive, isTeletextActive } = usePresets()
+
+const textStyle = computed(() => {
+  if (isGreenActive.value)
+    return 'tw-text-h3'
+  if (isTeletextActive.value)
+    return 'tw-h2 tw-text-off-white'
+
+  return 'tw-text-pink'
+})
 </script>
 
 <template>
@@ -49,11 +59,7 @@ const { isGreenActive, isTeletextActive } = usePresets()
         <h3 class="tw-leading-tight">
           <span
             class="tw-outline-none"
-            :class="
-              isGreenActive
-                ? 'tw-text-h3'
-                : 'tw-text-pink'
-            "
+            :class="textStyle"
           >
             {{ item.title }}
           </span>

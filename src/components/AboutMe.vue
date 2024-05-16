@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import BaseHeader from '@components/BaseHeader.vue'
-import { BLURB, SKILLS } from '@config/about.ts'
+import { BLURB } from '@config/about.ts'
 import { usePresets } from '@composables/usePresets.ts'
 import { computed } from 'vue'
 import dayjs from 'dayjs'
+import MySpecialties from '@components/MySpecialties.vue'
 
-const { isGreenActive, isTeletextActive } = usePresets()
+const { isTeletextActive } = usePresets()
 
 const DEV_START_DATE = dayjs('01-09-2007')
 const current = dayjs()
@@ -28,7 +29,9 @@ const howLong = computed(() => current.diff(DEV_START_DATE, 'year'))
         {{ item }}
       </p>
 
-      <p>
+      <MySpecialties v-if="!isTeletextActive" />
+
+      <!-- <p>
         Specialties:
         <span class="tw-space-x-2">
           <span
@@ -46,7 +49,7 @@ const howLong = computed(() => current.diff(DEV_START_DATE, 'year'))
           class="tw-ml-1 tw-w-5 tw-h-8 tw-bg-green tw-animate-pulse"
           style="animation-duration: 1s"
         >&nbsp;</span>
-      </p>
+      </p> -->
     </div>
   </div>
 </template>
