@@ -27,7 +27,7 @@ module.exports = {
         'h5': '1.5',
         'h6': '1.25rem',
         'md': 'var(--font-size)',
-        'sm': '0.875rem',
+        'sm': 'var(--font-size-sm)',
       },
       colors: {
         'off-black': 'var(--off-black)',

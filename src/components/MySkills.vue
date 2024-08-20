@@ -54,8 +54,8 @@ function tagStyles(item: string) {
 </script>
 
 <template>
-  <div :class="{ 'tw--top-10 tw-p-10 tw-relative': isTeletextActive }">
-    <BaseHeader text="Skills" :class="{ 'tw-bg-black tw-inline-flex tw-px-4 tw-relative tw-z-10': isTeletextActive }" />
+  <div :class="{ 'sm:tw--top-10 sm:tw-p-10 tw-relative': isTeletextActive }">
+    <BaseHeader text="Skills" :class="{ 'sm:tw-bg-black tw-inline-flex sm:tw-px-4 tw-relative tw-z-10': isTeletextActive }" />
 
     <div class="tw-content tw-mb-3">
       <p>
@@ -75,7 +75,7 @@ function tagStyles(item: string) {
       </button>
     </div>
 
-    <div v-if="isTeletextActive" class="tw-absolute tw-top-20 tw-left-0 border-height tw-w-full tw-border-[8px] tw-border-blue tw-z-0 tw-pointer-events-none" />
+    <div v-if="isTeletextActive" class="tw-absolute tw-top-0 sm:tw-top-20 tw-left-0 border-height tw-w-full tw-border-[8px] tw-border-blue tw-z-0 tw-pointer-events-none" />
   </div>
 </template>
 

@@ -26,7 +26,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="tw-relative tw-pt-4" :class="{ 'green-shadow': isGreenActive }">
+  <div class="tw-relative tw-pt-4" :class="[{ 'green-shadow': isGreenActive }]">
     <div
       class="tw-container tw-mx-auto tw-pb-40 tw-relative tw-z-10"
       :class="isTeletextActive ? 'tw-text-light-blue tw-space-y-16' : 'tw-space-y-24'"
@@ -41,7 +41,7 @@ onMounted(() => {
         <MySocial />
       </div>
 
-      <div :class="isTeletextActive ? 'tw-flex tw-gap-10' : 'tw-space-y-24 '">
+      <div :class="isTeletextActive ? 'tw-flex tw-flex-col xl:tw-flex-row tw-gap-10' : 'tw-space-y-24 '">
         <AboutMe />
         <MySkills />
       </div>
