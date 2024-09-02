@@ -61,6 +61,27 @@ export const EXPERIENCE = [
     ],
   },
   {
+    company: 'Gather',
+    icon: 'images/gather_logo.png',
+    type: 'Freelance',
+    country: 'America',
+    attendance: 'Remote',
+    link: 'https://www.gather.town/',
+    positions: [
+      {
+        role: 'Map maker',
+        dateFrom: '05-01-2024',
+        dateTo: null,
+        blurb: '',
+      },
+    ],
+    stack: [
+      type.TILED,
+      type.TILEMAP,
+      type.MAPDESIGN,
+    ],
+  },
+  {
     company: 'mod.io',
     icon: 'images/modio_logo.png',
     type: 'Full-time',
