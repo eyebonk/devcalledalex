@@ -2,6 +2,13 @@ import * as type from '@config'
 
 export const MY_PROJECTS = [
   {
+    title: 'Ambispace',
+    text: 'Ambispace is a free tool for mixing ambient noises to create the perfect soundscape for work, sleep, or relaxation.',
+    link: 'https://www.ambispace.io',
+    image: 'images/ambispace.png',
+    stack: [type.VUE3, type.JS, type.TAILWIND],
+  },
+  {
     title: 'Subtle Pink theme',
     text: 'A theme for VS Code, subtle background with pink accent',
     link: 'https://marketplace.visualstudio.com/items?itemName=eyebonk.subtle-pink',
