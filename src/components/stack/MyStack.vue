@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import StackItem from '@components/stack/StackItem.vue'
-import BaseHeader from '@components/BaseHeader.vue'
-import { REFERRALS } from '@config/referrals'
+import { REFERRALS } from '../../config/referrals.ts'
+import SectionTitle from '../SectionTitle.vue'
+import StackItem from './StackItem.vue'
 </script>
 
 <template>
   <div class="tw-py-10">
-    <BaseHeader text="My Stack" />
+    <SectionTitle>Wanna be like me? This is what I use:</SectionTitle>
 
     <StackItem :items="REFERRALS" />
   </div>

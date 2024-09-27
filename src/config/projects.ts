@@ -1,4 +1,4 @@
-import * as type from '@config'
+import * as type from '../config'
 
 export const MY_PROJECTS = [
   {
@@ -14,6 +14,7 @@ export const MY_PROJECTS = [
     link: 'https://marketplace.visualstudio.com/items?itemName=eyebonk.subtle-pink',
     image: 'images/subtlepink.png',
     stack: [type.VSCODE, type.THEME],
+    downloads: '7.7k',
   },
   {
     title: 'Subtle Blue theme',
@@ -21,6 +22,7 @@ export const MY_PROJECTS = [
     link: 'https://marketplace.visualstudio.com/items?itemName=eyebonk.subtle-blue',
     image: 'images/subtleblue.png',
     stack: [type.VSCODE, type.THEME],
+    downloads: '2.3k',
   },
   {
     title: 'Subtle Green theme',
@@ -28,6 +30,7 @@ export const MY_PROJECTS = [
     link: 'https://marketplace.visualstudio.com/items?itemName=eyebonk.subtle-green',
     image: 'images/subtlegreen.png',
     stack: [type.VSCODE, type.THEME],
+    downloads: '2.7k',
   },
   {
     title: 'Flix Slider',

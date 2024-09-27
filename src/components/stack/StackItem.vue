@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { usePresets } from '@composables/usePresets.ts'
-import PixelImage from '@components/PixelImage.vue'
+import LinkItem from '../LinkItem.vue'
 
 interface Referal {
   title: string
@@ -12,8 +11,6 @@ interface Referal {
 defineProps<{
   items: Referal[]
 }>()
-
-const { isGreenActive } = usePresets()
 </script>
 
 <template>
@@ -29,39 +26,23 @@ const { isGreenActive } = usePresets()
       <div
         class="tw-shrink-0 tw-overflow-hidden tw-rounded-global tw-h-10 sm:tw-h-16 tw-w-10 sm:tw-w-16 tw-flex tw-items-center tw-justify-center tw-relative"
       >
-        <PixelImage
-          v-if="isGreenActive"
-          :image="item.image"
-          class="tw-h-full tw-w-full tw-relative tw-filter tw-grayscale tw-opacity-70 tw-z-20"
-        />
 
-        <img v-else :src="item.image" :alt="item.text">
+        <img :src="item.image" :alt="item.text">
 
-        <div
-          v-if="isGreenActive"
-          class="tw-absolute tw-top-0 tw-left-0 tw-h-full tw-w-full tw-bg-green tw-opacity-80 tw-z-10"
-        />
       </div>
 
-      <div class="tw-flex tw-flex-col tw-text-sm tw-space-y-1 tw-pt-1">
-        <h3 class="tw-leading-tight">
-          <span
-            class="tw-outline-none"
-            :class="
-              isGreenActive
-                ? 'tw-text-h3'
-                : 'tw-text-pink'
-            "
-          >
-            {{ item.title }}
-          </span>
+      <div class="tw-flex tw-flex-col tw-space-y-3 tw-pt-1">
+        <h3 class="tw-text-pink">
+          {{ item.title }}
         </h3>
 
         <div
           v-if="item.text"
-          class="tw-mt-6 tw-content"
+          class="tw-mt-6 tw-content tw-text-white tw-text-opacity-60"
           v-html="item.text"
         />
+
+        <LinkItem :link="item.link" :text="item.title" />
       </div>
     </a>
   </div>

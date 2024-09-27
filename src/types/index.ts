@@ -2,7 +2,6 @@ interface POSITION {
   role: string
   dateFrom: string
   dateTo: string | null
-  blurb?: string
 }
 
 export interface EXPERIENCE_ITEM {
@@ -13,5 +12,6 @@ export interface EXPERIENCE_ITEM {
   attendance: string
   link: string
   positions: POSITION[]
+  blurb?: string
   stack: string[]
 }

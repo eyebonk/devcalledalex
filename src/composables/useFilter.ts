@@ -1,10 +1,8 @@
-import { usePresets } from '@composables/usePresets.ts'
 import { computed, ref } from 'vue'
 
 const state = ref<string[]>([])
 
 export function useFilter() {
-  const { isGreenActive } = usePresets()
   const activeFilters = computed(() => state.value)
 
   function addFilter(filter: string) {
@@ -19,21 +17,6 @@ export function useFilter() {
     return state.value.includes(item as string)
   }
 
-  function stackClass(item: string) {
-    const index = state.value.includes(item as string)
-
-    if (isGreenActive.value) {
-      return index
-        ? 'tw-bg-red-500 tw-bg-opacity-50'
-        : 'tw-opacity-70 tw-text-green'
-    }
-    else {
-      return index
-        ? 'tw-opacity-100 tw-text-yellow'
-        : 'tw-opacity-70 tw-text-green'
-    }
-  }
-
   function _addFilter(value: string) {
     state.value.push(value as string)
   }
@@ -44,7 +27,6 @@ export function useFilter() {
 
   return {
     activeFilters,
-    stackClass,
     addFilter,
     isActive,
   }
