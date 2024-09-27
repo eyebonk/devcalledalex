@@ -52,13 +52,13 @@ function _formatDateTo(from: Dayjs, to: Dayjs) {
 </script>
 
 <template>
-  <div class="tw-flex tw-w-full">
-    <div class="tw-w-2/12">
+  <div class="tw-flex tw-flex-col lg:tw-flex-row tw-w-full tw-space-y-4 lg:tw-space-y-0">
+    <div class="lg:tw-w-2/12">
       <span v-for="(date, dateIndex) in getDate(dateFrom, dateTo)" :key="dateIndex" class="tw-opacity-60">
         {{ date }}
       </span>
     </div>
-    <div class="tw-w-10/12 tw-space-y-4">
+    <div class="lg:tw-w-10/12 tw-space-y-4">
       <div>
         <div class="tw-flex tw-items-center tw-space-x-2">
           <span>{{ item.positions[0].role }}</span>

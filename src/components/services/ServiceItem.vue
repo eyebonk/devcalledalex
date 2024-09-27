@@ -12,7 +12,7 @@ defineProps<{
 
 <template>
   <div
-    class="tw-grid tw-grid-cols-3 tw-gap-10"
+    class="tw-grid lg:tw-grid-cols-3 tw-gap-10"
   >
     <div
       v-for="(item, index) in items"

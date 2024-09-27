@@ -1,5 +1,5 @@
 export const SITE_NAME = 'Devcalledalex'
-export const SUB_HEADING = 'Component library specialist /Experienced Software Engineer'
+export const SUB_HEADING = 'Experienced Frontend Software Engineer'
 
 export const JS = 'JavaScript'
 export const TS = 'TypeScript'
