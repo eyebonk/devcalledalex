@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { usePresets } from '@composables/usePresets.ts'
-
 interface Service {
   title: string
   text: string
@@ -10,45 +8,32 @@ interface Service {
 defineProps<{
   items: Service[]
 }>()
-
-const { isGreenActive } = usePresets()
 </script>
 
 <template>
   <div
-    class="tw-flex tw-flex-col tw-space-y-10"
+    class="tw-grid lg:tw-grid-cols-3 tw-gap-10"
   >
     <div
       v-for="(item, index) in items"
       :key="index"
-      class="tw-flex tw-w-fit tw-space-x-6"
+      class="tw-flex tw-flex-col tw-items-center tw-text-center tw-border tw-border-white tw-border-opacity-60 hover:tw-border-opacity-100 hover:tw-drop-shadow-glow-blue tw-transition tw-rounded-3xl tw-py-12 tw-px-10 tw-space-y-4 tw-group tw-cursor-default"
     >
       <div
-        class="tw-shrink-0 tw-overflow-hidden tw-rounded-global tw-h-10 sm:tw-h-16 tw-w-10 sm:tw-w-16 tw-flex tw-items-center tw-justify-center"
+        class="tw-shrink-0 tw-opacity-60 group-hover:tw-opacity-100 tw-transition tw-text-light-blue"
       >
         <FontAwesomeIcon :icon="item.icon" size="2x" />
       </div>
 
-      <div class="tw-flex tw-flex-col tw-text-sm tw-space-y-1 tw-pt-1">
-        <h3 class="tw-leading-tight">
-          <span
-            class="tw-outline-none"
-            :class="
-              isGreenActive
-                ? 'tw-text-h3'
-                : 'tw-text-pink'
-            "
-          >
-            {{ item.title }}
-          </span>
-        </h3>
+      <h3>
+        {{ item.title }}
+      </h3>
 
-        <div
-          v-if="item.text"
-          class="tw-mt-6 tw-content"
-          v-html="item.text"
-        />
-      </div>
+      <div
+        v-if="item.text"
+        class="tw-mt-6 tw-content tw-text-white tw-text-opacity-60"
+        v-html="item.text"
+      />
     </div>
   </div>
 </template>

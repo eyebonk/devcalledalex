@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import ProjectItems from '@components/projects/ProjectItems.vue'
-import BaseHeader from '@components/BaseHeader.vue'
-import { PROJECTS } from '@config/projects.ts'
+import { PROJECTS } from '../../config/projects.ts'
+import SectionTitle from '../SectionTitle.vue'
+import ProjectItems from './ProjectItems.vue'
 </script>
 
 <template>
   <div>
-    <BaseHeader text="Projects" />
+    <SectionTitle>My Websites</SectionTitle>
 
     <ProjectItems :items="PROJECTS" />
   </div>

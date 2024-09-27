@@ -1,45 +1,35 @@
 module.exports = {
-  content: ["*.html", "./src/**/*.{vue,js}"],
-  prefix: "tw-",
-  variants: {
-    extend: {
-      textColor: ["group-hover", "group-focus"],
-    },
-  },
+  content: ['*.html', './src/**/*.{vue,js,css}'],
+  prefix: 'tw-',
   theme: {
-    fontFamily: {
-      sans: "var(--font)",
-      display: "var(--font)",
-      body: "var(--font)",
-      heading: "var(--heading)",
-    },
     container: {
-      padding: "2rem",
+      padding: '2rem',
+      center: true,
+    },
+    fontFamily: {
+      body: 'poppins, sans-serif',
+      heading: 'anton, sans-serif',
     },
     extend: {
-      fontSize: {
-        h1: "4rem",
-        h2: "2rem",
-        h3: "1.375rem",
-        h4: "1rem",
-        h5: "1.5",
-        h6: "1.25rem",
-        md: "var(--font-size)",
-        sm: "0.875rem",
-      },
       colors: {
-        "off-black": "var(--off-black)",
-        "off-white": "var(--off-white)",
-        pink: "var(--pink)",
-        blue: "var(--blue)",
-        green: "var(--green)",
-        yellow: "var(--yellow)",
-        orange: "var(--orange)",
+        'pink': '#f329d7',
+        'light-blue': '#a9f9fe',
+        'green': '#16e154',
+        'red': '#fc0100',
+        'blue': '#181c38',
+        'dark-blue': '#0c122c',
       },
-      borderRadius: {
-        global: "var(--radius)",
+      dropShadow: {
+        'glow': [
+          '0 0px 20px rgba(243, 41, 215, 0.45)',
+          '0 0px 65px rgba(243, 41, 215, 0.3)',
+        ],
+        'glow-blue': [
+          '0 0px 20px rgba(169, 249, 254, 0.55)',
+          '0 0px 65px rgba(169, 249, 254, 0.3)',
+        ],
       },
     },
   },
   plugins: [],
-};
+}

@@ -20,7 +20,7 @@ export const SOCIAL = [
     link: 'https://discordapp.com/users/806327296247332905',
   },
   {
-    text: 'Email',
+    text: 'Email me',
     icon: 'fa-envelope',
     link: 'mailto:alex@devcalledalex.com',
   },

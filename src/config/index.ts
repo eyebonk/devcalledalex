@@ -1,3 +1,6 @@
+export const SITE_NAME = 'Devcalledalex'
+export const SUB_HEADING = 'Experienced Frontend Software Engineer'
+
 export const JS = 'JavaScript'
 export const TS = 'TypeScript'
 export const VUE2 = 'Vue2'
@@ -20,3 +23,5 @@ export const NUXT3 = 'Nuxt 3'
 export const TILED = 'Tiled'
 export const TILEMAP = 'Tile Map'
 export const MAPDESIGN = 'Map Design'
+export const PEOPLE = 'People Management'
+export const COMPLIB = 'Component Library'

@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import { useFilter } from '@composables/useFilter.ts'
-import { usePresets } from '@composables/usePresets.ts'
-import PixelImage from '@components/PixelImage.vue'
+import StackItem from '../StackItem.vue'
+import LinkItem from '../LinkItem.vue'
 
 interface Projects {
   title: string
@@ -9,26 +8,23 @@ interface Projects {
   link: string
   image: string
   stack: string[]
+  downloads?: string
 }
 
 defineProps<{
   items: Projects[]
 }>()
-
-const { stackClass } = useFilter()
-const { isGreenActive, isRetroActive } = usePresets()
 </script>
 
 <template>
-  <div class="tw-grid lg:tw-grid-cols-2 tw-gap-x-4 tw-gap-y-8">
+  <div class="tw-grid lg:tw-grid-cols-2 tw-gap-x-10 tw-gap-y-16">
     <div
       v-for="(item, index) in items"
       :key="index"
-      class="tw-flex"
-      :class="isRetroActive ? 'tw-space-x-6' : 'tw-space-x-4'"
+      class="tw-flex tw-space-x-6"
     >
       <div
-        class="tw-h-16 sm:tw-h-40 tw-w-16 sm:tw-w-40 tw-overflow-hidden tw-flex-shrink-0 tw-rounded-global"
+        class="tw-h-28 tw-aspect-square tw-overflow-hidden tw-flex-shrink-0"
       >
         <a
           :href="item.link"
@@ -37,59 +33,39 @@ const { isGreenActive, isRetroActive } = usePresets()
           tabindex="-1"
           class="tw-relative"
         >
-          <PixelImage
-            v-if="isGreenActive"
-            :image="item.image"
-            class="tw-h-full tw-w-full tw-relative tw-filter tw-grayscale tw-opacity-70 tw-z-20"
-          />
 
           <div
-            v-else
             role="img"
-            class="tw-h-full tw-w-full tw-bg-no-repeat tw-bg-cover tw-bg-center tw-relative tw-z-20 tw-rounded-global"
-            :class="{ 'tw-border-4 tw-border-blue': isRetroActive }"
+            class="tw-h-full tw-w-full tw-bg-no-repeat tw-bg-cover tw-bg-center tw-rounded tw-relative tw-z-20"
             :style="`background-image: url(${item.image});`"
           />
 
-          <div
-            v-if="isGreenActive"
-            class="tw-absolute tw-top-0 tw-left-0 tw-h-full tw-w-full tw-bg-green tw-opacity-80 tw-z-10"
-          />
         </a>
       </div>
 
-      <div class="tw-space-y-2">
-        <h3 class="tw-leading-tight">
-          <a
-            :href="item.link"
-            :title="item.title"
-            target="_blank"
-            class="tw-outline-none"
-            :class="
-              isGreenActive
-                ? 'tw-text-h3'
-                : 'tw-text-pink hover:tw-text-blue focus:tw-text-blue'
-            "
-          >
-            {{ item.title }}
-          </a>
+      <div class="tw-space-y-4">
+        <h3 class="tw-text-pink">
+          {{ item.title }}
         </h3>
 
-        <p class="tw-opacity-80">
-          {{ item.text }}
-        </p>
+        <div>
+          <p>
+            {{ item.text }}
+          </p>
+        </div>
 
-        <div class="tw-flex">
-          <span
-            v-for="(stack, stackIndex) in item.stack"
-            :key="stackIndex"
-            class="tw-space-x-1"
-          >
-            <span v-if="stackIndex > 0">,</span>
-            <span class="tw-whitespace-nowrap" :class="stackClass(stack)">
-              {{ stack }}
-            </span>
-          </span>
+        <div class="tw-flex tw-gap-4">
+          <LinkItem :link="item.link" :text="item.title" />
+          <LinkItem download :text="item.downloads" />
+        </div>
+
+        <div class="tw-flex tw-flex-wrap tw-text-sm tw-gap-y-2.5 tw-gap-x-2">
+          <StackItem
+            v-for="(stack, stackIndex) in item.stack" :key="stackIndex"
+            :item="stack"
+            :index="stackIndex"
+            :stack-index="stackIndex"
+          />
         </div>
       </div>
     </div>

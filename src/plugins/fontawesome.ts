@@ -12,9 +12,11 @@ import {
   faCircle,
   faCode,
   faComments,
+  faDownload,
   faEnvelope,
   faHandSparkles,
   faLayerGroup,
+  faLink,
   faList,
   faMugSaucer,
   faStore,
@@ -25,7 +27,7 @@ const brandIcons = [faGithub, faDiscord, faLinkedinIn]
 
 const regularIcons = [faStore]
 
-const solidIcons = [faEnvelope, faCode, faSun, faList, faCircle, faHandSparkles, faComments, faLayerGroup, faMugSaucer]
+const solidIcons = [faEnvelope, faCode, faSun, faList, faCircle, faHandSparkles, faComments, faLayerGroup, faMugSaucer, faLink, faDownload]
 
 library.add(...brandIcons, ...solidIcons, ...regularIcons)
 
