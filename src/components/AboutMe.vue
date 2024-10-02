@@ -13,9 +13,9 @@ const howLong = computed(() => current.diff(DEV_START_DATE, 'year'))
   <div>
     <SectionTitle>About Me</SectionTitle>
     <div class="tw-space-y-5">
-      <p>Hi, I'm Alex, a <b>Web Developer/Engineer </b> with a passion for pushing boundaries and delivering outstanding results. With over <b>{{ howLong }} years </b> of experience in the industry, I bring a wealth of expertise to every project I undertake.</p>
-      <p>I take immense pride in my meticulous approach, ensuring that every line of code I write is clean, every element is pixel-perfect, and every website is accessible and scalable.</p>
-      <p>Specialties: HTML5/ CSS3/ SCSS/ JavaScript/ Vue 2 & 3/ Bootstrap/ Tailwind/ JQuery/ Bespoke Component Libraries/ Responsive design/ W3C Guidelines/ Cross Browser & Accessibility</p>
+      <p>Hi, I'm Alex, a Web Developer/Engineer with over <b>{{ howLong }} years </b> of experience in  <b>crafting high-quality</b>, <b>scalable</b>, and <b>accessible</b> websites. I take pride in ensuring every project I work on is built with clean, maintainable code and a strong attention to detail, from <b>pixel-perfec</b>t design to <b>cross-browser compatibility</b>.</p>
+
+      <p>I specialise in <b>component libraries</b> and front-end technologies like HTML5, CSS3, SCSS, JavaScript, and Vue.js. I'm also well-versed in frameworks such as Tailwind and Bootstrap, and I'm passionate about creating responsive, W3C-compliant websites that deliver exceptional user experiences.</p>
     </div>
   </div>
 </template>
