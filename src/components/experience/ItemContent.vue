@@ -75,7 +75,7 @@ function _formatDateTo(from: Dayjs, to: Dayjs) {
         </div>
       </div>
 
-      <div v-if="item.blurb" v-html="item.blurb" />
+      <div v-if="item.blurb" class="tw-space-y-6" v-html="item.blurb" />
 
       <LinkItem :link="item.link" :text="item.company" />
 

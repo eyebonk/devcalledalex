@@ -20,8 +20,12 @@ export const EXPERIENCE = [
         dateTo: '04-02-2024',
       },
     ],
-    blurb:
-    '<p>In this diverse role, I oversee projects, manage resources, and prioritise timely project delivery. Collaborating with fellow lead engineers, I nurture a culture of success, utilising my leadership, technical expertise, and robust project coordination skills. Together, we achieve outstanding outcomes, surpassing expectations and propelling the team towards excellence. </p>',
+    blurb: `
+      <p>In my role/s as Staff/Lead Frontend Engineer, I am responsible for defining and setting up a comprehensive design system and component library in collaboration with the Design Lead. This system establishes a unified language and consistent processes across all frontend projects, ensuring accessibility and consistency not only in the visual aspects but also in the functionality and user interactions. The component library, created as a private NPM package, is designed for use by all engineers to streamline development and uphold high standards in both usability and performance.</p>
+      <p>Additionally, I manage a team of up to six direct reports, handling daily requests, facilitating their career growth through personal development plans, and guiding them in building their skills. </p>
+      <p>At a leadership level, I actively participate in the Engineering leadership team, helping to define processes, set strategic direction, and drive best practices across the team. I regularly engage with C-level executives and directors to align the frontend vision with business goals. </p>
+      <p>I also serve as the point of contact for all frontend-related matters, ensuring adherence to coding standards, setting up processes, and promoting best practices for scalable, maintainable code.</p>
+    `,
     stack: [
       type.PEOPLE,
       type.COMPLIB,
@@ -50,7 +54,11 @@ export const EXPERIENCE = [
         dateTo: null,
       },
     ],
-    blurb: '<p>lorem ipsum dolor sit amet consectetur adipisicing elit. lorem ipsum dolor sit amet consectetur adipisicing elit.  lorem ipsum dolor sit amet consectetur adipisicing elit. </p>',
+    blurb: `
+      <p>As the founder of pixel61, I am dedicated to building and designing high-end websites and software for a diverse range of clients. In this role, I handle all aspects of project delivery, from initial client consultations and requirement gathering to design, development, and deployment. I focus on delivering bespoke solutions that are both visually compelling and technically robust, ensuring that each project aligns with client goals and stands out in a competitive digital landscape.</p>
+      <p>In addition to website and software development, I offer specialised services in creating custom virtual office spaces using the Gather.town platform. This involves designing tailored environments that reflect each client’s unique brand and culture, fostering engagement and collaboration in their virtual spaces.</p>
+      <p>As I grow pixel61, I continue to expand its offerings, balancing creative design with technical expertise to deliver exceptional results for clients.</p>
+    `,
     stack: [
       type.VUE3,
       type.NUXT3,
@@ -76,7 +84,10 @@ export const EXPERIENCE = [
         dateTo: null,
       },
     ],
-    blurb: '<p>',
+    blurb: `
+      <p>In my role at Gather.town, I am responsible for creating bespoke virtual maps for a global clientele using the Tiled software. These maps are designed to meet client-specific needs, focusing on both aesthetic appeal and functionality. Once the maps are created, I upload them into the Gather platform and furnish them with interactive elements to enhance user engagement and experience.</p>
+      <p>I regularly liaise with colleagues across different time zones, particularly with teams in the US, to coordinate project timelines and address client feedback. I also handle post-delivery requests, ensuring that any necessary revisions are swiftly implemented while maintaining the highest level of quality.</p>
+    `,
     stack: [
       type.TILED,
       type.TILEMAP,
@@ -98,7 +109,7 @@ export const EXPERIENCE = [
       },
     ],
     blurb:
-      '<p>In a global remote team, I helped drive the frontend development for mod.io, collaborating with backend and design teams to ensure seamless browsing on all devices. Main responsibilities for, leading the monetisation section\'s frontend development. Previously, I had successfully delivered Vue3 & TailwindCSS-based v2 project with a 3-member frontend team. Additionally, mentoring juniors, conducting PR reviews and hold regular guild meetings to ensure project consistency and growth.</p>',
+      '<p>As part of a global remote team, I led the frontend development for mod.io, working closely with backend and design teams to ensure seamless browsing across all devices. I created the frontend from the ground up, building an internal component library to help engineers work more efficiently while maintaining consistency and accessibility throughout the project. My main responsibility was overseeing the frontend development of the monetisation section. I successfully delivered a Vue 3 and TailwindCSS-based v2 project with a 3-member frontend team. In addition to leading development efforts, I mentored junior developers, conducted PR reviews, and held regular guild meetings to drive project consistency and continuous improvement.</p>',
     stack: [
       type.PEOPLE,
       type.COMPLIB,
