@@ -21,10 +21,10 @@ defineProps<{
       v-for="(item, index) in items"
       :key="index"
       :href="item.link"
-      class="tw-flex tw-w-fit tw-space-x-6"
+      class="tw-flex tw-w-fit sm:tw-space-x-6"
     >
       <div
-        class="tw-shrink-0 tw-overflow-hidden tw-rounded-global tw-h-10 sm:tw-h-16 tw-w-10 sm:tw-w-16 tw-flex tw-items-center tw-justify-center tw-relative"
+        class="tw-shrink-0 tw-overflow-hidden tw-rounded-global tw-h-10 sm:tw-h-16 tw-w-10 sm:tw-w-16 tw-hidden sm:tw-flex tw-items-center tw-justify-center tw-relative"
       >
 
         <img :src="item.image" :alt="item.text">

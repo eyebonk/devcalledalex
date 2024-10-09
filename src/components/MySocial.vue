@@ -9,7 +9,7 @@ defineProps<{
 <template>
   <div
     class="tw-flex tw-gap-1"
-    :class="{ 'tw-flex-col': stack }"
+    :class="stack ? 'tw-flex-col' : 'tw-justify-center'"
   >
     <a
       v-for="(item, index) in SOCIAL"

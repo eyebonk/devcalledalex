@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { SITE_NAME, SUB_HEADING } from '../config'
+import MySocial from './MySocial.vue'
 </script>
 
 <template>
@@ -11,6 +12,8 @@ import { SITE_NAME, SUB_HEADING } from '../config'
         </h1>
 
         <span class="tw-font-heading tw-text-2xl tw-tracking-wider">{{ SUB_HEADING }}</span>
+
+        <MySocial class="tw-block sm:tw-hidden" />
       </div>
     </div>
   </header>

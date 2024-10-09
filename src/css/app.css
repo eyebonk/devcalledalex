@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply tw-font-body tw-text-white tw-text-lg;
+    @apply tw-font-body tw-text-white sm:tw-text-lg;
   }
 
   strong, b {

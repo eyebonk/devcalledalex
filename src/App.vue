@@ -14,7 +14,10 @@ import MyStack from './components/stack/MyStack.vue'
   <div class="tw-flex tw-flex-col tw-h-full tw-w-full tw-bg-gradient-to-b tw-from-blue tw-to-dark-blue tw-relative">
     <div class="tw-flex tw-flex-col tw-h-full tw-w-full">
       <TheHeader />
-      <MySocial stack class="tw-w-10 tw-fixed tw-top-1/2 tw-right-0 tw-transform tw--translate-y-1/2 tw-z-20" />
+      <MySocial
+        stack
+        class="tw-hidden sm:tw-block tw-w-10 tw-fixed tw-top-1/2 tw-right-0 tw-transform tw--translate-y-1/2 tw-z-20"
+      />
 
       <div class="tw-flex tw-flex-col tw-flex-1">
         <main class="tw-flex tw-flex-col tw-flex-1 tw-relative tw-z-10">

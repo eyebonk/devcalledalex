@@ -21,10 +21,10 @@ defineProps<{
     <div
       v-for="(item, index) in items"
       :key="index"
-      class="tw-flex tw-space-x-6"
+      class="tw-flex sm:tw-space-x-6"
     >
       <div
-        class="tw-h-28 tw-aspect-square tw-overflow-hidden tw-flex-shrink-0"
+        class="tw-hidden sm:tw-block tw-h-28 tw-aspect-square tw-overflow-hidden tw-flex-shrink-0"
       >
         <a
           :href="item.link"
