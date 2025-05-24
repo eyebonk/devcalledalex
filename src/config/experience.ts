@@ -11,13 +11,13 @@ export const EXPERIENCE = [
     positions: [
       {
         role: 'Staff Engineer (UI)',
-        dateFrom: '04-01-2024',
+        dateFrom: '04/01/2024',
         dateTo: null,
       },
       {
         role: 'Lead Frontend Engineer',
-        dateFrom: '01-01-2023',
-        dateTo: '04-02-2024',
+        dateFrom: '01/01/2023',
+        dateTo: '04/02/2024',
       },
     ],
     blurb: `
@@ -50,7 +50,7 @@ export const EXPERIENCE = [
     positions: [
       {
         role: 'Founder',
-        dateFrom: '09-01-2021',
+        dateFrom: '09/01/2021',
         dateTo: null,
       },
     ],
@@ -80,7 +80,7 @@ export const EXPERIENCE = [
     positions: [
       {
         role: 'Map maker',
-        dateFrom: '05-01-2024',
+        dateFrom: '05/01/2024',
         dateTo: null,
       },
     ],
@@ -104,8 +104,8 @@ export const EXPERIENCE = [
     positions: [
       {
         role: 'Senior Frontend Developer',
-        dateFrom: '02-01-2021',
-        dateTo: '01-01-2023',
+        dateFrom: '02/01/2021',
+        dateTo: '01/01/2023',
       },
     ],
     blurb:
@@ -131,8 +131,8 @@ export const EXPERIENCE = [
     positions: [
       {
         role: 'Co-Founder & Director',
-        dateFrom: '01-01-2016',
-        dateTo: '05-01-2022',
+        dateFrom: '01/01/2016',
+        dateTo: '05/01/2022',
       },
     ],
     blurb:
@@ -157,8 +157,8 @@ export const EXPERIENCE = [
     positions: [
       {
         role: 'Co-Founder & Director',
-        dateFrom: '01-01-2018',
-        dateTo: '01-01-2022',
+        dateFrom: '01/01/2018',
+        dateTo: '01/01/2022',
       },
     ],
     blurb: '<p>',
@@ -182,8 +182,8 @@ export const EXPERIENCE = [
     positions: [
       {
         role: 'Senior Frontend Developer',
-        dateFrom: '12-01-2016',
-        dateTo: '02-01-2021',
+        dateFrom: '12/01/2016',
+        dateTo: '02/01/2021',
       },
     ],
     blurb:
@@ -211,8 +211,8 @@ export const EXPERIENCE = [
     positions: [
       {
         role: 'Frontend Developer',
-        dateFrom: '06-01-2013',
-        dateTo: '10-01-2016',
+        dateFrom: '06/01/2013',
+        dateTo: '10/01/2016',
       },
     ],
     blurb:
@@ -238,8 +238,8 @@ export const EXPERIENCE = [
     positions: [
       {
         role: 'Web Developer',
-        dateFrom: '09-01-2007',
-        dateTo: '06-01-2013',
+        dateFrom: '09/01/2007',
+        dateTo: '06/01/2013',
       },
     ],
     blurb:
