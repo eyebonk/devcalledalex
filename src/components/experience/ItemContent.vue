@@ -77,7 +77,14 @@ function _formatDateTo(from: Dayjs, to: Dayjs) {
 
       <div v-if="item.blurb" class="tw-space-y-6" v-html="item.blurb" />
 
-      <LinkItem :link="item.link" :text="item.company" />
+      <div class="tw-py-2">
+        <div v-if="Array.isArray(item.link)" class="tw-flex tw-gap-6">
+          <LinkItem v-for="(linkItem, linkIndex) in item.link" :key="linkIndex" :link="linkItem.link" :text="linkItem.text" />
+        </div>
+        <template v-else>
+          <LinkItem :link="item.link" :text="item.company" />
+        </template>
+      </div>
 
       <div class="tw-flex tw-flex-wrap tw-text-sm tw-gap-y-2.5 tw-gap-x-2">
         <StackItem

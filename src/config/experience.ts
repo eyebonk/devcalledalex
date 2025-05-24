@@ -7,7 +7,10 @@ export const EXPERIENCE = [
     type: 'Full-time',
     country: 'Australia',
     attendance: 'Remote',
-    link: 'https://lyka.com.au/',
+    link: [
+      { text: 'Lyka', link: 'https://lyka.com.au/' },
+      { text: 'Component Library', link: 'https://lyka-pet-food.github.io/lyka-common/?path=/docs/welcome--docs' },
+    ],
     positions: [
       {
         role: 'Staff Engineer (UI)',
