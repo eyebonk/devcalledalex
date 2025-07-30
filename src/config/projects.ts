@@ -2,6 +2,13 @@ import * as type from '../config'
 
 export const MY_PROJECTS = [
   {
+    title: 'Band Me Up',
+    text: 'Band Me Up lets bands create and manage a full-featured, high-end website to promote their music and gigs.',
+    link: 'https://bandmeup.com/',
+    image: 'images/band_me_up.png',
+    stack: [type.VUE3, type.TS, type.TAILWIND],
+  },
+  {
     title: 'Ambispace IOS',
     text: 'Ambispace is a free tool for mixing ambient noises to create the perfect soundscape for work, sleep, or relaxation.',
     link: 'https://apps.apple.com/au/app/ambispace-ios/id6738633678',
@@ -13,7 +20,7 @@ export const MY_PROJECTS = [
     text: 'Ambispace is a free tool for mixing ambient noises to create the perfect soundscape for work, sleep, or relaxation.',
     link: 'https://www.ambispace.io',
     image: 'images/ambispace.png',
-    stack: [type.VUE3, type.JS, type.TAILWIND],
+    stack: [type.VUE3, type.TS, type.TAILWIND],
   },
   {
     title: 'Subtle Pink theme',
