@@ -4,18 +4,27 @@
 
 @layer base {
   body {
+    overscroll-behavior: none;
+  }
+
+  body {
     @apply tw-font-body tw-text-white sm:tw-text-lg;
   }
 
-  strong, b {
-    @apply  tw-text-opacity-100;
+  strong,
+  b {
+    @apply tw-text-opacity-100;
   }
 
   h1 {
     @apply tw-font-heading;
   }
 
-  h2, h3, h4, h5, h6 {
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply tw-font-body;
   }
 
@@ -23,7 +32,8 @@
     @apply tw-text-white tw-text-opacity-60;
   }
 
-  strong, b {
+  strong,
+  b {
     @apply tw-text-white tw-text-opacity-100;
   }
 }
