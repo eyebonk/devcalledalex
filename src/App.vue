@@ -35,6 +35,6 @@ import MyStack from './components/stack/MyStack.vue'
       </div>
     </div>
 
-    <div class="tw-bg-no-repeat tw-bg-[url('/silhouette.png')] tw-bg-cover tw-bg-center tw-h-full tw-w-full tw-absolute tw-bottom-0 tw-left-0 tw-z-0 tw-filter tw-blur-3xl tw-opacity-50" />
+    <div aria-hidden="true" class="tw-bg-no-repeat tw-bg-[url('/silhouette.png')] tw-bg-cover tw-bg-center tw-h-full tw-w-full tw-absolute tw-bottom-0 tw-left-0 tw-z-0 tw-filter tw-blur-3xl tw-opacity-50" />
   </div>
 </template>

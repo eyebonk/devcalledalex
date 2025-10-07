@@ -2,6 +2,35 @@ import * as type from '../config'
 
 export const EXPERIENCE = [
   {
+    company: 'Butternut Box',
+    icon: 'images/bnb_logo.png',
+    type: 'Full-time',
+    country: 'United Kingdom',
+    attendance: 'Remote',
+    link: [
+      { text: 'Butternut Box', link: 'https://butternutbox.com/' },
+    ],
+    positions: [
+      {
+        role: 'Senior Frontend Developer',
+        dateFrom: '08/04/2025',
+        dateTo: null,
+      },
+    ],
+    blurb: `
+
+    `,
+    stack: [
+      type.REACT,
+      type.COMPLIB,
+      type.JS,
+      type.TS,
+      type.HTML,
+      type.CSS,
+      type.SCSS,
+    ],
+  },
+  {
     company: 'Lyka',
     icon: 'images/lyka_logo.png',
     type: 'Full-time',
@@ -15,7 +44,7 @@ export const EXPERIENCE = [
       {
         role: 'Staff Engineer (UI)',
         dateFrom: '04/01/2024',
-        dateTo: null,
+        dateTo: '05/01/2025',
       },
       {
         role: 'Lead Frontend Engineer',
@@ -84,7 +113,7 @@ export const EXPERIENCE = [
       {
         role: 'Map maker',
         dateFrom: '05/01/2024',
-        dateTo: null,
+        dateTo: '07/01/2025',
       },
     ],
     blurb: `
@@ -119,57 +148,6 @@ export const EXPERIENCE = [
       type.VUE3,
       type.JS,
       type.TAILWIND,
-      type.HTML,
-      type.CSS,
-      type.SCSS,
-    ],
-  },
-  {
-    company: 'Linked Entity Limted',
-    icon: 'images/linkedentity_logo.png',
-    type: 'Full-time',
-    country: 'United Kingdom',
-    attendance: 'Remote',
-    link: '',
-    positions: [
-      {
-        role: 'Co-Founder & Director',
-        dateFrom: '01/01/2016',
-        dateTo: '05/01/2022',
-      },
-    ],
-    blurb:
-      '<p>Passionate about development, I co-founded a successful UK-based web development company in 2016 with two fellow developers. Specialising in WordPress, Shopify, and online software, we\'ve delivered multiple projects, including e-commerce sites and an innovative Vue.js & .NET Core-based online community for the music industry. </p>',
-    stack: [
-      type.WORDPRESS,
-      type.JS,
-      type.BOOTSTRAP3,
-      type.BOOTSTRAP4,
-      type.HTML,
-      type.CSS,
-      type.SCSS,
-    ],
-  },
-  {
-    company: 'Gig Ocean',
-    icon: 'images/gigocean_logo.png',
-    type: 'Full-time',
-    country: 'United Kingdom',
-    attendance: 'Remote',
-    link: '',
-    positions: [
-      {
-        role: 'Co-Founder & Director',
-        dateFrom: '01/01/2018',
-        dateTo: '01/01/2022',
-      },
-    ],
-    blurb: '<p>',
-    stack: [
-      type.VUE2,
-      type.JS,
-      type.BOOTSTRAP3,
-      type.BOOTSTRAP4,
       type.HTML,
       type.CSS,
       type.SCSS,

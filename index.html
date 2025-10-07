@@ -9,6 +9,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
     <meta name="theme-color" content="#923941" />
+    <meta name="author" content="Alex Smith" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,9 +18,14 @@
     />
 
     <link rel="manifest" href="site.webmanifest" />
+
+    <!-- Font Awesome resource hints -->
+    <link rel="preconnect" href="https://kit.fontawesome.com" />
+    <link rel="dns-prefetch" href="https://kit.fontawesome.com" />
     <script
       src="https://kit.fontawesome.com/b08c6281bf.js"
       crossorigin="anonymous"
+      defer
     ></script>
     <title>devcalledalex</title>
 
@@ -32,11 +38,12 @@
       content="Alex Smith - Staff Engineer (UI) / Founder"
     />
     <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:image" content="https://devcalledalex.com/images/splash.png" />
     <meta name="image" content="https://devcalledalex.com/images/splash.png" />
 
     <meta
       name="keywords"
-      content="alex, smith, lead, senior, front, end, frontend, software, developer, engineer, digital, accessible, web, development, manager, online, cv, portfolio"
+      content="alex smith, frontend engineer, staff engineer, UI engineer, vue.js developer, react developer, typescript, javascript, tailwind css, nuxt, component library, accessible web development, frontend architect, web development portfolio, senior frontend developer, vue3, react, scss, bootstrap, responsive design, cross-browser compatibility, W3C compliance"
     />
 
     <meta
@@ -61,29 +68,61 @@
       content="Alex Smith - Staff Engineer (UI) / Founder"
     />
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
 
     <meta property="og:url" content="https://devcalledalex.com" />
     <meta property="twitter:url" content="https://devcalledalex.com" />
 
     <link rel="canonical" href="https://devcalledalex.com" />
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-GEGHGSKZRY"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-GEGHGSKZRY");
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Alex Smith",
+      "jobTitle": "Staff Engineer (UI) / Founder",
+      "description": "Frontend software engineer who builds accessible, pixel perfect digital experiences for the web",
+      "url": "https://devcalledalex.com",
+      "image": "https://devcalledalex.com/images/splash.png",
+      "sameAs": [
+        "https://github.com/eyebonk",
+        "https://www.linkedin.com/in/alex-smith-frontend-developer"
+      ],
+      "knowsAbout": [
+        "Frontend Development",
+        "Web Development",
+        "Accessible Design",
+        "JavaScript",
+        "Vue.js",
+        "React",
+        "UI Engineering"
+      ]
+    }
     </script>
+
   </head>
   <body>
     <div id="app"></div>
     <script type="module" src="/src/main.ts"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics (Deferred for performance) -->
+    <script>
+      window.addEventListener('load', function() {
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-GEGHGSKZRY';
+        document.head.appendChild(script);
+
+        script.onload = function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+          gtag("config", "G-GEGHGSKZRY");
+        };
+      });
+    </script>
   </body>
 </html>
