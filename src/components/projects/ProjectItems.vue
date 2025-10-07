@@ -36,6 +36,7 @@ defineProps<{
 
           <div
             role="img"
+            :aria-label="`${item.title} project thumbnail`"
             class="tw-h-full tw-w-full tw-bg-no-repeat tw-bg-cover tw-bg-center tw-rounded tw-relative tw-z-20"
             :style="`background-image: url(${item.image});`"
           />
