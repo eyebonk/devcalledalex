@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import TheFooter from './components/TheFooter.vue'
-import TheHeader from './components/TheHeader.vue'
 import AboutMe from './components/AboutMe.vue'
 import MyExperience from './components/experience/MyExperience.vue'
 import MySocial from './components/MySocial.vue'
@@ -8,6 +6,8 @@ import MyProjects from './components/projects/MyProjects.vue'
 import OtherProjects from './components/projects/OtherProjects.vue'
 import MyServices from './components/services/MyServices.vue'
 import MyStack from './components/stack/MyStack.vue'
+import TheFooter from './components/TheFooter.vue'
+import TheHeader from './components/TheHeader.vue'
 </script>
 
 <template>

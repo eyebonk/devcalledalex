@@ -3,8 +3,8 @@ import type { Dayjs } from 'dayjs'
 import dayjs from 'dayjs'
 import { computed } from 'vue'
 import type { EXPERIENCE_ITEM } from '../../types'
-import StackItem from '../StackItem.vue'
 import LinkItem from '../LinkItem.vue'
+import StackItem from '../StackItem.vue'
 
 const props = defineProps<{
   item: EXPERIENCE_ITEM
@@ -53,10 +53,12 @@ function _formatDateTo(from: Dayjs, to: Dayjs) {
 
 <template>
   <div class="tw-flex tw-flex-col lg:tw-flex-row tw-w-full tw-space-y-4 lg:tw-space-y-0">
-    <div class="lg:tw-w-2/12">
+    <div class="lg:tw-w-2/12 tw-pr-10">
       <span v-for="(date, dateIndex) in getDate(dateFrom, dateTo)" :key="dateIndex" class="tw-opacity-60">
         {{ date }}
       </span>
+
+      <img :src="item.icon" :alt="item.company" class="tw-w-full tw-max-w-[180px] tw-mt-6 tw-rounded-global tw-hidden lg:tw-block">
     </div>
     <div class="lg:tw-w-10/12 tw-space-y-4">
       <div>
@@ -75,7 +77,9 @@ function _formatDateTo(from: Dayjs, to: Dayjs) {
         </div>
       </div>
 
-      <div v-if="item.blurb" class="tw-space-y-6" v-html="item.blurb" />
+      <div v-if="item.blurb" class="tw-space-y-6">
+        <p v-for="(blurb, blurbIndex) in item.blurb" :key="blurbIndex" v-html="blurb" />
+      </div>
 
       <div class="tw-py-2">
         <div v-if="Array.isArray(item.link)" class="tw-flex tw-gap-6">

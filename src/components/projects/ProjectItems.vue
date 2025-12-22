@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import StackItem from '../StackItem.vue'
 import LinkItem from '../LinkItem.vue'
+import StackItem from '../StackItem.vue'
 
 interface Projects {
   title: string

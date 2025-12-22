@@ -3,8 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  html,
   body {
     overscroll-behavior: none;
+    @apply tw-bg-dark-blue;
   }
 
   body {
