@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { computed } from 'vue'
 import dayjs from 'dayjs'
+import { computed } from 'vue'
 import SectionTitle from './SectionTitle.vue'
 
 const DEV_START_DATE = dayjs('01/09/2007')
@@ -13,9 +13,11 @@ const howLong = computed(() => current.diff(DEV_START_DATE, 'year'))
   <div>
     <SectionTitle>About Me</SectionTitle>
     <div class="tw-space-y-5">
-      <p>Hi, I'm Alex, a Web Developer/Engineer with over <b>{{ howLong }} years </b> of experience in  <b>crafting high-quality</b>, <b>scalable</b>, and <b>accessible</b> websites. I take pride in ensuring every project I work on is built with clean, maintainable code and a strong attention to detail, from <b>pixel-perfect</b> design to <b>cross-browser compatibility</b>.</p>
+      <p>Hi, I'm Alex — a frontend engineer with over <b>{{ howLong }} years </b> of experience building and scaling high-quality, accessible web interfaces. I care deeply about clean, maintainable code and strong fundamentals, from pixel-perfect UI and accessibility through to performance and long-term maintainability.</p>
 
-      <p>I specialise in <b>component libraries</b> and front-end technologies like HTML5, CSS3, SCSS, JavaScript, and Vue.js. I'm also well-versed in frameworks such as Tailwind and Bootstrap, and I'm passionate about creating responsive, W3C-compliant websites that deliver exceptional user experiences.</p>
+      <p>My background is heavily rooted in design systems, component libraries, and frontend architecture, where I've helped teams ship consistently high-quality UI at scale. I've worked across startups and scale-ups, often operating at a platform level — defining standards, improving developer experience, and making it easier for teams to move fast without compromising quality.</p>
+
+      <p>I specialise in modern frontend technologies including JavaScript, TypeScript, Vue, React, and CSS, and I've spent much of my career working closely with design and product to turn complex requirements into simple, usable interfaces. I'm also comfortable mentoring engineers, reviewing code, and contributing to technical direction, even when I'm not in a formal leadership role.</p>
     </div>
   </div>
 </template>
