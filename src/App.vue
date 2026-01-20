@@ -5,6 +5,7 @@ import MySocial from './components/MySocial.vue'
 import MyProjects from './components/projects/MyProjects.vue'
 import OtherProjects from './components/projects/OtherProjects.vue'
 import MyServices from './components/services/MyServices.vue'
+import MyTestimonials from './components/testimonials/MyTestimonials.vue'
 import MyStack from './components/stack/MyStack.vue'
 import TheFooter from './components/TheFooter.vue'
 import TheHeader from './components/TheHeader.vue'
@@ -32,6 +33,7 @@ import TheHeader from './components/TheHeader.vue'
             <MyExperience />
             <MyProjects />
             <OtherProjects />
+            <MyTestimonials />
             <MyServices />
             <MyStack />
           </div>
