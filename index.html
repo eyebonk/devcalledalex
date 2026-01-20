@@ -12,10 +12,21 @@
     <meta name="author" content="Alex Smith" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Preload LCP image -->
+    <link rel="preload" href="/silhouette.webp" as="image" type="image/webp" fetchpriority="high" />
+    <!-- Non-render-blocking fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,300;0,400;1,100&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,300;0,400;1,100&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
 
     <link rel="manifest" href="site.webmanifest" />
 
@@ -27,7 +38,7 @@
       crossorigin="anonymous"
       defer
     ></script>
-    <title>devcalledalex</title>
+    <title>Alex Smith - Staff Engineer (UI) & Founder | devcalledalex</title>
 
     <meta
       property="og:title"
@@ -38,8 +49,8 @@
       content="Alex Smith - Staff Engineer (UI) / Founder"
     />
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:image" content="https://devcalledalex.com/images/splash.png" />
-    <meta name="image" content="https://devcalledalex.com/images/splash.png" />
+    <meta property="twitter:image" content="https://devcalledalex.com/images/splash.webp" />
+    <meta name="image" content="https://devcalledalex.com/images/splash.webp" />
 
     <meta
       name="keywords"
@@ -61,7 +72,7 @@
 
     <meta
       property="og:image"
-      content="https://devcalledalex.com/images/splash.png"
+      content="https://devcalledalex.com/images/splash.webp"
     />
     <meta
       property="og:site_name"
@@ -84,7 +95,7 @@
       "jobTitle": "Staff Engineer (UI) / Founder",
       "description": "Frontend software engineer who builds accessible, pixel perfect digital experiences for the web",
       "url": "https://devcalledalex.com",
-      "image": "https://devcalledalex.com/images/splash.png",
+      "image": "https://devcalledalex.com/images/splash.webp",
       "sameAs": [
         "https://github.com/eyebonk",
         "https://www.linkedin.com/in/alex-smith-frontend-developer"
