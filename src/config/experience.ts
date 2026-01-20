@@ -3,7 +3,7 @@ import * as type from '../config'
 export const EXPERIENCE = [
   {
     company: 'Butternut Box',
-    icon: '/images/butternut_box_logo.webp',
+    icon: '/images/butternut_box_logo.png',
     type: 'Full-time',
     country: 'United Kingdom',
     attendance: 'Remote',
@@ -34,7 +34,7 @@ export const EXPERIENCE = [
   },
   {
     company: 'Lyka',
-    icon: '/images/lyka_logo.webp',
+    icon: '/images/lyka_logo.png',
     type: 'Full-time',
     country: 'Australia',
     attendance: 'Remote',
@@ -77,7 +77,7 @@ export const EXPERIENCE = [
   },
   {
     company: 'Band Me Up',
-    icon: '/images/band_me_up.webp',
+    icon: '/images/band_me_up.png',
     type: 'Part-time',
     country: 'Australia / United Kingdom',
     attendance: 'Remote',
@@ -105,7 +105,7 @@ export const EXPERIENCE = [
   },
   {
     company: 'mod.io',
-    icon: '/images/modio_logo.webp',
+    icon: '/images/modio_logo.png',
     type: 'Full-time',
     country: 'Australia',
     attendance: 'Remote',
@@ -134,7 +134,7 @@ export const EXPERIENCE = [
   },
   {
     company: 'Icon Agency',
-    icon: '/images/iconagency_logo.webp',
+    icon: '/images/iconagency_logo.png',
     type: 'Full-time',
     country: 'Australia',
     attendance: 'Hybrid',

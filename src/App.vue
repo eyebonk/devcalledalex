@@ -5,8 +5,8 @@ import MySocial from './components/MySocial.vue'
 import MyProjects from './components/projects/MyProjects.vue'
 import OtherProjects from './components/projects/OtherProjects.vue'
 import MyServices from './components/services/MyServices.vue'
-import MyTestimonials from './components/testimonials/MyTestimonials.vue'
 import MyStack from './components/stack/MyStack.vue'
+import MyTestimonials from './components/testimonials/MyTestimonials.vue'
 import TheFooter from './components/TheFooter.vue'
 import TheHeader from './components/TheHeader.vue'
 </script>
@@ -43,6 +43,6 @@ import TheHeader from './components/TheHeader.vue'
       </div>
     </div>
 
-    <div aria-hidden="true" class="tw-bg-no-repeat tw-bg-[url('/silhouette.webp')] tw-bg-cover tw-bg-center tw-h-full tw-w-full tw-absolute tw-bottom-0 tw-left-0 tw-z-0" />
+    <div aria-hidden="true" class="tw-bg-no-repeat tw-bg-[url('/silhouette.png')] tw-bg-cover tw-bg-center tw-h-full tw-w-full tw-absolute tw-bottom-0 tw-left-0 tw-z-0" />
   </div>
 </template>
