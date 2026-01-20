@@ -17,6 +17,6 @@ export interface EXPERIENCE_ITEM {
   attendance: string
   link: string | Link[]
   positions: POSITION[]
-  blurb?: string
+  blurb?: string[]
   stack: string[]
 }

@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import type { Dayjs } from 'dayjs'
+import type { EXPERIENCE_ITEM } from '../../types'
 import dayjs from 'dayjs'
 import { computed } from 'vue'
-import type { EXPERIENCE_ITEM } from '../../types'
 import LinkItem from '../LinkItem.vue'
 import StackItem from '../StackItem.vue'
 
@@ -68,7 +68,7 @@ function _formatDateTo(from: Dayjs, to: Dayjs) {
           <span>{{ item.company }}</span>
         </div>
 
-        <div v-if="item.positions.length > 1" class="tw-opacity-60">
+        <div v-if="item.positions.length > 1" class="tw-opacity-70">
           <template v-for="(position, index) in item.positions" :key="index">
             <span v-if="index !== 0">
               {{ position.role }}

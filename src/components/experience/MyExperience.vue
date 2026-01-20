@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { EXPERIENCE } from '../../config/experience.ts'
+import { EXPERIENCE } from '../../config/experience'
 import SectionTitle from '../SectionTitle.vue'
 import ItemContent from './ItemContent.vue'
 </script>
