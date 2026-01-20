@@ -9,18 +9,11 @@ export const MY_PROJECTS = [
     stack: [type.VUE3, type.TS, type.TAILWIND],
   },
   {
-    title: 'Ambispace IOS',
-    text: 'Ambispace is a free tool for mixing ambient noises to create the perfect soundscape for work, sleep, or relaxation.',
-    link: 'https://apps.apple.com/au/app/ambispace-ios/id6738633678',
-    image: '/images/ambispace_ios.png',
-    stack: [type.SWIFT, type.APP_DEV, type.IOS],
-  },
-  {
-    title: 'Ambispace',
+    title: 'Ambispace Web/IOS',
     text: 'Ambispace is a free tool for mixing ambient noises to create the perfect soundscape for work, sleep, or relaxation.',
     link: 'https://www.ambispace.io',
     image: '/images/ambispace.png',
-    stack: [type.VUE3, type.TS, type.TAILWIND],
+    stack: [type.VUE3, type.TS, type.TAILWIND, type.SWIFT, type.APP_DEV, type.IOS],
   },
   {
     title: 'Subtle Pink theme',
@@ -46,13 +39,13 @@ export const MY_PROJECTS = [
     stack: [type.VSCODE, type.THEME],
     downloads: '3.3k',
   },
-  {
-    title: 'Flix Slider',
-    text: 'An NPM package custom slider',
-    link: 'https://www.npmjs.com/package/flix-slider',
-    image: '/images/flix_slider.png',
-    stack: [type.JQUERY, type.SCSS, type.NPM],
-  },
+  // {
+  //   title: 'Flix Slider',
+  //   text: 'An NPM package custom slider',
+  //   link: 'https://www.npmjs.com/package/flix-slider',
+  //   image: '/images/flix_slider.png',
+  //   stack: [type.JQUERY, type.SCSS, type.NPM],
+  // },
 ]
 
 export const PROJECTS = [
@@ -83,12 +76,5 @@ export const PROJECTS = [
     link: 'http://www.pyeparr.com',
     image: '/images/pye_parr_logo.png',
     stack: [type.WORDPRESS, type.BOOTSTRAP4, type.SCSS],
-  },
-  {
-    title: 'Leather Pig',
-    text: 'Nuxt 3 one page site',
-    link: 'https://www.leatherpig.co.uk/',
-    image: '/images/leather_pig_logo.png',
-    stack: [type.NUXT3, type.TS, type.TAILWIND, type.CSS],
   },
 ]
