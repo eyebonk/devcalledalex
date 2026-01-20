@@ -28,7 +28,7 @@ export const MY_PROJECTS = [
     link: 'https://marketplace.visualstudio.com/items?itemName=eyebonk.subtle-pink',
     image: 'images/subtlepink.png',
     stack: [type.VSCODE, type.THEME],
-    downloads: '7.7k',
+    downloads: '12.5k',
   },
   {
     title: 'Subtle Blue theme',
@@ -36,7 +36,7 @@ export const MY_PROJECTS = [
     link: 'https://marketplace.visualstudio.com/items?itemName=eyebonk.subtle-blue',
     image: 'images/subtleblue.png',
     stack: [type.VSCODE, type.THEME],
-    downloads: '2.3k',
+    downloads: '3.4k',
   },
   {
     title: 'Subtle Green theme',
@@ -44,7 +44,7 @@ export const MY_PROJECTS = [
     link: 'https://marketplace.visualstudio.com/items?itemName=eyebonk.subtle-green',
     image: 'images/subtlegreen.png',
     stack: [type.VSCODE, type.THEME],
-    downloads: '2.7k',
+    downloads: '3.3k',
   },
   {
     title: 'Flix Slider',
