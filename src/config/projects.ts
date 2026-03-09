@@ -9,6 +9,13 @@ export const MY_PROJECTS = [
     stack: [type.VUE3, type.TS, type.TAILWIND],
   },
   {
+    title: 'Band Me Up - Availability checker',
+    text: 'Band Me Up free tools to manage their band members availability.',
+    link: 'https://bandmeup.com/tools/availability',
+    image: '/images/band_me_up_tools.png',
+    stack: [type.VUE3, type.TS, type.TAILWIND],
+  },
+  {
     title: 'Ambispace Web/IOS',
     text: 'Ambispace is a free tool for mixing ambient noises to create the perfect soundscape for work, sleep, or relaxation.',
     link: 'https://www.ambispace.io',
