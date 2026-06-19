@@ -1,32 +1,32 @@
 export const SOCIAL = [
   {
     text: 'Linkedin',
-    icon: ['fa-brands', 'fa-linkedin-in'],
+    icon: 'linkedin',
     link: 'https://www.linkedin.com/in/alex-smith-frontend-developer/',
   },
   {
     text: 'Github',
-    icon: ['fa-brands', 'fa-github'],
+    icon: 'github',
     link: 'https://github.com/eyebonk',
   },
   {
     text: 'VS Marketplace',
-    icon: 'fa-store',
+    icon: 'store',
     link: 'https://marketplace.visualstudio.com/publishers/eyebonk',
   },
   {
     text: 'Discord',
-    icon: ['fa-brands', 'fa-discord'],
+    icon: 'discord',
     link: 'https://discordapp.com/users/806327296247332905',
   },
   {
     text: 'Email me',
-    icon: 'fa-envelope',
+    icon: 'envelope',
     link: 'mailto:alex@devcalledalex.com',
   },
   {
     text: 'Buy me a coffee?',
-    icon: 'fa-mug-saucer',
+    icon: 'coffee',
     link: 'https://buymeacoffee.com/devcalledalex',
   },
 ]

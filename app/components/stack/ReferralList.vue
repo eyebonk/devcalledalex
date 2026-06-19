@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import LinkItem from '../LinkItem.vue'
-
 interface Referal {
   title: string
   text: string
@@ -21,7 +19,9 @@ defineProps<{
       v-for="(item, index) in items"
       :key="index"
       :href="item.link"
-      class="tw-flex tw-w-fit sm:tw-space-x-6"
+      target="_blank"
+      rel="noopener"
+      class="tw-group tw-flex tw-w-fit sm:tw-space-x-6"
     >
       <div
         class="tw-shrink-0 tw-overflow-hidden tw-rounded-global tw-h-10 sm:tw-h-16 tw-w-10 sm:tw-w-16 tw-hidden sm:tw-flex tw-items-center tw-justify-center tw-relative"
@@ -42,7 +42,12 @@ defineProps<{
           v-html="item.text"
         />
 
-        <LinkItem :link="item.link" :text="item.title" />
+        <!-- Styled like LinkItem but NOT an <a>: the whole card is already the
+             anchor, and nesting <a> inside <a> breaks SSR hydration. -->
+        <div class="tw-text-sm tw-inline-flex tw-items-center tw-gap-2 tw-transition group-hover:tw-text-green">
+          <AppIcon name="link" class="tw-w-4 tw-h-4 tw-opacity-40" />
+          {{ item.title }}
+        </div>
       </div>
     </a>
   </div>

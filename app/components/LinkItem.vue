@@ -15,7 +15,7 @@ defineProps<{
       class="tw-inline-flex tw-items-center tw-gap-2 tw-transition"
       :class="{ 'hover:tw-text-green tw-cursor-pointer': link }"
     >
-      <FontAwesomeIcon :icon="download ? 'download' : 'link'" class="tw-opacity-40" />
+      <AppIcon :name="download ? 'download' : 'link'" class="tw-w-4 tw-h-4 tw-opacity-40" />
       {{ text }}
     </component>
   </div>

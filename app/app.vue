@@ -9,6 +9,38 @@ import MyStack from './components/stack/MyStack.vue'
 import MyTestimonials from './components/testimonials/MyTestimonials.vue'
 import TheFooter from './components/TheFooter.vue'
 import TheHeader from './components/TheHeader.vue'
+
+const personJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  'name': 'Alex Smith',
+  'jobTitle': 'Staff Engineer (UI) / Founder',
+  'description': 'Frontend software engineer who builds accessible, pixel perfect digital experiences for the web',
+  'url': 'https://devcalledalex.com',
+  'image': 'https://devcalledalex.com/images/splash.png',
+  'sameAs': [
+    'https://github.com/eyebonk',
+    'https://www.linkedin.com/in/alex-smith-frontend-developer',
+  ],
+  'knowsAbout': [
+    'Frontend Development',
+    'Web Development',
+    'Accessible Design',
+    'JavaScript',
+    'Vue.js',
+    'React',
+    'UI Engineering',
+  ],
+}
+
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify(personJsonLd),
+    },
+  ],
+})
 </script>
 
 <template>

@@ -19,7 +19,7 @@ defineProps<{
       class="tw-h-8 tw-aspect-square tw-shrink-0 tw-text-xl tw-flex tw-items-center tw-justify-center tw-filter hover:tw-text-green focus:tw-text-green tw-outline-none tw-no-underline tw-relative tw-group tw-transition"
       target="_blank"
     >
-      <FontAwesomeIcon :icon="item.icon" />
+      <AppIcon :name="item.icon" class="tw-w-5 tw-h-5" />
 
       <div
         class="tw-absolute tw-mx-auto tw-transform tw-text-center tw-text-xs tw-flex tw-items-center tw-justify-center tw-z-10 tw-transition tw-opacity-0 group-hover:tw-opacity-100"

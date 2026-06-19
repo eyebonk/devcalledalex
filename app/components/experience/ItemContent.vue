@@ -64,7 +64,7 @@ function _formatDateTo(from: Dayjs, to: Dayjs) {
       <div>
         <div class="tw-flex tw-items-center tw-space-x-2">
           <span>{{ item.positions[0].role }}</span>
-          <FontAwesomeIcon icon="circle" class="tw-text-[6px] tw-opacity-40" />
+          <span class="tw-inline-block tw-shrink-0 tw-w-1 tw-h-1 tw-rounded-full tw-bg-current tw-opacity-40" />
           <span>{{ item.company }}</span>
         </div>
 

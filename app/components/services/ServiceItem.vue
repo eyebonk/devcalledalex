@@ -22,7 +22,7 @@ defineProps<{
       <div
         class="tw-shrink-0 tw-opacity-60 group-hover:tw-opacity-100 tw-transition tw-text-light-blue"
       >
-        <FontAwesomeIcon :icon="item.icon" size="2x" />
+        <AppIcon :name="item.icon" class="tw-w-8 tw-h-8" />
       </div>
 
       <h3>

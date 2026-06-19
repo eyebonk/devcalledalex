@@ -4,15 +4,23 @@ export default antfu({
   ignores: [
     '.vscode/*',
     '.git/*',
-    '.github/*',
+    '.nuxt/*',
+    '.output/*',
     'dist/*',
     'node_modules/*',
     'public/*',
+    'nuxt.config.ts',
     '*.md',
     '*/**.md',
   ],
-  rules: {
-    // Allow process.env usage in server files
-    'node/prefer-global/process': 'off',
+}, {
+  // Nuxt auto-imported composables — declared as globals so no-undef doesn't fire.
+  languageOptions: {
+    globals: {
+      defineNuxtPlugin: 'readonly',
+      useHead: 'readonly',
+      useSeoMeta: 'readonly',
+      useRuntimeConfig: 'readonly',
+    },
   },
 })

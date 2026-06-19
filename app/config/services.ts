@@ -2,7 +2,7 @@ export const MY_SERVICES = [
   {
     title: 'Frontend engineering',
     text: 'Need support building or improving a frontend? I help teams ship reliable, scalable UI.',
-    icon: 'hand-sparkles',
+    icon: 'sparkles',
   },
   {
     title: 'Frontend consultancy',
@@ -12,6 +12,6 @@ export const MY_SERVICES = [
   {
     title: 'Design systems & component libraries',
     text: 'Working on a component library or design system? I can help shape, review, or steady large-scale frontend systems.',
-    icon: 'layer-group',
+    icon: 'layers',
   },
 ]
