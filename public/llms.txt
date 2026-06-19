@@ -1,0 +1,44 @@
+# Alex Smith — devcalledalex
+
+> Alex Smith (devcalledalex) is a UK-based frontend software engineer with over 18 years of experience building accessible, pixel-perfect web interfaces. He specialises in frontend architecture, design systems and component libraries, and works at a staff/lead level — defining standards, improving developer experience, and helping teams ship high-quality UI at scale. He is available for frontend engineering, consultancy and design-system work.
+
+## Key facts
+
+- Frontend software engineer, 18+ years' experience; operates at staff / lead / platform level (UI architecture, standards, developer experience), not only as an individual contributor.
+- Core specialisms: design systems, component libraries, frontend architecture, accessibility, performance, and long-term maintainability.
+- Primary technologies: JavaScript, TypeScript, Vue, Nuxt, React, Next.js, CSS/SCSS, Tailwind. Comfortable across startups and scale-ups.
+- UK-based, works remotely with distributed teams.
+- Founder of pixel61 (a UK web design and development studio) and founding engineer of Band Me Up (a website builder for musicians).
+- Currently a Senior Frontend Engineer at Butternut Box, rebuilding the customer-facing site in React/Next.js with Storyblok.
+- Available for hire: frontend engineering, frontend consultancy / technical direction, and design-system & component-library work.
+
+## What I can help with
+
+- Frontend engineering: building or improving frontends; shipping reliable, scalable, accessible UI as part of (or alongside) a team.
+- Frontend consultancy: a second opinion or technical direction, grounded in real-world delivery rather than theory.
+- Design systems & component libraries: shaping, reviewing or steadying large-scale frontend systems — from a private NPM component library to contribution workflows, theming, accessibility, versioning and adoption.
+
+## Selected experience
+
+- Lyka (Staff Engineer, UI / Lead Frontend Engineer): built a company-wide design system and component library from the ground up as a private NPM package; mentored engineers and ran a design-system guild.
+- mod.io (Senior Frontend Engineer): led frontend across the platform, built an internal component library, and led the monetisation area's complex, state-heavy UI (Vue 3 + Tailwind).
+- Icon Agency (Senior Frontend Developer): led a Vue.js component library for the Australian Department of Defence used to rebuild 150+ websites; delivered for clients including the Australian Air Force and Maurice Blackburn.
+- Band Me Up (Founding Engineer): self-initiated SaaS built end to end — frontend architecture, authenticated flows and admin interfaces (Vue 3, TypeScript, Supabase, Tailwind).
+
+## Selected projects
+
+- Band Me Up — a website builder for bands and musicians. https://bandmeup.com/
+- Ambispace — a free tool for mixing ambient soundscapes (web + iOS). https://www.ambispace.io
+- VS Code themes (publisher: eyebonk) — Subtle Pink (~12.5k installs), Subtle Blue, Subtle Green. https://marketplace.visualstudio.com/publishers/eyebonk
+
+## Links
+
+- Portfolio: https://devcalledalex.com
+- GitHub: https://github.com/eyebonk
+- LinkedIn: https://www.linkedin.com/in/alex-smith-frontend-developer
+- VS Code Marketplace: https://marketplace.visualstudio.com/publishers/eyebonk
+- pixel61 (studio): https://pixel61.com
+
+## Contact
+
+- Email: alex@devcalledalex.com
