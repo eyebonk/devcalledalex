@@ -27,7 +27,7 @@ defineProps<{
         class="tw-shrink-0 tw-overflow-hidden tw-rounded-global tw-h-10 sm:tw-h-16 tw-w-10 sm:tw-w-16 tw-hidden sm:tw-flex tw-items-center tw-justify-center tw-relative"
       >
 
-        <img :src="item.image" :alt="item.text">
+        <img :src="item.image" :alt="item.text" width="64" height="64" loading="lazy" decoding="async" class="tw-w-full tw-h-full tw-object-contain">
 
       </div>
 

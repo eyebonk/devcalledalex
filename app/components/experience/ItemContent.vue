@@ -58,7 +58,7 @@ function _formatDateTo(from: Dayjs, to: Dayjs) {
         {{ date }}
       </span>
 
-      <img :src="item.icon" :alt="item.company" class="tw-w-full tw-max-w-[180px] tw-mt-6 tw-rounded-global tw-hidden lg:tw-block">
+      <img :src="item.icon" :alt="item.company" width="180" height="180" loading="lazy" decoding="async" class="tw-w-full tw-max-w-[180px] tw-h-auto tw-mt-6 tw-rounded-global tw-hidden lg:tw-block">
     </div>
     <div class="lg:tw-w-10/12 tw-space-y-4">
       <div>
