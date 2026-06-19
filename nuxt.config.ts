@@ -9,17 +9,9 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   modules: ['@nuxtjs/tailwindcss', '@nuxtjs/sitemap'],
-  // Force a fully static (prerendered) site regardless of which command the
-  // host runs. Amplify auto-detects Nuxt and runs `nuxt build` (SSR), which
-  // produces no static index.html; this makes even `nuxt build` prerender.
-  ssr: true,
-  nitro: {
-    preset: 'static',
-    prerender: {
-      crawlLinks: true,
-      routes: ['/'],
-    },
-  },
+  // SSR (server-rendered). On Amplify the app is a "Web compute" type, which
+  // injects the aws-amplify Nitro preset and produces .amplify-hosting/
+  // deploy-manifest.json. SSR still serves full crawlable HTML to bots.
   site: {
     url: SITE_URL,
     name: SITE_NAME,

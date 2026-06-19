@@ -8,9 +8,9 @@ frontend:
         - yarn install --frozen-lockfile
     build:
       commands:
-        - yarn generate
+        - yarn build
   artifacts:
-    baseDirectory: .output/public
+    baseDirectory: .amplify-hosting
     files:
       - '**/*'
   cache:
