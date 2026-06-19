@@ -59,7 +59,7 @@ export const PROJECTS = [
   {
     title: 'pixel61',
     text: 'Website design and development specialists',
-    link: 'https://www.pixel61.com/',
+    link: 'https://pixel61.com/',
     image: '/images/pixel61_logo.png',
     stack: [type.TS, type.VUE3, type.TAILWIND, type.CSS],
   },

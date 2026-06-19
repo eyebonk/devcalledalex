@@ -10,26 +10,53 @@ import MyTestimonials from './components/testimonials/MyTestimonials.vue'
 import TheFooter from './components/TheFooter.vue'
 import TheHeader from './components/TheHeader.vue'
 
-const personJsonLd = {
+const SITE = 'https://devcalledalex.com'
+
+// Entity graph: a Person node (linked to employers + profiles) plus a WebSite
+// node that the Person publishes. The @id links let Google resolve these into
+// a single "Alex Smith" entity.
+const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'Person',
-  'name': 'Alex Smith',
-  'jobTitle': 'Staff Engineer (UI) / Founder',
-  'description': 'Frontend software engineer who builds accessible, pixel perfect digital experiences for the web',
-  'url': 'https://devcalledalex.com',
-  'image': 'https://devcalledalex.com/images/splash.png',
-  'sameAs': [
-    'https://github.com/eyebonk',
-    'https://www.linkedin.com/in/alex-smith-frontend-developer',
-  ],
-  'knowsAbout': [
-    'Frontend Development',
-    'Web Development',
-    'Accessible Design',
-    'JavaScript',
-    'Vue.js',
-    'React',
-    'UI Engineering',
+  '@graph': [
+    {
+      '@type': 'Person',
+      '@id': `${SITE}/#person`,
+      'name': 'Alex Smith',
+      'jobTitle': 'Staff Engineer (UI) / Founder',
+      'description': 'Frontend software engineer who builds accessible, pixel perfect digital experiences for the web',
+      'url': SITE,
+      'image': `${SITE}/images/splash.png`,
+      'sameAs': [
+        'https://github.com/eyebonk',
+        'https://www.linkedin.com/in/alex-smith-frontend-developer',
+        'https://marketplace.visualstudio.com/publishers/eyebonk',
+      ],
+      'worksFor': [
+        { '@type': 'Organization', 'name': 'Butternut Box', 'url': 'https://butternutbox.com/' },
+        { '@type': 'Organization', 'name': 'pixel61', 'url': 'https://pixel61.com/' },
+      ],
+      'knowsAbout': [
+        'Frontend Development',
+        'Web Development',
+        'Accessible Design',
+        'Design Systems',
+        'Component Libraries',
+        'JavaScript',
+        'TypeScript',
+        'Vue.js',
+        'Nuxt',
+        'React',
+        'UI Engineering',
+      ],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${SITE}/#website`,
+      'url': SITE,
+      'name': 'devcalledalex',
+      'inLanguage': 'en-GB',
+      'publisher': { '@id': `${SITE}/#person` },
+    },
   ],
 }
 
@@ -37,7 +64,7 @@ useHead({
   script: [
     {
       type: 'application/ld+json',
-      innerHTML: JSON.stringify(personJsonLd),
+      innerHTML: JSON.stringify(jsonLd),
     },
   ],
 })
