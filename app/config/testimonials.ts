@@ -6,7 +6,7 @@ export const TESTIMONIALS = [
   },
   {
     name: 'Abdullah Quazi',
-    company: 'Australian Defence of Defence',
+    company: 'Australian Department of Defence',
     text: 'Alex and I have been working together for quite some time on one of the really big and complex projects I have ever worked on so far. And here is the thing about Alex, whenever I needed some changes only to suit my end he would come up with a good solution, not a dirty fix but trying best to cover the future needs. What can you say about a dev who says, "Quazi, I had a dream about the problem we were talking about and I solved the problem in my dream". He is talented, dedicated, focused, easygoing and I can say from my experience he can be asset to any team.',
   },
   {

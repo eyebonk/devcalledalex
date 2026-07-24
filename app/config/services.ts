@@ -6,12 +6,12 @@ export const MY_SERVICES = [
   },
   {
     title: 'Frontend consultancy',
-    text: 'Looking for a second opinion or technical direction? I offer practical guidance grounded in real-world delivery.',
+    text: 'Looking for a second opinion or technical direction? I can give practical guidance based on what has actually worked in production.',
     icon: 'comments',
   },
   {
     title: 'Design systems & component libraries',
-    text: 'Working on a component library or design system? I can help shape, review, or steady large-scale frontend systems.',
+    text: 'Working on a component library or design system? I can help shape a new one or steady an existing one.',
     icon: 'layers',
   },
 ]

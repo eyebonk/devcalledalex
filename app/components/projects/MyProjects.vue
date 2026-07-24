@@ -6,7 +6,7 @@ import ProjectItems from './ProjectItems.vue'
 
 <template>
   <div>
-    <SectionTitle>My projects</SectionTitle>
+    <SectionTitle>My Projects</SectionTitle>
 
     <ProjectItems :items="MY_PROJECTS" />
   </div>

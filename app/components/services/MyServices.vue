@@ -6,7 +6,7 @@ import ServiceItem from './ServiceItem.vue'
 
 <template>
   <div>
-    <SectionTitle>What I can offer you:</SectionTitle>
+    <SectionTitle>What I can offer</SectionTitle>
 
     <ServiceItem :items="MY_SERVICES" />
   </div>

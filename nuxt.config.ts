@@ -1,7 +1,8 @@
 const SITE_URL = 'https://devcalledalex.com'
 const SITE_NAME = 'devcalledalex'
-const TITLE = 'Alex Smith - Staff Engineer (UI) & Founder | devcalledalex'
-const DESCRIPTION = 'Alex Smith is a frontend software engineer who builds accessible, pixel perfect digital experiences for the web.'
+const TITLE = 'Alex Smith - Frontend Engineer & Design Systems | devcalledalex'
+const DESCRIPTION = 'Alex Smith is a frontend engineer specialising in design systems, component libraries and accessible, high-quality UI across React, Next.js, Vue and TypeScript.'
+const SOCIAL_TITLE = 'Alex Smith - Frontend Engineer, UI Architecture & Design Systems'
 const SOCIAL_IMAGE = `${SITE_URL}/images/splash.png`
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
@@ -39,20 +40,20 @@ export default defineNuxtConfig({
         { name: 'robots', content: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' },
         { property: 'og:type', content: 'website' },
         { property: 'og:locale', content: 'en_GB' },
-        { property: 'og:site_name', content: 'Alex Smith - Staff Engineer (UI) / Founder' },
-        { property: 'og:title', content: 'Alex Smith - Staff Engineer (UI) / Founder' },
+        { property: 'og:site_name', content: 'devcalledalex' },
+        { property: 'og:title', content: SOCIAL_TITLE },
         { property: 'og:description', content: DESCRIPTION },
         { property: 'og:image', content: SOCIAL_IMAGE },
-        { property: 'og:image:width', content: '700' },
-        { property: 'og:image:height', content: '450' },
+        { property: 'og:image:width', content: '1200' },
+        { property: 'og:image:height', content: '630' },
         { property: 'og:image:type', content: 'image/png' },
-        { property: 'og:image:alt', content: 'Alex Smith — Staff Engineer (UI) / Founder' },
+        { property: 'og:image:alt', content: SOCIAL_TITLE },
         { property: 'og:url', content: SITE_URL },
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:title', content: 'Alex Smith - Staff Engineer (UI) / Founder' },
+        { name: 'twitter:title', content: SOCIAL_TITLE },
         { name: 'twitter:description', content: DESCRIPTION },
         { name: 'twitter:image', content: SOCIAL_IMAGE },
-        { name: 'twitter:image:alt', content: 'Alex Smith — Staff Engineer (UI) / Founder' },
+        { name: 'twitter:image:alt', content: SOCIAL_TITLE },
       ],
       link: [
         { rel: 'icon', href: '/favicon.ico' },

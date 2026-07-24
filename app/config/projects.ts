@@ -17,7 +17,7 @@ export const MY_PROJECTS = [
   },
   {
     title: 'Ambispace Web/IOS',
-    text: 'Ambispace is a free tool for mixing ambient noises to create the perfect soundscape for work, sleep, or relaxation.',
+    text: 'A cross-platform (Web + iOS) tool for mixing ambient noises to create the perfect soundscape for work, sleep, or relaxation.',
     link: 'https://www.ambispace.io',
     image: '/images/ambispace.png',
     stack: [type.VUE3, type.TS, type.TAILWIND, type.SWIFT, type.APP_DEV, type.IOS],

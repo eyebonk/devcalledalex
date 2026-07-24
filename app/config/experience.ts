@@ -56,13 +56,14 @@ export const EXPERIENCE = [
     ],
     blurb: [
       'As a Staff / Lead Frontend Engineer at Lyka, I led the development of a company-wide design system and component library in close collaboration with the Design Lead. The goal was to create a single, scalable foundation for all frontend work, ensuring consistency, accessibility, performance, and ease of use across teams.',
-      'I built the component library from the ground up as a private NPM package, defining standards around responsiveness, theming, accessibility, testing, versioning, and contribution workflows. This significantly improved developer experience and enabled teams to move faster without sacrificing quality.',
-      'Alongside the technical work, I supported and mentored frontend engineers across multiple squads through regular guidance, PR reviews, and an open-door approach to problem solving. I also set up and ran a Design System / Component Library guild to encourage adoption, shared ownership, and cross-team collaboration.',
+      'I built the component library from the ground up as a private NPM package, along with a shared token package that kept the design primitives — spacing, colour, border-radius and more — aligned across Figma and code under a single, matching naming convention, so engineers referencing a design in Figma already knew the equivalent in code. This kept design and engineering in lockstep and reduced day-to-day friction. I defined the standards it was built on — responsiveness, theming, accessibility, and semantic versioning — along with the full component lifecycle: how a new component is proposed, designed, built, reviewed, tested, and released.',
+      'A significant part of the work was defining the contribution model and then driving adoption across the org — bringing other teams on board, aligning them on shared patterns, and making the case for a single source of truth over one-off implementations. It became the default foundation for new apps and rebuilds, with internal admin systems built on it exclusively, and teams regularly noted how much faster they could ship without rebuilding common UI like buttons from scratch each time. Alongside this I mentored frontend engineers across multiple squads through regular guidance and PR reviews, and set up and ran a Design System / Component Library guild to build shared ownership, momentum, and cross-team collaboration.',
       'At a leadership level, I worked closely with engineering leadership and stakeholders to help shape frontend direction, improve processes, and align technical decisions with broader business goals.',
     ],
     stack: [
       type.COMPLIB,
       type.DESIGNSYS,
+      type.FIGMA,
       type.NUXT2,
       type.NUXT3,
       type.JS,

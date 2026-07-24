@@ -6,7 +6,7 @@ import TestimonialItem from './TestimonialItem.vue'
 
 <template>
   <div>
-    <SectionTitle>What people say:</SectionTitle>
+    <SectionTitle>What people say</SectionTitle>
 
     <TestimonialItem :items="TESTIMONIALS" />
   </div>
