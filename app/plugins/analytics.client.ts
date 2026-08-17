@@ -8,17 +8,21 @@ export default defineNuxtPlugin(() => {
 
   window.addEventListener('load', () => {
     const w = window as unknown as { dataLayer: unknown[] }
+    // gtag.js only processes genuine `arguments` objects pushed to dataLayer;
+    // plain arrays are silently ignored, so this must not use rest parameters.
+    w.dataLayer = w.dataLayer || []
+    function gtag() {
+      // eslint-disable-next-line prefer-rest-params
+      w.dataLayer.push(arguments)
+    }
+    // @ts-expect-error gtag is intentionally untyped variadic
+    gtag('js', new Date())
+    // @ts-expect-error gtag is intentionally untyped variadic
+    gtag('config', GA_ID)
+
     const script = document.createElement('script')
     script.async = true
     script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`
-    script.onload = () => {
-      w.dataLayer = w.dataLayer || []
-      function gtag(...args: unknown[]) {
-        w.dataLayer.push(args)
-      }
-      gtag('js', new Date())
-      gtag('config', GA_ID)
-    }
     document.head.appendChild(script)
   })
 })
