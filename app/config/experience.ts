@@ -85,7 +85,7 @@ export const EXPERIENCE = [
     link: 'https://bandmeup.com/',
     positions: [
       {
-        role: 'Founding Engineer',
+        role: 'Founder / Full Stack Engineer',
         dateFrom: '09/01/2024',
         dateTo: null,
       },
